@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niken Oktavia | Business Analyst Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .logo h2 {
+      color: #0b2a4a;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #d9a441;
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    nav a:hover {
+      color: #d9a441;
+    }
+
+    .btn-cv {
+      background: #0b2a4a;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #08233f, #0b2a4a, #123b63);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero small {
+      color: #f5b942;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      margin: 18px 0 10px;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: #f5b942;
+    }
+
+    .hero h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #e5e7eb;
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #f5b942;
+      color: #0b2a4a;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .hero-image {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .profile-placeholder {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      margin: auto;
+      background: linear-gradient(135deg, white, #f5b942);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b2a4a;
+      font-size: 64px;
+      font-weight: bold;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .quick-skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .quick-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .quick-card h4 {
+      color: #f5b942;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .quick-card p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #0b2a4a;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .about-grid,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .card,
+    .experience-card,
+    .project-card,
+    .skill-box {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3,
+    .experience-card h3,
+    .skill-box h3 {
+      color: #0b2a4a;
+      margin-bottom: 15px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #d9a441;
+      font-weight: bold;
+    }
+
+    .experience-card {
+      border-left: 6px solid #d9a441;
+    }
+
+    .experience-card span {
+      color: #6b7280;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+    }
+
+    .project-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: #0b2a4a;
+      color: #f5b942;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .project-card h3 {
+      color: #0b2a4a;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .project-card small {
+      color: #d9a441;
+      font-weight: bold;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      margin: 12px 0 18px;
+      color: #4b5563;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #eef4fb;
+      color: #0b2a4a;
+      padding: 8px 12px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: #0b2a4a;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: #e5e7eb;
+      margin-bottom: 24px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-info div {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #061a30;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 18px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .hero-content,
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-skills,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .quick-skills,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-placeholder {
+        width: 190px;
+        height: 190px;
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      #home
+        <h2>NIKEN OKTAVIA</h2>
+        <span>BUSINESS ANALYST</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li>#homeHome</a></li>
+          <li>#aboutAbout Me</a></li>
+          <li>#experienceExperience</a></li>
+          <li>#projectsProjects</a></li>
+          <li>#skillsSkills</a></li>
+          <li>#contactContact</a></li>
+          <li>#Download CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <small>WELCOME TO MY PORTFOLIO</small>
+          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
+          <h3>Business Analyst | SAP | FMS | Integration Project Support</h3>
+
+          <p>
+            I help bridge business needs and technical solutions by analyzing requirements,
+            preparing functional documentation, designing process flows, and supporting
+            system enhancements across SAP, FMS, and integration platforms.
+          </p>
+
+          <div class="hero-buttons">
+            #projectsView My Projects</a>
+            #Download CV</a>
+            #contactContact Me</a>
+          </div>
+
+          <div class="quick-skills">
+            <div class="quick-card">
+              <h4>Requirement Analysis</h4>
+              <p>Business needs to solution</p>
+            </div>
+            <div class="quick-card">
+              <h4>Process Flow</h4>
+              <p>As-Is, To-Be, E2E flow</p>
+            </div>
+            <div class="quick-card">
+              <h4>Documentation</h4>
+              <p>CRF, FRD, user scenario</p>
+            </div>
+            <div class="quick-card">
+              <h4>Integration Support</h4>
+              <p>SAP, MuleSoft, API, JSON</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="profile-placeholder">NO</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Short profile and professional focus</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Professional Summary</h3>
+            <p>
+              I am a Business Analyst based in Medan, North Sumatera, with experience
+              in supporting system enhancement, change request preparation, business
+              process analysis, and integration-related documentation.
+            </p>
+            <br />
+            <p>
+              My work focuses on understanding business requirements, translating them
+              into clear functional specifications, coordinating with users and developers,
+              and ensuring the solution aligns with operational needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What I Do Best</h3>
+            <ul class="check-list">
+              <li>Analyze business requirements and translate them into functional solutions.</li>
+              <li>Prepare CRF, requirement documents, and process flows.</li>
+              <li>Support SAP, FMS enhancements, and integration activities.</li>
+              <li>Review field mapping, JSON payload, and system responses.</li>
+              <li>Coordinate with users, developers, and stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p>Professional role and responsibilities</p>
+        </div>
+
+        <div class="experience-card">
+          <h3>Middle Office Assistant Analyst</h3>
+          <span>Medan, North Sumatera</span>
+
+          <ul class="check-list">
+            <li>Analyze business requirements from users and translate them into functional documentation.</li>
+            <li>Prepare CRF, user requirement documents, and meeting summaries.</li>
+            <li>Support SAP, FMS, and integration-related enhancement discussions.</li>
+            <li>Review field mapping, JSON payload, and SAP feedback or errors.</li>
+            <li>Coordinate with users, developers, and related stakeholders.</li>
+            <li>Prepare process flow diagrams and end-to-end business scenarios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <p>Some of the key projects I have worked on</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-icon">⚙</div>
+            <h3>Access Management Approval Matrix Enhancement</h3>
+            <small>FMS Enhancement</small>
+            <p>
+              Enhancement to support approval matrix configuration by department
+              for specific locations using fallback logic.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">📄</div>
+            <h3>Vehicle Running Account BA Enhancement</h3>
+            <small>Document & Running Number</small>
+            <p>
+              Enhancement for BA document generation, running number, reprint control,
+              date logic, and customer code display.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🔗</div>
+            <h3>SAP SO/PO Integration Support</h3>
+            <small>SAP / MuleSoft Integration</small>
+            <p>
+              Support for SAP integration, error analysis, field mapping validation,
+              and JSON payload review.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🏢</div>
+            <h3>Utility & Permit Management Process</h3>
+            <small>Business Process</small>
+            <p>
+              Reviewed and documented business processes for operational modules
+              such as utility, permit, and access management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Business, technical, and documentation capabilities</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Business Analysis</h3>
+            <div class="tags">
+              <span class="tag">Requirement Gathering</span>
+              <span class="tag">CRF Documentation</span>
+              <span class="tag">Functional Specification</span>
+              <span class="tag">Process Flow</span>
+              <span class="tag">User Scenario</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <h3>Technical Systems</h3>
+            <div class="tags">
+              <span class="tag">SAP MM</span>
+              <span class="tag">SAP SD</span>
+              <span class="tag">FMS</span>
+              <span class="tag">MuleSoft</span>
+              <span class="tag">API</span>
+              <span class="tag">JSON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <p>
+          Interested to discuss business analysis, system enhancement,
+          or integration-related projects? Feel free to reach out.
+        </p>
+
+        <div class="contact-info">
+          <div>Email: niken.oktavia@email.com</div>
+          <div>LinkedIn: linkedin.com/in/nikenoktavia</div>
+          <div>Location: Medan, North Sumatera</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Niken Oktavia. All rights reserved.</p>
+  </footer>
+</body>
+</html>
