@@ -368,7 +368,127 @@
       padding: 18px 0;
       font-size: 14px;
     }
+/* Modern Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
 
+.project-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+}
+
+.project-media {
+  height: 220px;
+  background: linear-gradient(135deg, #0b2a4a, #123b63, #f5b942);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.project-media .media-icon {
+  font-size: 56px;
+  z-index: 2;
+}
+
+.project-media .media-label {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.project-content {
+  padding: 26px;
+}
+
+.project-badge {
+  display: inline-block;
+  background: #eef4fb;
+  color: #0b2a4a;
+  padding: 7px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.project-content h3 {
+  color: #0b2a4a;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.project-content p {
+  color: #4b5563;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.project-points {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 9px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.project-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d9a441;
+  font-size: 22px;
+  line-height: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #0b2a4a;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
     @media (max-width: 992px) {
       .hero-content,
       .about-grid,
@@ -539,105 +659,138 @@
     </section>
 
     <section id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2>Featured Projects</h2>
-          <p>Some of the key projects I have worked on</p>
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <p>Selected projects covering business process improvement, system enhancement, integration, and UI/UX revamp</p>
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-icon">🌾</div>
+          <div class="media-label">Project Documentation Photo</div>
         </div>
 
-        <div class="project-grid">
-          <div class="project-card">
-            <div class="project-icon">⚙</div>
-            <h3>Access Management Approval Matrix Enhancement</h3>
-            <small>FMS Enhancement</small>
-            <p>
-              Enhancement to support approval matrix configuration by department
-              for specific locations using fallback logic.
-            </p>
-          </div>
+        <div class="project-content">
+          <span class="project-badge">Farmer Operations Management System</span>
+          <h3>Farmer Operations Management System</h3>
+          <p>
+            Supported business analysis activities for farmer operations processes,
+            including requirement gathering, process flow review, documentation,
+            and coordination with stakeholders.
+          </p>
 
-          <div class="project-card">
-            <div class="project-icon">📄</div>
-            <h3>Vehicle Running Account BA Enhancement</h3>
-            <small>Document & Running Number</small>
-            <p>
-              Enhancement for BA document generation, running number, reprint control,
-              date logic, and customer code display.
-            </p>
-          </div>
+          <ul class="project-points">
+            <li>Prepared requirement analysis and functional documentation.</li>
+            <li>Reviewed business process flow and user scenarios.</li>
+            <li>Supported system enhancement discussion with related teams.</li>
+          </ul>
 
-          <div class="project-card">
-            <div class="project-icon">🔗</div>
-            <h3>SAP SO/PO Integration Support</h3>
-            <small>SAP / MuleSoft Integration</small>
-            <p>
-              Support for SAP integration, error analysis, field mapping validation,
-              and JSON payload review.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <div class="project-icon">🏢</div>
-            <h3>Utility & Permit Management Process</h3>
-            <small>Business Process</small>
-            <p>
-              Reviewed and documented business processes for operational modules
-              such as utility, permit, and access management.
-            </p>
+          <div class="project-tags">
+            <span>Business Analysis</span>
+            <span>Process Flow</span>
+            <span>Requirement</span>
+            <span>Documentation</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Business, technical, and documentation capabilities</p>
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-icon">🏢</div>
+          <div class="media-label">Project Documentation Photo</div>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-box">
-            <h3>Business Analysis</h3>
-            <div class="tags">
-              <span class="tag">Requirement Gathering</span>
-              <span class="tag">CRF Documentation</span>
-              <span class="tag">Functional Specification</span>
-              <span class="tag">Process Flow</span>
-              <span class="tag">User Scenario</span>
-            </div>
-          </div>
+        <div class="project-content">
+          <span class="project-badge">Facility Management System</span>
+          <h3>Project Facility Management System</h3>
+          <p>
+            Involved in FMS enhancement activities related to access management,
+            permit management, approval workflow, document generation, and operational
+            process improvement.
+          </p>
 
-          <div class="skill-box">
-            <h3>Technical Systems</h3>
-            <div class="tags">
-              <span class="tag">SAP MM</span>
-              <span class="tag">SAP SD</span>
-              <span class="tag">FMS</span>
-              <span class="tag">MuleSoft</span>
-              <span class="tag">API</span>
-              <span class="tag">JSON</span>
-            </div>
+          <ul class="project-points">
+            <li>Prepared As-Is and To-Be process documentation.</li>
+            <li>Reviewed approval workflow and business rule logic.</li>
+            <li>Supported CRF preparation and stakeholder review.</li>
+          </ul>
+
+          <div class="project-tags">
+            <span>FMS</span>
+            <span>Workflow</span>
+            <span>CRF</span>
+            <span>System Enhancement</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let’s Connect</h2>
-        <p>
-          Interested to discuss business analysis, system enhancement,
-          or integration-related projects? Feel free to reach out.
-        </p>
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-icon">🔗</div>
+          <div class="media-label">Project Documentation Photo</div>
+        </div>
 
-        <div class="contact-info">
-          <div>Email: niken.oktavia@email.com</div>
-          <div>LinkedIn: linkedin.com/in/nikenoktavia</div>
-          <div>Location: Medan, North Sumatera</div>
+        <div class="project-content">
+          <span class="project-badge">SAP & WB.NET Integration</span>
+          <h3>Integration to SAP and WB.NET</h3>
+          <p>
+            Supported integration analysis between internal systems, SAP, and WB.NET,
+            including mapping review, payload checking, error investigation, and
+            coordination between business and technical teams.
+          </p>
+
+          <ul class="project-points">
+            <li>Reviewed field mapping and integration requirements.</li>
+            <li>Supported JSON payload and API response checking.</li>
+            <li>Assisted issue analysis related to SAP feedback and integration errors.</li>
+          </ul>
+
+          <div class="project-tags">
+            <span>SAP</span>
+            <span>WB.NET</span>
+            <span>API</span>
+            <span>JSON Mapping</span>
+            <span>Integration</span>
+          </div>
         </div>
       </div>
-    </section>
+
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-icon">📱</div>
+          <div class="media-label">Project Documentation Photo</div>
+        </div>
+
+        <div class="project-content">
+          <span class="project-badge">Mobile UI/UX Revamp</span>
+          <h3>Mobile UI/UX Revamp</h3>
+          <p>
+            Involved in mobile application revamp by reviewing user flow, providing
+            UI/UX input, improving screen layout, and ensuring the design supports
+            business process needs.
+          </p>
+
+          <ul class="project-points">
+            <li>Reviewed mobile user journey and screen flow.</li>
+            <li>Provided UI/UX improvement input for better usability.</li>
+            <li>Aligned mobile design with business requirements.</li>
+          </ul>
+
+          <div class="project-tags">
+            <span>UI/UX</span>
+            <span>Mobile Revamp</span>
+            <span>User Flow</span>
+            <span>Design Review</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   </main>
 
   <footer>
