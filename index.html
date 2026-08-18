@@ -6,6 +6,22 @@
   <title>Niken Oktavia | Business Analyst Portfolio</title>
 
   <style>
+    :root {
+      --bg: #f8fbff;
+      --white: #ffffff;
+      --text: #243047;
+      --muted: #64748b;
+      --soft-blue: #dbeafe;
+      --soft-blue-2: #eff6ff;
+      --soft-pink: #fce7f3;
+      --soft-pink-2: #fff1f2;
+      --accent-blue: #60a5fa;
+      --accent-pink: #f472b6;
+      --dark-blue: #1e3a5f;
+      --border: #e5e7eb;
+      --shadow: 0 12px 32px rgba(30, 58, 95, 0.10);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -18,14 +34,9 @@
     }
 
     body {
-      background: #f7f9fc;
-      color: #1f2937;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
     }
 
     .container {
@@ -35,8 +46,9 @@
     }
 
     header {
-      background: #ffffff;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 16px rgba(30, 58, 95, 0.08);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -50,14 +62,21 @@
       gap: 20px;
     }
 
+    .logo {
+      cursor: pointer;
+      background: none;
+      border: 0;
+      text-align: left;
+    }
+
     .logo h2 {
-      color: #0b2a4a;
+      color: var(--dark-blue);
       font-size: 24px;
       letter-spacing: 1px;
     }
 
     .logo span {
-      color: #d9a441;
+      color: var(--accent-pink);
       font-size: 12px;
       letter-spacing: 3px;
       font-weight: bold;
@@ -66,37 +85,48 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 22px;
+      gap: 12px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
-    nav a {
+    nav button,
+    .btn-cv {
+      border: 0;
+      background: transparent;
       font-weight: bold;
-      color: #1f2937;
-      transition: 0.3s;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      transition: 0.25s;
     }
 
-    nav a:hover {
-      color: #d9a441;
+    nav button:hover {
+      color: var(--dark-blue);
+      background: var(--soft-blue-2);
     }
 
     .btn-cv {
-      background: #0b2a4a;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      display: inline-block;
+      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
+      color: var(--dark-blue);
+      padding: 10px 18px;
+      border: 1px solid #dbeafe;
     }
 
     .btn-cv:hover {
-      background: #123b63;
-      color: white;
+      background: linear-gradient(135deg, #bfdbfe, #fbcfe8);
+      color: var(--dark-blue);
     }
 
     .hero {
-      background: linear-gradient(120deg, #08233f, #0b2a4a, #123b63);
-      color: white;
-      padding: 80px 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.25), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(96, 165, 250, 0.24), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eff6ff 48%, #fff1f2 100%);
+      color: var(--text);
+      padding: 86px 0;
     }
 
     .hero-content {
@@ -107,7 +137,7 @@
     }
 
     .hero small {
-      color: #f5b942;
+      color: var(--accent-pink);
       letter-spacing: 3px;
       font-weight: bold;
     }
@@ -116,19 +146,21 @@
       font-size: 54px;
       margin: 18px 0 10px;
       line-height: 1.1;
+      color: var(--dark-blue);
     }
 
     .hero h1 span {
-      color: #f5b942;
+      color: var(--accent-pink);
     }
 
     .hero h3 {
       font-size: 22px;
       margin-bottom: 20px;
+      color: #334155;
     }
 
     .hero p {
-      color: #e5e7eb;
+      color: var(--muted);
       max-width: 680px;
       margin-bottom: 30px;
     }
@@ -143,36 +175,43 @@
     .btn-primary,
     .btn-secondary {
       padding: 12px 22px;
-      border-radius: 8px;
+      border-radius: 999px;
       font-weight: bold;
       display: inline-block;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.25s;
     }
 
     .btn-primary {
-      background: #f5b942;
-      color: #0b2a4a;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+      color: white;
+      border: 0;
+      box-shadow: 0 10px 22px rgba(96, 165, 250, 0.25);
     }
 
     .btn-primary:hover {
-      background: #d9a441;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(244, 114, 182, 0.26);
     }
 
     .btn-secondary {
-      border: 1px solid white;
-      color: white;
+      border: 1px solid #cbd5e1;
+      color: var(--dark-blue);
+      background: white;
     }
 
     .btn-secondary:hover {
-      background: white;
-      color: #0b2a4a;
+      background: var(--soft-blue-2);
     }
 
     .hero-image {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(203, 213, 225, 0.8);
+      border-radius: 28px;
       padding: 35px;
       text-align: center;
+      box-shadow: var(--shadow);
     }
 
     .profile-placeholder {
@@ -180,14 +219,14 @@
       height: 230px;
       border-radius: 50%;
       margin: auto;
-      background: linear-gradient(135deg, white, #f5b942);
+      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #0b2a4a;
+      color: var(--dark-blue);
       font-size: 64px;
       font-weight: bold;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 20px 40px rgba(30, 58, 95, 0.18);
     }
 
     .quick-skills {
@@ -198,25 +237,27 @@
     }
 
     .quick-card {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
     }
 
     .quick-card h4 {
-      color: #f5b942;
+      color: var(--dark-blue);
       font-size: 15px;
       margin-bottom: 5px;
     }
 
     .quick-card p {
+      color: var(--muted);
       font-size: 13px;
       margin: 0;
     }
 
     section {
-      padding: 70px 0;
+      padding: 72px 0;
     }
 
     .section-title {
@@ -225,13 +266,13 @@
     }
 
     .section-title h2 {
-      color: #0b2a4a;
+      color: var(--dark-blue);
       font-size: 32px;
       margin-bottom: 8px;
     }
 
     .section-title p {
-      color: #6b7280;
+      color: var(--muted);
     }
 
     .about-grid,
@@ -245,16 +286,16 @@
     .experience-card,
     .skill-box {
       background: white;
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 28px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-      border: 1px solid #e5e7eb;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
 
     .card h3,
     .experience-card h3,
     .skill-box h3 {
-      color: #0b2a4a;
+      color: var(--dark-blue);
       margin-bottom: 15px;
     }
 
@@ -272,21 +313,20 @@
       content: "✓";
       position: absolute;
       left: 0;
-      color: #d9a441;
+      color: var(--accent-pink);
       font-weight: bold;
     }
 
     .experience-card {
-      border-left: 6px solid #d9a441;
+      border-left: 6px solid var(--accent-blue);
     }
 
     .experience-card span {
-      color: #6b7280;
+      color: var(--muted);
       display: block;
       margin-bottom: 18px;
     }
 
-    /* Modern Projects Section */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -295,34 +335,33 @@
 
     .project-card {
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
-      border: 1px solid #e5e7eb;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
       transition: 0.3s ease;
     }
 
     .project-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+      box-shadow: 0 20px 45px rgba(30, 58, 95, 0.16);
     }
 
     .project-media {
       height: 220px;
-      background: linear-gradient(135deg, #0b2a4a, #123b63, #f5b942);
+      background: linear-gradient(135deg, #dbeafe, #fce7f3);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
+      color: var(--dark-blue);
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
     }
 
-    .project-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .project-media.facility {
+      background-image: url("assets/facility-management.png");
     }
 
     .project-media .media-icon {
@@ -334,12 +373,14 @@
       position: absolute;
       bottom: 16px;
       left: 18px;
-      background: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--dark-blue);
       backdrop-filter: blur(8px);
       padding: 8px 14px;
       border-radius: 30px;
       font-size: 13px;
       font-weight: bold;
+      border: 1px solid rgba(255, 255, 255, 0.6);
     }
 
     .project-content {
@@ -348,23 +389,24 @@
 
     .project-badge {
       display: inline-block;
-      background: #eef4fb;
-      color: #0b2a4a;
+      background: var(--soft-blue-2);
+      color: var(--dark-blue);
       padding: 7px 12px;
       border-radius: 30px;
       font-size: 12px;
       font-weight: bold;
       margin-bottom: 14px;
+      border: 1px solid #dbeafe;
     }
 
     .project-content h3 {
-      color: #0b2a4a;
+      color: var(--dark-blue);
       font-size: 22px;
       margin-bottom: 12px;
     }
 
     .project-content p {
-      color: #4b5563;
+      color: #475569;
       font-size: 15px;
       margin-bottom: 18px;
     }
@@ -386,55 +428,43 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: #d9a441;
+      color: var(--accent-pink);
       font-size: 22px;
       line-height: 16px;
     }
 
-    .project-tags {
+    .project-tags,
+    .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    .project-tags span {
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      color: #0b2a4a;
+    .project-tags span,
+    .tag {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: var(--dark-blue);
       padding: 7px 10px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: bold;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: #eef4fb;
-      color: #0b2a4a;
-      padding: 8px 12px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
     .contact {
-      background: #0b2a4a;
-      color: white;
+      background: linear-gradient(135deg, #eff6ff, #fff1f2);
+      color: var(--text);
       text-align: center;
     }
 
     .contact h2 {
+      color: var(--dark-blue);
       font-size: 32px;
       margin-bottom: 10px;
     }
 
     .contact p {
-      color: #e5e7eb;
+      color: var(--muted);
       margin-bottom: 24px;
     }
 
@@ -447,5 +477,281 @@
     }
 
     .contact-info div {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 14px
+      background: rgba(255, 255, 255, 0.78);
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+    }
+
+    footer {
+      background: #ffffff;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px 0;
+      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 992px) {
+      .hero-content,
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-skills,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .quick-skills,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-placeholder {
+        width: 190px;
+        height: 190px;
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <button class="logo" onclick="location.href='#home'">
+        <h2>NIKEN OKTAVIA</h2>
+        <span>BUSINESS ANALYST</span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><button onclick="location.href='#home'">Home</button></li>
+          <li><button onclick="location.href='#about'">About Me</button></li>
+          <li><button onclick="location.href='#experience'">Experience</button></li>
+          <li><button onclick="location.href='#projects'">Projects</button></li>
+          <li><button onclick="location.href='#skills'">Skills</button></li>
+          <li><button onclick="location.href='#contact'">Contact</button></li>
+          <li><button class="btn-cv" onclick="location.href='#'">Download CV</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <small>WELCOME TO MY PORTFOLIO</small>
+          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
+          <h3>Business Analyst | SAP | FMS | Integration Project Support</h3>
+
+          <p>
+            I help bridge business needs and technical solutions by analyzing requirements,
+            preparing functional documentation, designing process flows, and supporting
+            system enhancements across SAP, FMS, and integration platforms.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="location.href='#projects'">View My Projects</button>
+            <button class="btn-secondary" onclick="location.href='#'">Download CV</button>
+            <button class="btn-secondary" onclick="location.href='#contact'">Contact Me</button>
+          </div>
+
+          <div class="quick-skills">
+            <div class="quick-card"><h4>Requirement Analysis</h4><p>Business needs to solution</p></div>
+            <div class="quick-card"><h4>Process Flow</h4><p>As-Is, To-Be, E2E flow</p></div>
+            <div class="quick-card"><h4>Documentation</h4><p>CRF, FRD, user scenario</p></div>
+            <div class="quick-card"><h4>Integration Support</h4><p>SAP, MuleSoft, API, JSON</p></div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="profile-placeholder">NO</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Short profile and professional focus</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Professional Summary</h3>
+            <p>
+              I am a Business Analyst based in Medan, North Sumatera, with experience
+              in supporting system enhancement, change request preparation, business
+              process analysis, and integration-related documentation.
+            </p>
+            <br />
+            <p>
+              My work focuses on understanding business requirements, translating them
+              into clear functional specifications, coordinating with users and developers,
+              and ensuring the solution aligns with operational needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What I Do Best</h3>
+            <ul class="check-list">
+              <li>Analyze business requirements and translate them into functional solutions.</li>
+              <li>Prepare CRF, requirement documents, and process flows.</li>
+              <li>Support SAP, FMS enhancements, and integration activities.</li>
+              <li>Review field mapping, JSON payload, and system responses.</li>
+              <li>Coordinate with users, developers, and stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p>Professional role and responsibilities</p>
+        </div>
+
+        <div class="experience-card">
+          <h3>Middle Office Assistant Analyst</h3>
+          <span>Medan, North Sumatera</span>
+
+          <ul class="check-list">
+            <li>Analyze business requirements from users and translate them into functional documentation.</li>
+            <li>Prepare CRF, user requirement documents, and meeting summaries.</li>
+            <li>Support SAP, FMS, and integration-related enhancement discussions.</li>
+            <li>Review field mapping, JSON payload, and SAP feedback or errors.</li>
+            <li>Coordinate with users, developers, and related stakeholders.</li>
+            <li>Prepare process flow diagrams and end-to-end business scenarios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <p>Selected projects covering business process improvement, system enhancement, integration, and UI/UX revamp</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="media-icon">🌾</div>
+              <div class="media-label">Project Documentation Photo</div>
+            </div>
+            <div class="project-content">
+              <span class="project-badge">Farmer Operations Management System</span>
+              <h3>Farmer Operations Management System</h3>
+              <p>Supported business analysis activities for farmer operations processes, including requirement gathering, process flow review, documentation, and coordination with stakeholders.</p>
+              <ul class="project-points">
+                <li>Prepared requirement analysis and functional documentation.</li>
+                <li>Reviewed business process flow and user scenarios.</li>
+                <li>Supported system enhancement discussion with related teams.</li>
+              </ul>
+              <div class="project-tags"><span>Business Analysis</span><span>Process Flow</span><span>Requirement</span><span>Documentation</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-media facility">
+              <div class="media-label">Facility Management Documentation</div>
+            </div>
+            <div class="project-content">
+              <span class="project-badge">Facility Management System</span>
+              <h3>Project Facility Management System</h3>
+              <p>Involved in FMS enhancement activities related to access management, permit management, approval workflow, document generation, and operational process improvement.</p>
+              <ul class="project-points">
+                <li>Prepared As-Is and To-Be process documentation.</li>
+                <li>Reviewed approval workflow and business rule logic.</li>
+                <li>Supported CRF preparation and stakeholder review.</li>
+              </ul>
+              <div class="project-tags"><span>FMS</span><span>Workflow</span><span>CRF</span><span>System Enhancement</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-media">
+              <div class="media-icon">🔗</div>
+              <div class="media-label">Project Documentation Photo</div>
+            </div>
+            <div class="project-content">
+              <span class="project-badge">SAP & WB.NET Integration</span>
+              <h3>Integration to SAP and WB.NET</h3>
+              <p>Supported integration analysis between internal systems, SAP, and WB.NET, including mapping review, payload checking, error investigation, and coordination between business and technical teams.</p>
+              <ul class="project-points">
+                <li>Reviewed field mapping and integration requirements.</li>
+                <li>Supported JSON payload and API response checking.</li>
+                <li>Assisted issue analysis related to SAP feedback and integration errors.</li>
+              </ul>
+              <div class="project-tags"><span>SAP</span><span>WB.NET</span><span>API</span><span>JSON Mapping</span><span>Integration</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-media">
+              <div class="media-icon">📱</div>
+              <div class="media-label">Project Documentation Photo</div>
+            </div>
+            <div class="project-content">
+              <span class="project-badge">Mobile UI/UX Revamp</span>
+              <h3>Mobile UI/UX Revamp</h3>
+              <p>Involved in mobile application revamp by reviewing user flow, providing UI/UX input, improving screen layout, and ensuring the design supports business process needs.</p>
+              <ul class="project-points">
+                <li>Reviewed mobile user journey and screen flow.</li>
+                <li>Provided UI/UX improvement input for better usability.</li>
+                <li>Aligned mobile design with business requirements.</li>
+              </ul>
+              <div class="project-tags"><span>UI/UX</span><span>Mobile Revamp</span><span>User Flow</span><span>Design Review</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-title"><h2>Skills</h2><p>Business, technical, and documentation capabilities</p></div>
+        <div class="skills-grid">
+          <div class="skill-box"><h3>Business Analysis</h3><div class="tags"><span class="tag">Requirement Gathering</span><span class="tag">CRF Documentation</span><span class="tag">Functional Specification</span><span class="tag">Process Flow</span><span class="tag">User Scenario</span></div></div>
+          <div class="skill-box"><h3>Technical Systems</h3><div class="tags"><span class="tag">SAP</span><span class="tag">FMS</span><span class="tag">WB.NET</span><span class="tag">MuleSoft</span><span class="tag">API</span><span class="tag">JSON</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <p>Interested to discuss business analysis, system enhancement, or integration-related projects? Feel free to reach out.</p>
+        <div class="contact-info"><div>Email: niken.oktavia@email.com</div><div>LinkedIn: linkedin.com/in/nikenoktavia</div><div>Location: Medan, North Sumatera</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Niken Oktavia. All rights reserved.</p>
+  </footer>
+</body>
+</html>
