@@ -367,21 +367,34 @@
     }
 
     .project-media {
-      height: 220px;
-      background: linear-gradient(135deg, #dbeafe, #fce7f3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark-blue);
-      position: relative;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-    }
+  width: 100%;
+  height: 260px;
+  background-color: #f8fbff;
+  background-image: linear-gradient(135deg, #dbeafe, #f9dce8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-blue);
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
     .project-media.facility {
       background-image: url("assets/facility-management.png");
     }
+    .project-media.farmer {
+  background-image: url("assets/farmer-operations.png");
+}
+    .project-media.integration {
+  background-image: url("assets/sap-wbnet-integration.png");
+}
+
+.project-media.mobile {
+  background-image: url("assets/mobile-revamp.png");
+}
 
     .project-media .media-icon {
       font-size: 56px;
@@ -676,10 +689,9 @@
 
         <div class="project-grid">
           <div class="project-card">
-            <div class="project-media">
-              <div class="media-icon">🌾</div>
-              <div class="media-label">Project Documentation Photo</div>
-            </div>
+            <div class="project-media farmer">
+  <div class="media-label">Farmer Operations Documentation</div>
+</div>
             <div class="project-content">
               <span class="project-badge">Farmer Operations Management System</span>
               <h3>Farmer Operations Management System</h3>
@@ -711,10 +723,11 @@
           </div>
 
           <div class="project-card">
-            <div class="project-media">
-              <div class="media-icon">🔗</div>
-              <div class="media-label">Project Documentation Photo</div>
-            </div>
+           <div class="project-media integration">
+  <div class="media-label">
+    SAP &amp; WB.NET Integration Documentation
+  </div>
+</div>
             <div class="project-content">
               <span class="project-badge">SAP & WB.NET Integration</span>
               <h3>Integration to SAP and WB.NET</h3>
@@ -729,10 +742,11 @@
           </div>
 
           <div class="project-card">
-            <div class="project-media">
-              <div class="media-icon">📱</div>
-              <div class="media-label">Project Documentation Photo</div>
-            </div>
+            <div class="project-media mobile">
+  <div class="media-label">
+    Mobile UI/UX Revamp Documentation
+  </div>
+</div>
             <div class="project-content">
               <span class="project-badge">Mobile UI/UX Revamp</span>
               <h3>Mobile UI/UX Revamp</h3>
