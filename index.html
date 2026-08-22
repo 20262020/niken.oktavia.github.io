@@ -524,9 +524,96 @@
       font-size: 14px;
       border-top: 1px solid #e5e7eb;
     }
+/* Interactive Header Buttons */
+nav button {
+  position: relative;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
 
-    @media (max-width: 992px) {
-      .hero-content,
+nav button:hover {
+  color: var(--dark-blue);
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue),
+    var(--soft-pink)
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.14);
+}
+
+nav button:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
+}
+
+nav button:focus-visible {
+  outline: 3px solid rgba(122, 167, 232, 0.35);
+  outline-offset: 3px;
+}
+
+/* Interactive Hero Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-cv {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(207, 101, 157, 0.28);
+  filter: brightness(1.03);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 10px rgba(111, 159, 223, 0.22);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue),
+    var(--soft-pink)
+  );
+  color: var(--dark-blue);
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.14);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.12);
+}
+
+.btn-cv:hover {
+  background: linear-gradient(
+    135deg,
+    #bfd6f5,
+    #f2c3d9
+  );
+  color: var(--dark-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.14);
+}
+
+.btn-cv:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 992px) {   
+        .hero-content,
       .about-grid,
       .skills-grid {
         grid-template-columns: 1fr;
