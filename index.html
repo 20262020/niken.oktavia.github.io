@@ -612,7 +612,55 @@ nav button:focus-visible {
 }
 
 /* Responsive */
-@media (max-width: 992px) {   
+
+    /* Download Notification */
+.download-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--dark-blue);
+  box-shadow: 0 14px 35px rgba(30, 58, 95, 0.18);
+font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+.download-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.download-toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-blue),
+    var(--accent-pink)
+  );
+  color: #ffffff;
+  font-size: 16px;
+}
+    @media (max-width: 992px) {   
         .hero-content,
       .about-grid,
       .skills-grid {
@@ -874,9 +922,22 @@ nav button:focus-visible {
   </main>
 
   <footer>
-    <p>© 2026 Niken Oktavia. All rights reserved.</p>
-  </footer>
+  <p>© 2026 Niken Oktavia. All rights reserved.</p>
+</footer>
+
+<div
+  class="download-toast"
+  id="downloadToast"
+  role="status"
+  aria-live="polite"
+>
+  <span class="download-toast-icon">✓</span>
+  <span>Download CV dimulai</span>
+</div>
+
 <script>
+  let downloadToastTimer;
+
   function downloadCV() {
     const link = document.createElement("a");
 
@@ -886,7 +947,25 @@ nav button:focus-visible {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    showDownloadToast();
+  }
+
+  function showDownloadToast() {
+    const toast = document.getElementById("downloadToast");
+
+    if (!toast) {
+      return;
+    }
+
+    clearTimeout(downloadToastTimer);
+    toast.classList.add("show");
+
+    downloadToastTimer = setTimeout(function () {
+      toast.classList.remove("show");
+    }, 3000);
   }
 </script>
+
 </body>
 </html>
