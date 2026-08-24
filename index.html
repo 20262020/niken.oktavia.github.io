@@ -6,7 +6,7 @@
   <title>Niken Oktavia | Business Analyst Portfolio</title>
   
   <style>
-    : root {
+    :root {
   --bg: #f8fbff;
   --white: #ffffff;
   --text: #243047;
@@ -382,13 +382,15 @@
   background-repeat: no-repeat;
 }
 
-    .project-media.facility {
-      background-image: url("assets/facility-management.png");
-    }
     .project-media.farmer {
   background-image: url("assets/farmer-operations.png");
 }
-    .project-media.integration {
+
+.project-media.facility {
+  background-image: url("assets/facility-management.png");
+}
+
+.project-media.integration {
   background-image: url("assets/sap-wbnet-integration.png");
 }
 
@@ -660,6 +662,243 @@ font-size: 14px;
   color: #ffffff;
   font-size: 16px;
 }
+
+    /* Clickable Project Image */
+.project-media {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.project-media:hover {
+  filter: brightness(0.94);
+}
+
+.project-media:active {
+  transform: scale(0.99);
+}
+
+.media-label {
+  z-index: 3;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.gallery-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-container {
+  position: relative;
+  width: min(1000px, 96vw);
+  max-height: 92vh;
+  padding: 24px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.38);
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.3s ease;
+}
+
+.gallery-modal.show .gallery-container {
+  transform: translateY(0) scale(1);
+}
+
+.gallery-header {
+  padding-right: 50px;
+  margin-bottom: 16px;
+}
+
+.gallery-header h3 {
+  color: var(--dark-blue);
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.gallery-header p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--soft-pink);
+  color: var(--dark-blue);
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-close:hover {
+  background: #f2c3d9;
+  transform: rotate(90deg);
+}
+
+.gallery-image-area {
+  width: 100%;
+  min-height: 320px;
+  max-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue-2),
+    var(--soft-pink-2)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-height: 620px;
+  display: block;
+  object-fit: contain;
+}
+
+.gallery-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.gallery-button {
+  border: 0;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    #6f9fdf,
+    #cf659d
+  );
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gallery-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 58, 95, 0.2);
+}
+
+.gallery-button:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.gallery-counter {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 4px 2px 8px;
+  overflow-x: auto;
+}
+
+.gallery-thumbnail {
+  width: 96px;
+  height: 64px;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-thumbnail.active {
+  border-color: var(--accent-pink);
+}
+
+/* Gallery Mobile */
+@media (max-width: 768px) {
+  .gallery-modal {
+    padding: 10px;
+  }
+
+  .gallery-container {
+    width: 100%;
+    max-height: 94vh;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .gallery-header h3 {
+    font-size: 18px;
+  }
+
+  .gallery-image-area {
+    min-height: 220px;
+  }
+
+  .gallery-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-counter {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .gallery-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .gallery-thumbnail {
+    width: 74px;
+    height: 52px;
+  }
+}
     @media (max-width: 992px) {   
         .hero-content,
       .about-grid,
@@ -677,35 +916,41 @@ font-size: 14px;
       }
     }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   /* Mobile Header */
   header {
-    position: relativ*;
+    position: relative;
   }
 
   .navbar {
-    width: 92%;*    flex-direction: column;
-    pa*ding: 16px 0 18px;
+    width: 92%;
+    flex-direction: column;
+    padding: 16px 0 18px;
     gap: 16px;
-* }
+  }
 
   .logo {
     width: 100%;
-   *text-align: center;
+    text-align: center;
   }
 
-  .logo h* {
+  .logo h2 {
     font-size: 25px;
-    line-h*ight: 1.1;
+    line-height: 1.1;
+    white-space: nowrap;
   }
 
   .logo span {
-   *font-size: 11px;
-    letter-spacin*: 3px;
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    white-space: nowrap;
   }
 
   nav {
-    width: 100*;
+    width: 100%;
   }
 
   nav ul {
@@ -725,59 +970,59 @@ font-size: 14px;
 
   /* Mobile Hero */
   .hero {
-    padding: 54px 0 48px;
+    padding: 50px 0 44px;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 34px;
   }
 
   .hero small {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.5;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
   }
 
   .hero h1 {
-    font-size: clamp(42px, 13vw, 54px);
-    line-height: 1.02;
-    margin: 22px 0 18px;
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 20px 0 18px;
   }
 
   .hero h3 {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.45;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .hero p {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 26px;
   }
 
   /* Mobile Hero Buttons */
   .hero-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-bottom: 28px;
   }
 
   .hero-buttons button {
     width: 100%;
     min-height: 50px;
-    padding: 11px 12px;
+    padding: 11px 16px;
     font-size: 14px;
   }
 
   .hero-buttons .btn-secondary:last-child {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
-  /* Mobile Skills and Projects */
+  /* Mobile Content */
   .quick-skills,
   .project-grid {
     grid-template-columns: 1fr;
@@ -796,7 +1041,6 @@ font-size: 14px;
     font-size: 14px;
   }
 
-  /* Mobile Profile */
   .hero-image {
     padding: 24px;
   }
@@ -805,18 +1049,10 @@ font-size: 14px;
     width: min(210px, 100%);
   }
 
-  .profile-placeholder {
-    width: 190px;
-    height: 190px;
-    font-size: 48px;
-  }
-
-  /* Mobile Project Images */
   .project-media {
     height: 220px;
   }
 
-  /* Mobile Download Notification */
   .download-toast {
     right: 16px;
     bottom: 16px;
@@ -854,14 +1090,7 @@ font-size: 14px;
     padding: 8px 13px;
   }
 }
-``
 
-      .profile-placeholder {
-        width: 190px;
-        height: 190px;
-        font-size: 48px;
-      }
-    }
   </style>
 </head>
 
@@ -993,8 +1222,16 @@ font-size: 14px;
 
         <div class="project-grid">
           <div class="project-card">
-            <div class="project-media farmer">
-  <div class="media-label">Farmer Operations Documentation</div>
+<div
+  class="project-media farmer"
+  onclick="openProjectGallery('farmer')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'farmer')"
+>
+  <div class="media-label">
+    View Farmer Documentation
+  </div>
 </div>
             <div class="project-content">
               <span class="project-badge">Farmer Operations Management System</span>
@@ -1010,9 +1247,17 @@ font-size: 14px;
           </div>
 
           <div class="project-card">
-            <div class="project-media facility">
-              <div class="media-label">Facility Management Documentation</div>
-            </div>
+            <div
+  class="project-media facility"
+  onclick="openProjectGallery('facility')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'facility')"
+>
+  <div class="media-label">
+    View Facility Documentation
+  </div>
+</div>
             <div class="project-content">
               <span class="project-badge">Facility Management System</span>
               <h3>Project Facility Management System</h3>
@@ -1026,12 +1271,19 @@ font-size: 14px;
             </div>
           </div>
 
-          <div class="project-card">
-           <div class="project-media integration">
-  <div class="media-label">
-    SAP &amp; WB.NET Integration Documentation
+        <div class="project-card">
+  <div
+    class="project-media integration"
+    onclick="openProjectGallery('integration')"
+    role="button"
+    tabindex="0"
+    onkeydown="openGalleryWithKeyboard(event, 'integration')"
+  >
+    <div class="media-label">
+      View SAP &amp; WB.NET Documentation
+    </div>
   </div>
-</div>
+
             <div class="project-content">
               <span class="project-badge">SAP & WB.NET Integration</span>
               <h3>Integration to SAP and WB.NET</h3>
@@ -1046,9 +1298,15 @@ font-size: 14px;
           </div>
 
           <div class="project-card">
-            <div class="project-media mobile">
+          <div
+  class="project-media mobile"
+  onclick="openProjectGallery('mobile')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'mobile')"
+>
   <div class="media-label">
-    Mobile UI/UX Revamp Documentation
+    View Mobile Revamp Documentation
   </div>
 </div>
             <div class="project-content">
@@ -1086,6 +1344,78 @@ font-size: 14px;
     </section>
   </main>
 
+
+
+  <!-- Project Gallery Modal -->
+<div
+  class="gallery-modal"
+  id="projectGalleryModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="projectGalleryTitle"
+  onclick="closeGalleryFromBackground(event)"
+>
+  <div class="gallery-container">
+    <button
+      class="gallery-close"
+      type="button"
+      onclick="closeProjectGallery()"
+      aria-label="Close gallery"
+    >
+      &times;
+    </button>
+
+    <div class="gallery-header">
+      <h3 id="projectGalleryTitle">
+        Project Documentation
+      </h3>
+
+      <p id="projectGalleryDescription">
+        Documentation using sample or testing data.
+      </p>
+    </div>
+
+    <div class="gallery-image-area">
+      <img
+        class="gallery-image"
+        id="projectGalleryImage"
+        src=""
+        alt="Project documentation"
+      />
+    </div>
+
+    <div class="gallery-controls">
+      <button
+        class="gallery-button"
+        type="button"
+        onclick="previousGalleryImage()"
+      >
+        Previous
+      </button>
+
+      <div
+        class="gallery-counter"
+        id="projectGalleryCounter"
+      >
+        1 / 1
+      </div>
+
+      <button
+        class="gallery-button"
+        type="button"
+        onclick="nextGalleryImage()"
+      >
+        Next
+      </button>
+    </div>
+
+    <div
+      class="gallery-thumbnails"
+      id="projectGalleryThumbnails"
+      aria-label="Project gallery thumbnails"
+    ></div>
+  </div>
+</div>
   <footer>
   <p>© 2026 Niken Oktavia. All rights reserved.</p>
 </footer>
@@ -1130,6 +1460,259 @@ font-size: 14px;
       toast.classList.remove("show");
     }, 3000);
   }
+
+
+  const projectGalleries = {
+  farmer: {
+    title: "Farmer Operations Management System",
+    description:
+      "Business process, system functionality, and project documentation.",
+    images: [
+  "assets/farmer-operations.png",
+  "assets/farmer-operations-1.png",
+  "assets/farmer-operations-2.png",
+  "assets/farmer-operations-3.png"
+]
+  },
+
+  facility: {
+    title: "Facility Management System",
+    description:
+      "FMS workflow, dashboard, transaction, and enhancement documentation.",
+    images: [
+  "assets/facility-management.png",
+  "assets/facility-management-1.png",
+  "assets/facility-management-2.png",
+  "assets/facility-management-3.png"
+]
+  },
+
+  integration: {
+    title: "SAP and WB.NET Integration",
+    description:
+      "Integration flow, mapping, payload, response, and testing documentation.",
+    images: [
+  "assets/sap-wbnet-integration.png",
+  "assets/sap-wbnet-integration-1.png",
+  "assets/sap-wbnet-integration-2.png",
+  "assets/sap-wbnet-integration-3.png"
+]
+  },
+
+  mobile: {
+    title: "Mobile UI/UX Revamp",
+    description:
+      "Mobile user flow, interface design, and revamp documentation.",
+    images: [
+  "assets/mobile-revamp.png",
+  "assets/mobile-revamp-1.png",
+  "assets/mobile-revamp-2.png",
+  "assets/mobile-revamp-3.png"
+]
+  }
+};
+
+let activeProjectGallery = null;
+let activeGalleryIndex = 0;
+
+function openProjectGallery(projectKey) {
+  activeProjectGallery = projectGalleries[projectKey];
+  activeGalleryIndex = 0;
+
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  const modal = document.getElementById(
+    "projectGalleryModal"
+  );
+
+  const title = document.getElementById(
+    "projectGalleryTitle"
+  );
+
+  const description = document.getElementById(
+    "projectGalleryDescription"
+  );
+
+  if (!modal || !title || !description) {
+    return;
+  }
+
+  title.textContent = activeProjectGallery.title;
+  description.textContent =
+    activeProjectGallery.description;
+
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+
+  renderProjectGallery();
+}
+
+function renderProjectGallery() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  const image = document.getElementById(
+    "projectGalleryImage"
+  );
+
+  const counter = document.getElementById(
+    "projectGalleryCounter"
+  );
+
+  const thumbnails = document.getElementById(
+    "projectGalleryThumbnails"
+  );
+
+  if (!image || !counter || !thumbnails) {
+    return;
+  }
+
+  const currentImage =
+    activeProjectGallery.images[activeGalleryIndex];
+
+  image.src = currentImage;
+
+  image.alt =
+    activeProjectGallery.title +
+    " documentation image " +
+    (activeGalleryIndex + 1);
+
+  counter.textContent =
+    activeGalleryIndex +
+    1 +
+    " / " +
+    activeProjectGallery.images.length;
+
+  thumbnails.innerHTML = "";
+
+  activeProjectGallery.images.forEach(
+    function (imagePath, index) {
+      const thumbnailButton =
+        document.createElement("button");
+
+      thumbnailButton.type = "button";
+      thumbnailButton.className =
+        "gallery-thumbnail";
+
+      if (index === activeGalleryIndex) {
+        thumbnailButton.classList.add("active");
+      }
+
+      thumbnailButton.onclick = function () {
+        activeGalleryIndex = index;
+        renderProjectGallery();
+      };
+
+      const thumbnailImage =
+        document.createElement("img");
+
+      thumbnailImage.src = imagePath;
+      thumbnailImage.alt =
+        "Open documentation image " +
+        (index + 1);
+
+      thumbnailButton.appendChild(
+        thumbnailImage
+      );
+
+      thumbnails.appendChild(
+        thumbnailButton
+      );
+    }
+  );
+}
+
+function nextGalleryImage() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  activeGalleryIndex =
+    (activeGalleryIndex + 1) %
+    activeProjectGallery.images.length;
+
+  renderProjectGallery();
+}
+
+function previousGalleryImage() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  activeGalleryIndex =
+    (
+      activeGalleryIndex -
+      1 +
+      activeProjectGallery.images.length
+    ) %
+    activeProjectGallery.images.length;
+
+  renderProjectGallery();
+}
+
+function closeProjectGallery() {
+  const modal = document.getElementById(
+    "projectGalleryModal"
+  );
+
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+  activeProjectGallery = null;
+}
+
+function closeGalleryFromBackground(event) {
+  if (event.target.id === "projectGalleryModal") {
+    closeProjectGallery();
+  }
+}
+
+function openGalleryWithKeyboard(
+  event,
+  projectKey
+) {
+  if (
+    event.key === "Enter" ||
+    event.key === " "
+  ) {
+    event.preventDefault();
+    openProjectGallery(projectKey);
+  }
+}
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+    const modal = document.getElementById(
+      "projectGalleryModal"
+    );
+
+    if (
+      !modal ||
+      !modal.classList.contains("show")
+    ) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeProjectGallery();
+    }
+
+    if (event.key === "ArrowRight") {
+      nextGalleryImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+      previousGalleryImage();
+    }
+  }
+);
 </script>
 
 </body>
