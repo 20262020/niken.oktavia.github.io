@@ -1,1719 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Niken Oktavia | Business Analyst Portfolio</title>
-  
+  <script nonce="MkCaxQzAXEKgC3900stf9g==">
+    window.rootUrl = "https://teams.microsoft.com/";
+    window.environment = "prod";
+    window.platformId = "27";
+  </script>
+  <meta name="viewport" content="width=device-width" />
+  <title>Microsoft Teams - Error</title>
   <style>
-    :root {
-  --bg: #f8fbff;
-  --white: #ffffff;
-  --text: #243047;
-  --muted: #64748b;
-
-  --soft-blue: #dbeafe;
-  --soft-blue-2: #eff6ff;
-  --soft-pink: #f9dce8;
-  --soft-pink-2: #fff5f8;
-
-  --accent-blue: #7aa7e8;
-  --accent-pink: #d96fa7;
-  --dark-blue: #1e3a5f;
-
-  --border: #e5e7eb;
-  --shadow: 0 12px 32px rgba(30, 58, 95, 0.10);
-}
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     html {
-      scroll-behavior: smooth;
+      font-size: calc(1em*.625) !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      background: #f3f2f1;
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Web", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.4285;
+      color: #252424;
+      overflow-y: auto;
+      text-align: center;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
+    .oops-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: calc(100vh - 100px);
+      width: 100%;
     }
 
-    header {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 16px rgba(30, 58, 95, 0.08);
-      position: sticky;
+    .oops-svg {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    .oops-ref {
+      color: #16233a; /* darkblue */
+      font-family: monospace;
+      font-size: 1rem;
+      margin: 3.2rem 0 0 6rem;
+      position: fixed;
+      top: 92%;
+      cursor: pointer;
+    }
+
+    .ts-btn-fluent-primary {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Web", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      height: 32px;
+      padding: 0 20px;
+      min-width: 96px;
+      outline: 0;
+      white-space: nowrap;
+      cursor: pointer;
+      box-shadow: 0 2px 4px -.75px rgba(0,0,0,.25);
+      background: #5b5fc7;
+      border: 0;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    .ts-btn-fluent-primary::after,
+    .ts-btn-fluent-primary::before {
+      position: absolute;
+      content: '';
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+
+    .ts-btn-fluent-primary::before {
+      top: 1px;
+      left: 1px;
+      right: 1px;
+      bottom: 1px;
+    }
+
+    .ts-btn-fluent-primary::after {
       top: 0;
-      z-index: 100;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-    }
-
-    .logo {
-      cursor: pointer;
-      background: none;
-      border: 0;
-      text-align: left;
-    }
-
-    .logo h2 {
-      color: var(--dark-blue);
-      font-size: 24px;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: var(--accent-pink);
-      font-size: 12px;
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav button,
-    .btn-cv {
-      border: 0;
-      background: transparent;
-      font-weight: bold;
-      color: var(--text);
-      cursor: pointer;
-      font-size: 14px;
-      padding: 9px 10px;
-      border-radius: 999px;
-      transition: 0.25s;
-    }
-
-    nav button:hover {
-      color: var(--dark-blue);
-      background: var(--soft-blue-2);
-    }
-
-    .btn-cv {
-      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
-      color: var(--dark-blue);
-      padding: 10px 18px;
-      border: 1px solid #dbeafe;
-    }
-
-    .btn-cv:hover {
-      background: linear-gradient(135deg, #bfdbfe, #fbcfe8);
-      color: var(--dark-blue);
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.25), transparent 28%),
-        radial-gradient(circle at 85% 25%, rgba(96, 165, 250, 0.24), transparent 30%),
-        linear-gradient(135deg, #ffffff 0%, #eff6ff 48%, #fff1f2 100%);
-      color: var(--text);
-      padding: 86px 0;
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero small {
-      color: var(--accent-pink);
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
-
-    .hero h1 {
-      font-size: 54px;
-      margin: 18px 0 10px;
-      line-height: 1.1;
-      color: var(--dark-blue);
-    }
-
-    .hero h1 span {
-      color: var(--accent-pink);
-    }
-
-    .hero h3 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #334155;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 680px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-bottom: 35px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-weight: bold;
-      display: inline-block;
-      cursor: pointer;
-      font-size: 14px;
-      transition: 0.25s;
-    }
-
-    .btn-primary {
-  background: linear-gradient(
-    135deg,
-    #6f9fdf,
-    #cf659d
-  );
-  color: #ffffff;
-  border: 0;
-  box-shadow: 0 10px 22px rgba(111, 159, 223, 0.3);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(207, 101, 157, 0.28);
-  filter: brightness(0.96);
-}
-
-    .btn-secondary {
-      border: 1px solid #cbd5e1;
-      color: var(--dark-blue);
-      background: white;
-    }
-
-    .btn-secondary:hover {
-      background: var(--soft-blue-2);
-    }
-
-    .hero-image {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(203, 213, 225, 0.8);
-      border-radius: 28px;
-      padding: 35px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    .profile-photo {
-  width: min(260px, 100%);
-  aspect-ratio: 1 / 1;
-  margin: auto;
-  border-radius: 50%;
-  background-image: url("assets/profile-niken.png");
-  background-size: cover;
-  background-position: center 20%;
-  background-repeat: no-repeat;
-  border: 8px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 20px 40px rgba(30, 58, 95, 0.18);
-}
-
-    .profile-placeholder {
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      margin: auto;
-      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark-blue);
-      font-size: 64px;
-      font-weight: bold;
-      box-shadow: 0 20px 40px rgba(30, 58, 95, 0.18);
-    }
-
-    .quick-skills {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .quick-card {
-      background: rgba(255, 255, 255, 0.75);
-      border-radius: 16px;
-      padding: 16px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
-    }
-
-    .quick-card h4 {
-      color: var(--dark-blue);
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-
-    .quick-card p {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0;
-    }
-
-    section {
-      padding: 72px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      color: var(--dark-blue);
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    .about-grid,
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
-    .card,
-    .experience-card,
-    .skill-box {
-      background: white;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .card h3,
-    .experience-card h3,
-    .skill-box h3 {
-      color: var(--dark-blue);
-      margin-bottom: 15px;
-    }
-
-    .check-list {
-      list-style: none;
-    }
-
-    .check-list li {
-      margin-bottom: 12px;
-      padding-left: 28px;
-      position: relative;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
       left: 0;
-      color: var(--accent-pink);
-      font-weight: bold;
+      right: 0;
+      bottom: 0;
     }
 
-    .experience-card {
-      border-left: 6px solid var(--accent-blue);
+    .ts-btn-fluent-primary:hover {
+      background: #3d3e78;
     }
 
-    .experience-card span {
-      color: var(--muted);
+    .ts-btn-fluent-primary:active,
+    .ts-btn-fluent-primary:focus {
+      background: #2f2f4a;
+      box-shadow: none;
+    }
+
+    .ts-btn-fluent-primary:focus::after {
+      border-color: #252423;
+    }
+
+    .ts-btn-fluent-primary:focus::before {
+      border-color: #fff;
+    }
+
+    .oops-line-one {
       display: block;
-      margin-bottom: 18px;
+      color: #252424;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Web", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 536px;
+      margin: 32px auto 20px auto;
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+    .oops-itp-block-learn-more {
+      text-decoration: none;
+      color: #5b5fc7;
     }
 
-    .project-card {
-      background: #ffffff;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      transition: 0.3s ease;
+    #try-again-link,
+    #open-teams-on-web {
+      text-decoration: none;
+      margin-bottom: 16px;
     }
 
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 45px rgba(30, 58, 95, 0.16);
+    .oops-hidden {
+      display: none;
     }
-
-    .project-media {
-  width: 100%;
-  height: 260px;
-  background-color: #f8fbff;
-  background-image: linear-gradient(135deg, #dbeafe, #f9dce8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-blue);
-  position: relative;
-  overflow: hidden;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-    .project-media.farmer {
-  background-image: url("assets/farmer-operations.png");
-}
-
-.project-media.facility {
-  background-image: url("assets/facility-management.png");
-}
-
-.project-media.integration {
-  background-image: url("assets/sap-wbnet-integration.png");
-}
-
-.project-media.mobile {
-  background-image: url("assets/mobile-revamp.png");
-}
-
-    .project-media .media-icon {
-      font-size: 56px;
-      z-index: 2;
-    }
-
-    .project-media .media-label {
-      position: absolute;
-      bottom: 16px;
-      left: 18px;
-      background: rgba(255, 255, 255, 0.82);
-      color: var(--dark-blue);
-      backdrop-filter: blur(8px);
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: bold;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
-
-    .project-content {
-      padding: 26px;
-    }
-
-    .project-badge {
-      display: inline-block;
-      background: var(--soft-blue-2);
-      color: var(--dark-blue);
-      padding: 7px 12px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 14px;
-      border: 1px solid #dbeafe;
-    }
-
-    .project-content h3 {
-      color: var(--dark-blue);
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .project-content p {
-      color: #475569;
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .project-points {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-
-    .project-points li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 9px;
-      color: #374151;
-      font-size: 14px;
-    }
-
-    .project-points li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent-pink);
-      font-size: 22px;
-      line-height: 16px;
-    }
-
-    .project-tags,
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .project-tags span,
-    .tag {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: var(--dark-blue);
-      padding: 7px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .contact {
-      background: linear-gradient(135deg, #eff6ff, #fff1f2);
-      color: var(--text);
-      text-align: center;
-    }
-
-    .contact h2 {
-      color: var(--dark-blue);
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .contact p {
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .contact-info div {
-      background: rgba(255, 255, 255, 0.78);
-      padding: 14px 20px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
-    }
-
-    footer {
-      background: #ffffff;
-      color: var(--muted);
-      text-align: center;
-      padding: 18px 0;
-      font-size: 14px;
-      border-top: 1px solid #e5e7eb;
-    }
-/* Interactive Header Buttons */
-nav button {
-  position: relative;
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.2s ease,
-    box-shadow 0.25s ease;
-}
-
-nav button:hover {
-  color: var(--dark-blue);
-  background: linear-gradient(
-    135deg,
-    var(--soft-blue),
-    var(--soft-pink)
-  );
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.14);
-}
-
-nav button:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
-}
-
-nav button:focus-visible {
-  outline: 3px solid rgba(122, 167, 232, 0.35);
-  outline-offset: 3px;
-}
-
-/* Interactive Hero Buttons */
-.btn-primary,
-.btn-secondary,
-.btn-cv {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(207, 101, 157, 0.28);
-  filter: brightness(1.03);
-}
-
-.btn-primary:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 4px 10px rgba(111, 159, 223, 0.22);
-}
-
-.btn-secondary:hover {
-  background: linear-gradient(
-    135deg,
-    var(--soft-blue),
-    var(--soft-pink)
-  );
-  color: var(--dark-blue);
-  border-color: transparent;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.14);
-}
-
-.btn-secondary:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.12);
-}
-
-.btn-cv:hover {
-  background: linear-gradient(
-    135deg,
-    #bfd6f5,
-    #f2c3d9
-  );
-  color: var(--dark-blue);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.14);
-}
-
-.btn-cv:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
-}
-
-/* Responsive */
-
-    /* Download Notification */
-.download-toast {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border: 1px solid #dbeafe;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.96);
-  color: var(--dark-blue);
-  box-shadow: 0 14px 35px rgba(30, 58, 95, 0.18);
-font-size: 14px;
-  font-weight: bold;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.3s ease;
-}
-
-.download-toast.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.download-toast-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--accent-blue),
-    var(--accent-pink)
-  );
-  color: #ffffff;
-  font-size: 16px;
-}
-
-    /* Clickable Project Image */
-.project-media {
-  cursor: pointer;
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
-}
-
-.project-media:hover {
-  filter: brightness(0.94);
-}
-
-.project-media:active {
-  transform: scale(0.99);
-}
-
-.media-label {
-  z-index: 3;
-}
-
-/* Gallery Modal */
-.gallery-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(15, 23, 42, 0.88);
-  backdrop-filter: blur(8px);
-
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-}
-
-.gallery-modal.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.gallery-container {
-  position: relative;
-  width: min(1000px, 96vw);
-  max-height: 92vh;
-  padding: 24px;
-  overflow-y: auto;
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.38);
-  transform: translateY(20px) scale(0.98);
-  transition: transform 0.3s ease;
-}
-
-.gallery-modal.show .gallery-container {
-  transform: translateY(0) scale(1);
-}
-
-.gallery-header {
-  padding-right: 50px;
-  margin-bottom: 16px;
-}
-
-.gallery-header h3 {
-  color: var(--dark-blue);
-  font-size: 22px;
-  margin-bottom: 4px;
-}
-
-.gallery-header p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.gallery-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 50%;
-  background: var(--soft-pink);
-  color: var(--dark-blue);
-  font-size: 26px;
-  font-weight: bold;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
-}
-
-.gallery-close:hover {
-  background: #f2c3d9;
-  transform: rotate(90deg);
-}
-
-.gallery-image-area {
-  width: 100%;
-  min-height: 320px;
-  max-height: 620px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    var(--soft-blue-2),
-    var(--soft-pink-2)
-  );
-  border: 1px solid var(--border);
-  border-radius: 18px;
-}
-
-.gallery-image {
-  width: 100%;
-  max-height: 620px;
-  display: block;
-  object-fit: contain;
-}
-
-.gallery-controls {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.gallery-button {
-  border: 0;
-  padding: 11px 20px;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    #6f9fdf,
-    #cf659d
-  );
-  color: #ffffff;
-  font-weight: bold;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.gallery-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(30, 58, 95, 0.2);
-}
-
-.gallery-button:active {
-  transform: translateY(1px) scale(0.97);
-}
-
-.gallery-counter {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.gallery-thumbnails {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-  padding: 4px 2px 8px;
-  overflow-x: auto;
-}
-
-.gallery-thumbnail {
-  width: 96px;
-  height: 64px;
-  flex: 0 0 auto;
-  padding: 0;
-  overflow: hidden;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-.gallery-thumbnail img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.gallery-thumbnail.active {
-  border-color: var(--accent-pink);
-}
-
-/* Gallery Mobile */
-@media (max-width: 768px) {
-  .gallery-modal {
-    padding: 10px;
-  }
-
-  .gallery-container {
-    width: 100%;
-    max-height: 94vh;
-    padding: 18px;
-    border-radius: 18px;
-  }
-
-  .gallery-header h3 {
-    font-size: 18px;
-  }
-
-  .gallery-image-area {
-    min-height: 220px;
-  }
-
-  .gallery-controls {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery-counter {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-
-  .gallery-button {
-    padding: 10px 12px;
-    font-size: 13px;
-  }
-
-  .gallery-thumbnail {
-    width: 74px;
-    height: 52px;
-  }
-}
-    @media (max-width: 992px) {   
-        .hero-content,
-      .about-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .quick-skills,
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      nav ul {
-        justify-content: center;
-      }
-    }
-
-@media (max-width: 768px) {
-  /* Mobile Header */
-  header {
-    position: relative;
-  }
-
-  .navbar {
-    width: 92%;
-    flex-direction: column;
-    padding: 16px 0 18px;
-    gap: 16px;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo h2 {
-    font-size: 25px;
-    line-height: 1.1;
-    white-space: nowrap;
-  }
-
-  .logo span {
-    display: block;
-    margin-top: 5px;
-    font-size: 11px;
-    line-height: 1.2;
-    letter-spacing: 3px;
-    white-space: nowrap;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
-    width: 100%;
-    justify-content: center;
-    gap: 8px 10px;
-  }
-
-  nav button {
-    padding: 8px 12px;
-    font-size: 13px;
-  }
-
-  nav .btn-cv {
-    padding: 9px 16px;
-  }
-
-  /* Mobile Hero */
-  .hero {
-    padding: 50px 0 44px;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .hero small {
-    display: block;
-    font-size: 11px;
-    line-height: 1.5;
-    letter-spacing: 2.5px;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-    line-height: 1.05;
-    margin: 20px 0 18px;
-  }
-
-  .hero h3 {
-    font-size: 19px;
-    line-height: 1.45;
-    margin-bottom: 20px;
-  }
-
-  .hero p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 26px;
-  }
-
-  /* Mobile Hero Buttons */
-  .hero-buttons {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 11px;
-    margin-bottom: 28px;
-  }
-
-  .hero-buttons button {
-    width: 100%;
-    min-height: 50px;
-    padding: 11px 16px;
-    font-size: 14px;
-  }
-
-  .hero-buttons .btn-secondary:last-child {
-    grid-column: auto;
-  }
-
-  /* Mobile Content */
-  .quick-skills,
-  .project-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .quick-card {
-    padding: 18px;
-  }
-
-  .quick-card h4 {
-    font-size: 16px;
-  }
-
-  .quick-card p {
-    font-size: 14px;
-  }
-
-  .hero-image {
-    padding: 24px;
-  }
-
-  .profile-photo {
-    width: min(210px, 100%);
-  }
-
-  .project-media {
-    height: 220px;
-  }
-
-  .download-toast {
-    right: 16px;
-    bottom: 16px;
-    left: 16px;
-    justify-content: center;
-  }
-}
-    @media (max-width: 420px) {
-  .hero-buttons {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-buttons .btn-secondary:last-child {
-    grid-column: auto;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .hero h3 {
-    font-size: 18px;
-  }
-
-  nav ul {
-    gap: 6px;
-  }
-
-  nav button {
-    padding: 7px 9px;
-    font-size: 12px;
-  }
-
-  nav .btn-cv {
-    padding: 8px 13px;
-  }
-}
-
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container navbar">
-      <button class="logo" onclick="location.href='#home'">
-        <h2>NIKEN OKTAVIA</h2>
-        <span>BUSINESS ANALYST</span>
-      </button>
+  <div class="oops" role="main">
+    <div class="oops-content">
+      <!-- eoa.svg -->
+      <svg id="eoa-svg" class="oops-svg oops-hidden" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_2916_170481)">
+          <path d="M153.363 3H47.0605V197H153.363V3Z" fill="#E2E2F6"/>
+          <path d="M150.363 6V194H50.0605V6H150.363ZM156.363 0H44.0605V200H156.363V0Z" fill="#BDBDE6"/>
+          <g opacity="0.3">
+            <path opacity="0.3" d="M156.363 0H44.0605V200H156.363V0Z" fill="#BDBDE6"/>
+          </g>
+          <path d="M93.4585 109.793H64.7744V177.389H93.4585V109.793Z" fill="white"/>
+          <path d="M90.4585 112.793V174.388H67.7744V112.793H90.4585V112.793ZM96.4585 106.793H90.4585H67.7744H61.7744V112.793V174.388V180.388H67.7744H90.4585H96.4585V174.388V112.793V106.793Z" fill="#BDBDE6"/>
+          <path d="M90.4585 129.585V174.388L67.7744 174.403V140.093L90.4585 129.585Z" fill="#F3F2F1"/>
+          <path d="M137.86 109.793H109.177V177.389H137.86V109.793Z" fill="white"/>
+          <path d="M134.861 112.793V174.388H112.177V112.793H134.861V112.793ZM140.861 106.793H134.861H112.177H106.177V112.793V174.388V180.388H112.177H134.861H140.861V174.388V112.793V106.793Z" fill="#BDBDE6"/>
+          <path d="M134.861 113.617V174.388L112.177 174.408V124.132L134.861 113.617Z" fill="#F3F2F1"/>
+          <path d="M56.5075 113.364H56.5075C54.0574 113.364 52.0713 111.378 52.0713 108.928V95.8883C52.0713 93.4383 54.0574 91.4521 56.5075 91.4521H56.5075C58.9575 91.4521 60.9437 93.4383 60.9437 95.8883V108.927C60.9437 111.378 58.9575 113.364 56.5075 113.364Z" fill="url(#paint0_radial_2916_170481)"/>
+          <path d="M66.8286 104.322H56.2003C54.8664 104.322 53.7852 103.241 53.7852 101.907V101.907C53.7852 100.573 54.8664 99.4917 56.2003 99.4917H66.8286C68.1624 99.4917 69.2437 100.573 69.2437 101.907C69.2437 103.241 68.1624 104.322 66.8286 104.322Z" fill="#EDEBE9"/>
+          <path d="M93.4585 19.9531H64.7744V87.5483H93.4585V19.9531Z" fill="white"/>
+          <path d="M90.4585 22.9534V84.5484H67.7744V22.9534H90.4585ZM96.4585 16.9534H90.4585H67.7744H61.7744V22.9534V84.5484V90.5484H67.7744H90.4585H96.4585V84.5484V22.9534V16.9534Z" fill="#BDBDE6"/>
+          <path d="M90.4761 58.1758V84.5485H67.792V68.6861L90.4761 58.1758Z" fill="#F3F2F1"/>
+          <path d="M137.86 19.9536H109.177V87.5483H137.86V19.9536Z" fill="white"/>
+          <path d="M134.861 22.9534V84.5483H112.177V22.9534H134.861ZM140.861 16.9534H134.861H112.177H106.177V22.9534V84.5483V90.5483H112.177H134.861H140.861V84.5483V22.9534V16.9534Z" fill="#BDBDE6"/>
+          <path d="M134.842 39.7485V84.6222H112.158V50.2588L134.842 39.7485Z" fill="#F3F2F1"/>
+          <path d="M14.4893 104.826H6.29785V195.843H14.4893V104.826Z" fill="url(#paint1_linear_2916_170481)"/>
+          <path d="M20.7868 200H0L10.2824 188.095L20.7868 200Z" fill="#FDC9B5"/>
+          <path d="M10.393 115.031C14.763 115.031 18.3056 111.488 18.3056 107.118C18.3056 102.748 14.763 99.2058 10.393 99.2058C6.02304 99.2058 2.48047 102.748 2.48047 107.118C2.48047 111.488 6.02304 115.031 10.393 115.031Z" fill="#FDC9B5"/>
+          <path d="M193.702 104.826H185.511V195.843H193.702V104.826Z" fill="url(#paint2_linear_2916_170481)"/>
+          <path d="M200 200H179.213L189.495 188.095L200 200Z" fill="#FDC9B5"/>
+          <path d="M189.607 115.031C193.977 115.031 197.519 111.488 197.519 107.118C197.519 102.748 193.977 99.2058 189.607 99.2058C185.237 99.2058 181.694 102.748 181.694 107.118C181.694 111.488 185.237 115.031 189.607 115.031Z" fill="#FDC9B5"/>
+          <path d="M99.6942 138.026C99.4109 138.026 99.13 138.024 98.8461 138.023C68.4464 137.884 41.129 130.132 23.2558 116.669C19.612 113.94 23.0269 109.128 26.7598 111.933C43.6193 124.664 69.6887 131.997 98.8734 132.132C128.987 132.237 154.767 124.815 171.907 111.084C177.459 106.637 181.041 111.386 175.16 116.026C157.131 130.252 130.553 138.026 99.6942 138.026Z" fill="#E86E58"/>
+          <path d="M24.6958 118.99C27.4289 118.99 29.6445 116.774 29.6445 114.041C29.6445 111.308 27.4289 109.092 24.6958 109.092C21.9627 109.092 19.7471 111.308 19.7471 114.041C19.7471 116.774 21.9627 118.99 24.6958 118.99Z" fill="#605D5A"/>
+          <path d="M174.315 117.742C177.048 117.742 179.264 115.527 179.264 112.793C179.264 110.06 177.048 107.845 174.315 107.845C171.582 107.845 169.366 110.06 169.366 112.793C169.366 115.527 171.582 117.742 174.315 117.742Z" fill="#605D5A"/>
+        </g>
+        <defs>
+          <radialGradient id="paint0_radial_2916_170481" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(59.6961 101.899) scale(7.55951 5.02978)">
+            <stop stop-color="#C8C6C4"/>
+            <stop offset="1" stop-color="#E1DFDD"/>
+          </radialGradient>
+          <linearGradient id="paint1_linear_2916_170481" x1="10.3936" y1="108.626" x2="10.3936" y2="136.656" gradientUnits="userSpaceOnUse">
+            <stop offset="0.002198" stop-color="#ED9583"/>
+            <stop offset="1" stop-color="#FDC9B5"/>
+          </linearGradient>
+          <linearGradient id="paint2_linear_2916_170481" x1="189.606" y1="108.626" x2="189.606" y2="136.656" gradientUnits="userSpaceOnUse">
+            <stop offset="0.002198" stop-color="#ED9583"/>
+            <stop offset="1" stop-color="#FDC9B5"/>
+          </linearGradient>
+          <clipPath id="clip0_2916_170481">
+            <rect width="200" height="200" fill="white"/>
+          </clipPath>
+        </defs>
+        </svg>
+      <!-- oops.svg -->
+      <svg id="oops-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.3 201.3" class="oops-svg">
+        <circle cx="100.65" cy="100.65" r="100.8" fill="#e1dfdd"/>
+        <path fill="#8b8cc4" d="M164.616 130.272c-.347.022-.686.18-1.016.45a46.79 46.79 0 0 0-7.366-.583h-26.278a46.31 46.31 0 0 0-6.576.479l-1.686-.286s-31.896-1.455-43.822-10.645c-2.408-2.894-.23-3.797.882-5.77 1.638-2.908-2.066-4.306-2.116-5.832-.06-1.86 2.584-3.845 2.895-4.073 14.68-8.93 50.816-11.593 50.816-11.593l-.845-11.644S46.52 65.143 36.902 108.663c-8.432 38.15 45.387 52.636 50.15 81.782l.874 10.208c4.167.525 8.414.797 12.724.797 41.805 0 77.665-25.45 92.935-61.701-7.963-4.976-17.523-8.463-28.97-9.477z"/>
+        <radialGradient id="a" cx="133.181" cy="87.203" r="26.001" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#915a37"/>
+          <stop offset=".299" stop-color="#b1805b"/>
+          <stop offset=".576" stop-color="#c99c75"/>
+          <stop offset=".818" stop-color="#d7ad85"/>
+          <stop offset="1" stop-color="#dcb38b"/>
+        </radialGradient>
+        <path fill="url(#a)" d="M88.335 78.304l3.574 20.63c16.619-4.907 38.44-6.515 38.44-6.515l-.845-11.644s-19.795-3.726-41.17-2.47z"/>
+        <path fill="#bf8f68" d="M119.587 90.935l48.03.69.236-16.457a8.484 8.484 0 0 0-8.362-8.604l-31.066-.446a8.48 8.48 0 0 0-8.601 8.358l-.237 16.459z"/>
+        <radialGradient id="b" cx="139.096" cy="105.403" r="29.595" fx="139.932" fy="105.326" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#915a37"/>
+          <stop offset=".093" stop-color="#9d6844"/>
+          <stop offset=".343" stop-color="#b88963"/>
+          <stop offset=".583" stop-color="#cca079"/>
+          <stop offset=".808" stop-color="#d8ae86"/>
+          <stop offset="1" stop-color="#dcb38b"/>
+        </radialGradient>
+        <path fill="url(#b)" d="M159.456 124.23c-.688-5.305.49-34.218.49-34.218h-29.772s-.312 30.16-1.506 35.484c-1.195 5.324-5.607 4.639-6.974 4.836 2.896 4.942 11.877 8.755 22.14 8.755 10.537 0 20.194-3.504 22.846-8.65-1.902-.274-6.588-1.305-7.224-6.208z"/>
+        <circle cx="163.578" cy="93.482" r="7.149" fill="#dcb38b"/>
+        <radialGradient id="c" cx="131.398" cy="94.684" r="13.738" gradientTransform="matrix(1 .0088 -.0088 1 -.723 -3.06)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#915a37"/>
+          <stop offset=".054" stop-color="#98623e"/>
+          <stop offset=".326" stop-color="#b58560"/>
+          <stop offset=".582" stop-color="#cb9e77"/>
+          <stop offset=".814" stop-color="#d7ae86"/>
+          <stop offset="1" stop-color="#dcb38b"/>
+        </radialGradient>
+        <circle cx="122.021" cy="93.116" r="7.149" fill="url(#c)"/>
+        <path fill="#dcb38b" d="M139.07 120.47l6.11.088c10.049.145 18.313-7.885 18.457-17.935l.34-23.695c.076-5.347-4.196-9.743-9.542-9.82l-22.654-.325c-5.482-.079-9.99 4.301-10.068 9.783l-.34 23.692c-.143 9.917 7.78 18.07 17.697 18.213z"/>
+        <path fill="#bf8f68" d="M119.83 71.376s6.897-2.563 6.823 5.983-5.187 8.627-5.187 8.627l-1.636-14.61z"/>
+        <path fill="#bf8f68" d="M132.314 73.466c3.064-.21 11.692-4.14 17.818-4.42 8.867-.405 11.456 3.81 11.456 3.81s2.538-17.34-10.019-15.088c-12.02 2.156-9.186-3.028-14.347-3.38-4.899-.335-5.039 4.376-8.054 4.54-4.975.273-3.245-5.775-10.831-4.709-7.253 1.02-11.83 21.014 13.977 19.247z"/>
+        <ellipse cx="151.266" cy="88.69" fill="#605d5a" rx="1.684" ry="3.109" transform="rotate(-.642 150.728 88.38)"/>
+        <radialGradient id="d" cx="242.292" cy="155.621" r="12.536" gradientTransform="matrix(.9696 .0718 -.0647 .8738 -81.71 -56.88)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#9b643d"/>
+          <stop offset=".18" stop-color="#a46e47" stop-opacity=".82"/>
+          <stop offset=".687" stop-color="#b8865f" stop-opacity=".313"/>
+          <stop offset="1" stop-color="#bf8f68" stop-opacity="0"/>
+        </radialGradient>
+        <path fill="url(#d)" d="M127.035 113.103l13.988.883.695-11.215a2.343 2.343 0 0 0-.932-2.018l-3.225-2.422a1.601 1.601 0 0 1-.33-2.229l3.205-4.363a6.767 6.767 0 0 0 1.298-3.565l.629-9.226-12.984-.817-2.343 34.972z"/>
+        <path fill="#bf8f68" d="M166.335 79.382c.197-4.017-1.432-7.68-4.434-7.81-1.647-.07-3.8 1.846-3.835 5.728-.077 8.546 5.805 9.01 5.805 9.01s2.268-2.91 2.464-6.928z"/>
+        <ellipse cx="133.588" cy="88.901" fill="#605d5a" rx="1.684" ry="3.109" transform="rotate(-.642 133.12 88.594)"/>
+        <path fill="#bf8f68" d="M147.564 107.996c-.674-.059-1.204.03-1.882.15-.665.129-1.415.319-2.24.46-.82.147-1.728.234-2.676.156-.94-.075-1.944-.352-2.732-.957a.762.762 0 0 1 .38-1.361l.081-.009a22.067 22.067 0 0 0 2.165-.347c.705-.145 1.434-.337 2.238-.485.802-.15 1.68-.285 2.669-.232.963.042 2.146.364 2.892 1.186a.872.872 0 0 1-.718 1.455l-.177-.016z"/>
+        <circle cx="100.65" cy="100.65" r="100.8" fill="none"/>
+        <circle cx="61.871" cy="48.022" r="28.91" fill="#fff"/>
+        <circle cx="90.781" cy="42.047" r="6.609" fill="#fff"/>
+        <circle cx="103.196" cy="47.227" r="3.505" fill="#fff"/>
+        <path fill="#f7b548" d="M61.828 63.526c-.416-.01-.828-.1-1.21-.269a3.336 3.336 0 0 1-1.752-1.698 2.993 2.993 0 0 1-.269-1.263A3.082 3.082 0 0 1 58.866 59a3.37 3.37 0 0 1 .727-1.028 3.276 3.276 0 0 1 1.027-.67 3.27 3.27 0 0 1 3.498.687c.622.604.963 1.44.94 2.306a3.057 3.057 0 0 1-.94 2.307 3.159 3.159 0 0 1-2.29.924zm.055-9.881a2.706 2.706 0 0 1-2.704-2.62l-.494-15.71-.001-.084a2.706 2.706 0 0 1 2.706-2.706h.987l.084.001a2.706 2.706 0 0 1 2.62 2.79l-.493 15.708a2.706 2.706 0 0 1-2.705 2.621z"/>
+      </svg>
 
-      <nav>
-        <ul>
-          <li><button onclick="location.href='#home'">Home</button></li>
-          <li><button onclick="location.href='#about'">About Me</button></li>
-          <li><button onclick="location.href='#experience'">Experience</button></li>
-          <li><button onclick="location.href='#projects'">Projects</button></li>
-          <li><button onclick="location.href='#skills'">Skills</button></li>
-          <li><button onclick="location.href='#contact'">Contact</button></li>
-         <li>
-  <button class="btn-cv" onclick="downloadCV()">
-    Download CV
-  </button>
-</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <div>
-          <small>WELCOME TO MY PORTFOLIO</small>
-          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
-          <h3>Business Analyst | SAP | FMS | Integration Project Support</h3>
-
-          <p>
-            I help bridge business needs and technical solutions by analyzing requirements,
-            preparing functional documentation, designing process flows, and supporting
-            system enhancements across SAP, FMS, and integration platforms.
-          </p>
-
-          <div class="hero-buttons">
-            <button class="btn-primary" onclick="location.href='#projects'">View My Projects</button>
-            <button class="btn-secondary" onclick="downloadCV()">Download CV</button>
-            <button class="btn-secondary" onclick="location.href='#contact'">Contact Me</button>
-          </div>
-
-          <div class="quick-skills">
-            <div class="quick-card"><h4>Requirement Analysis</h4><p>Business needs to solution</p></div>
-            <div class="quick-card"><h4>Process Flow</h4><p>As-Is, To-Be, E2E flow</p></div>
-            <div class="quick-card"><h4>Documentation</h4><p>CRF, FRD, user scenario</p></div>
-            <div class="quick-card"><h4>Integration Support</h4><p>SAP, MuleSoft, API, JSON</p></div>
-          </div>
-        </div>
-
-<div class="hero-image">
-<div class="profile-photo"></div>
-</div>
-</div>
-</section>
-    <section id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>About Me</h2>
-          <p>Short profile and professional focus</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="card">
-            <h3>Professional Summary</h3>
-            <p>
-              I am a Business Analyst based in Medan, North Sumatera, with experience
-              in supporting system enhancement, change request preparation, business
-              process analysis, and integration-related documentation.
-            </p>
-            <br />
-            <p>
-              My work focuses on understanding business requirements, translating them
-              into clear functional specifications, coordinating with users and developers,
-              and ensuring the solution aligns with operational needs.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What I Do Best</h3>
-            <ul class="check-list">
-              <li>Analyze business requirements and translate them into functional solutions.</li>
-              <li>Prepare CRF, requirement documents, and process flows.</li>
-              <li>Support SAP, FMS enhancements, and integration activities.</li>
-              <li>Review field mapping, JSON payload, and system responses.</li>
-              <li>Coordinate with users, developers, and stakeholders.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="oops-h1">
+        <h1 id="oops-line-one" class="oops-line-one">Classic Teams is no longer available</h1>
+        <p id="oops-line-two" class="oops-hidden">
+          Use Teams on the web or download the latest version of the app.
+          <a class="oops-itp-block-learn-more oops-hidden" href="" target="_blank">Learn more</a>
+        </p>
+        <p id="oops-line-three" class="oops-hidden">
+          For more information or assistance, please contact your IT administrator.
+          <a class="oops-eoa-mtr-learn-more oops-hidden">Learn more</a>
+        </p>
       </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-title">
-          <h2>Experience</h2>
-          <p>Professional role and responsibilities</p>
-        </div>
-
-        <div class="experience-card">
-          <h3>Middle Office Assistant Analyst</h3>
-          <span>Medan, North Sumatera</span>
-
-          <ul class="check-list">
-            <li>Analyze business requirements from users and translate them into functional documentation.</li>
-            <li>Prepare CRF, user requirement documents, and meeting summaries.</li>
-            <li>Support SAP, FMS, and integration-related enhancement discussions.</li>
-            <li>Review field mapping, JSON payload, and SAP feedback or errors.</li>
-            <li>Coordinate with users, developers, and related stakeholders.</li>
-            <li>Prepare process flow diagrams and end-to-end business scenarios.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2>Featured Projects</h2>
-          <p>Selected projects covering business process improvement, system enhancement, integration, and UI/UX revamp</p>
-        </div>
-
-        <div class="project-grid">
-          <div class="project-card">
-<div
-  class="project-media farmer"
-  onclick="openProjectGallery('farmer')"
-  role="button"
-  tabindex="0"
-  onkeydown="openGalleryWithKeyboard(event, 'farmer')"
->
-  <div class="media-label">
-    View Farmer Documentation
-  </div>
-</div>
-            <div class="project-content">
-              <span class="project-badge">Farmer Operations Management System</span>
-              <h3>Farmer Operations Management System</h3>
-              <p>Supported business analysis activities for farmer operations processes, including requirement gathering, process flow review, documentation, and coordination with stakeholders.</p>
-              <ul class="project-points">
-                <li>Prepared requirement analysis and functional documentation.</li>
-                <li>Reviewed business process flow and user scenarios.</li>
-                <li>Supported system enhancement discussion with related teams.</li>
-              </ul>
-              <div class="project-tags"><span>Business Analysis</span><span>Process Flow</span><span>Requirement</span><span>Documentation</span></div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div
-  class="project-media facility"
-  onclick="openProjectGallery('facility')"
-  role="button"
-  tabindex="0"
-  onkeydown="openGalleryWithKeyboard(event, 'facility')"
->
-  <div class="media-label">
-    View Facility Documentation
-  </div>
-</div>
-            <div class="project-content">
-              <span class="project-badge">Facility Management System</span>
-              <h3>Project Facility Management System</h3>
-              <p>Involved in FMS enhancement activities related to access management, permit management, approval workflow, document generation, and operational process improvement.</p>
-              <ul class="project-points">
-                <li>Prepared As-Is and To-Be process documentation.</li>
-                <li>Reviewed approval workflow and business rule logic.</li>
-                <li>Supported CRF preparation and stakeholder review.</li>
-              </ul>
-              <div class="project-tags"><span>FMS</span><span>Workflow</span><span>CRF</span><span>System Enhancement</span></div>
-            </div>
-          </div>
-
-        <div class="project-card">
-  <div
-    class="project-media integration"
-    onclick="openProjectGallery('integration')"
-    role="button"
-    tabindex="0"
-    onkeydown="openGalleryWithKeyboard(event, 'integration')"
-  >
-    <div class="media-label">
-      View SAP &amp; WB.NET Documentation
-    </div>
-  </div>
-
-            <div class="project-content">
-              <span class="project-badge">SAP & WB.NET Integration</span>
-              <h3>Integration to SAP and WB.NET</h3>
-              <p>Supported integration analysis between internal systems, SAP, and WB.NET, including mapping review, payload checking, error investigation, and coordination between business and technical teams.</p>
-              <ul class="project-points">
-                <li>Reviewed field mapping and integration requirements.</li>
-                <li>Supported JSON payload and API response checking.</li>
-                <li>Assisted issue analysis related to SAP feedback and integration errors.</li>
-              </ul>
-              <div class="project-tags"><span>SAP</span><span>WB.NET</span><span>API</span><span>JSON Mapping</span><span>Integration</span></div>
-            </div>
-          </div>
-
-          <div class="project-card">
-          <div
-  class="project-media mobile"
-  onclick="openProjectGallery('mobile')"
-  role="button"
-  tabindex="0"
-  onkeydown="openGalleryWithKeyboard(event, 'mobile')"
->
-  <div class="media-label">
-    View Mobile Revamp Documentation
-  </div>
-</div>
-            <div class="project-content">
-              <span class="project-badge">Mobile UI/UX Revamp</span>
-              <h3>Mobile UI/UX Revamp</h3>
-              <p>Involved in mobile application revamp by reviewing user flow, providing UI/UX input, improving screen layout, and ensuring the design supports business process needs.</p>
-              <ul class="project-points">
-                <li>Reviewed mobile user journey and screen flow.</li>
-                <li>Provided UI/UX improvement input for better usability.</li>
-                <li>Aligned mobile design with business requirements.</li>
-              </ul>
-              <div class="project-tags"><span>UI/UX</span><span>Mobile Revamp</span><span>User Flow</span><span>Design Review</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-title"><h2>Skills</h2><p>Business, technical, and documentation capabilities</p></div>
-        <div class="skills-grid">
-          <div class="skill-box"><h3>Business Analysis</h3><div class="tags"><span class="tag">Requirement Gathering</span><span class="tag">CRF Documentation</span><span class="tag">Functional Specification</span><span class="tag">Process Flow</span><span class="tag">User Scenario</span></div></div>
-          <div class="skill-box"><h3>Technical Systems</h3><div class="tags"><span class="tag">SAP</span><span class="tag">FMS</span><span class="tag">WB.NET</span><span class="tag">MuleSoft</span><span class="tag">API</span><span class="tag">JSON</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let’s Connect</h2>
-        <p>Interested to discuss business analysis, system enhancement, or integration-related projects? Feel free to reach out.</p>
-        <div class="contact-info"><div>Email: niken.oktavia@email.com</div><div>LinkedIn: linkedin.com/in/nikenoktavia</div><div>Location: Medan, North Sumatera</div></div>
-      </div>
-    </section>
-  </main>
-
-
-
-  <!-- Project Gallery Modal -->
-<div
-  class="gallery-modal"
-  id="projectGalleryModal"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="projectGalleryTitle"
-  onclick="closeGalleryFromBackground(event)"
->
-  <div class="gallery-container">
-    <button
-      class="gallery-close"
-      type="button"
-      onclick="closeProjectGallery()"
-      aria-label="Close gallery"
-    >
-      &times;
-    </button>
-
-    <div class="gallery-header">
-      <h3 id="projectGalleryTitle">
-        Project Documentation
-      </h3>
-
-      <p id="projectGalleryDescription">
-        Documentation using sample or testing data.
-      </p>
-    </div>
-
-    <div class="gallery-image-area">
-      <img
-        class="gallery-image"
-        id="projectGalleryImage"
-        src=""
-        alt="Project documentation"
-      />
-    </div>
-
-    <div class="gallery-controls">
-      <button
-        class="gallery-button"
-        type="button"
-        onclick="previousGalleryImage()"
+      <a href="/downloads" id="try-again-link">
+        <button class="ts-btn ts-btn-fluent ts-btn-fluent-primary oops-button"
+                type="button">
+          Try again
+        </button>
+      </a>
+     <a
+        id="open-teams-on-web"
+        class="ts-btn ts-btn-fluent ts-btn-fluent-primary oops-button oops-hidden"
+        href=""
+        target="_blank"
       >
-        Previous
-      </button>
-
-      <div
-        class="gallery-counter"
-        id="projectGalleryCounter"
-      >
-        1 / 1
+        Use Teams on the web
+      </a>
+      <a id="open-teams-in-edge-link" class="oops-hidden">
+        <button class="ts-btn ts-btn-fluent ts-btn-fluent-primary oops-button"
+                type="button">
+          
+        </button>
+      </a>
+      <a id="manage-settings-link" class="oops-hidden">
+        <button class="ts-btn ts-btn-fluent ts-btn-fluent-primary oops-button"
+                type="button">
+          
+        </button>
+      </a>
+      <div id="eoa-signout-text" class="oops-text oops-hidden">
+        <a href="https://login.microsoftonline.com/[[tenantId]]/oauth2/logout?post_logout_redirect_uri=https://teams.microsoft.com/" id="eoa-signout-link">Sign out</a>
       </div>
-
-      <button
-        class="gallery-button"
-        type="button"
-        onclick="nextGalleryImage()"
-      >
-        Next
-      </button>
+      <div id="oops-signout-text" class="oops-text oops-hidden">
+        If that doesn't work, try
+        <a href="https://login.microsoftonline.com/[[tenantId]]/oauth2/logout?post_logout_redirect_uri=https://teams.microsoft.com/" id="oops-signout-link">signing out</a>
+        and back in.
+      </div>
+      <div id="alternative-oops-signout-text" class="oops-text oops-hidden">
+        <span id="alternative-oops-signout-before-text">Please</span>
+        <a href="https://login.microsoftonline.com/[[tenantId]]/oauth2/logout?post_logout_redirect_uri=https://teams.microsoft.com/" id="alternative-oops-signout-link">sign out</a>
+        <span id="alternative-oops-signout-after-text">and sign back in</span>
+      </div>
+      <div id="error-ie-not-supported-launch-app" class="oops-text oops-hidden">
+        <span id="launch-app-before-text"></span>
+        <a href="" id="launch-app-link"></a>
+      </div>
     </div>
-
-    <div
-      class="gallery-thumbnails"
-      id="projectGalleryThumbnails"
-      aria-label="Project gallery thumbnails"
-    ></div>
   </div>
-</div>
-  <footer>
-  <p>© 2026 Niken Oktavia. All rights reserved.</p>
-</footer>
-
-<div
-  class="download-toast"
-  id="downloadToast"
-  role="status"
-  aria-live="polite"
->
-  <span class="download-toast-icon">✓</span>
-  <span>Download CV dimulai</span>
-</div>
-
-<script>
-  let downloadToastTimer;
-
-  function downloadCV() {
-    const link = document.createElement("a");
-
-    link.href = "assets/cv-niken-oktavia.pdf";
-    link.download = "CV-Niken-Oktavia.pdf";
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    showDownloadToast();
-  }
-
-  function showDownloadToast() {
-    const toast = document.getElementById("downloadToast");
-
-    if (!toast) {
-      return;
-    }
-
-    clearTimeout(downloadToastTimer);
-    toast.classList.add("show");
-
-    downloadToastTimer = setTimeout(function () {
-      toast.classList.remove("show");
-    }, 3000);
-  }
-
-
-  const projectGalleries = {
-  farmer: {
-    title: "Farmer Operations Management System",
-    description:
-      "Business process, system functionality, and project documentation.",
-    images: [
-  "assets/farmer-operations.png",
-  "assets/farmer-operations-1.png",
-  "assets/farmer-operations-2.png",
-  "assets/farmer-operations-3.png"
-]
-  },
-
-  facility: {
-    title: "Facility Management System",
-    description:
-      "FMS workflow, dashboard, transaction, and enhancement documentation.",
-    images: [
-  "assets/facility-management.png",
-  "assets/facility-management-1.png",
-  "assets/facility-management-2.png",
-  "assets/facility-management-3.png"
-]
-  },
-
-  integration: {
-    title: "SAP and WB.NET Integration",
-    description:
-      "Integration flow, mapping, payload, response, and testing documentation.",
-    images: [
-  "assets/sap-wbnet-integration.png",
-  "assets/sap-wbnet-integration-1.png",
-  "assets/sap-wbnet-integration-2.png",
-  "assets/sap-wbnet-integration-3.png"
-]
-  },
-
-  mobile: {
-    title: "Mobile UI/UX Revamp",
-    description:
-      "Mobile user flow, interface design, and revamp documentation.",
-    images: [
-  "assets/mobile-revamp.png",
-  "assets/mobile-revamp-1.png",
-  "assets/mobile-revamp-2.png",
-  "assets/mobile-revamp-3.png"
-]
-  }
-};
-
-let activeProjectGallery = null;
-let activeGalleryIndex = 0;
-
-function openProjectGallery(projectKey) {
-  activeProjectGallery = projectGalleries[projectKey];
-  activeGalleryIndex = 0;
-
-  if (!activeProjectGallery) {
-    return;
-  }
-
-  const modal = document.getElementById(
-    "projectGalleryModal"
-  );
-
-  const title = document.getElementById(
-    "projectGalleryTitle"
-  );
-
-  const description = document.getElementById(
-    "projectGalleryDescription"
-  );
-
-  if (!modal || !title || !description) {
-    return;
-  }
-
-  title.textContent = activeProjectGallery.title;
-  description.textContent =
-    activeProjectGallery.description;
-
-  modal.classList.add("show");
-  document.body.style.overflow = "hidden";
-
-  renderProjectGallery();
-}
-
-function renderProjectGallery() {
-  if (!activeProjectGallery) {
-    return;
-  }
-
-  const image = document.getElementById(
-    "projectGalleryImage"
-  );
-
-  const counter = document.getElementById(
-    "projectGalleryCounter"
-  );
-
-  const thumbnails = document.getElementById(
-    "projectGalleryThumbnails"
-  );
-
-  if (!image || !counter || !thumbnails) {
-    return;
-  }
-
-  const currentImage =
-    activeProjectGallery.images[activeGalleryIndex];
-
-  image.src = currentImage;
-
-  image.alt =
-    activeProjectGallery.title +
-    " documentation image " +
-    (activeGalleryIndex + 1);
-
-  counter.textContent =
-    activeGalleryIndex +
-    1 +
-    " / " +
-    activeProjectGallery.images.length;
-
-  thumbnails.innerHTML = "";
-
-  activeProjectGallery.images.forEach(
-    function (imagePath, index) {
-      const thumbnailButton =
-        document.createElement("button");
-
-      thumbnailButton.type = "button";
-      thumbnailButton.className =
-        "gallery-thumbnail";
-
-      if (index === activeGalleryIndex) {
-        thumbnailButton.classList.add("active");
-      }
-
-      thumbnailButton.onclick = function () {
-        activeGalleryIndex = index;
-        renderProjectGallery();
-      };
-
-      const thumbnailImage =
-        document.createElement("img");
-
-      thumbnailImage.src = imagePath;
-      thumbnailImage.alt =
-        "Open documentation image " +
-        (index + 1);
-
-      thumbnailButton.appendChild(
-        thumbnailImage
-      );
-
-      thumbnails.appendChild(
-        thumbnailButton
-      );
-    }
-  );
-}
-
-function nextGalleryImage() {
-  if (!activeProjectGallery) {
-    return;
-  }
-
-  activeGalleryIndex =
-    (activeGalleryIndex + 1) %
-    activeProjectGallery.images.length;
-
-  renderProjectGallery();
-}
-
-function previousGalleryImage() {
-  if (!activeProjectGallery) {
-    return;
-  }
-
-  activeGalleryIndex =
-    (
-      activeGalleryIndex -
-      1 +
-      activeProjectGallery.images.length
-    ) %
-    activeProjectGallery.images.length;
-
-  renderProjectGallery();
-}
-
-function closeProjectGallery() {
-  const modal = document.getElementById(
-    "projectGalleryModal"
-  );
-
-  if (!modal) {
-    return;
-  }
-
-  modal.classList.remove("show");
-  document.body.style.overflow = "";
-  activeProjectGallery = null;
-}
-
-function closeGalleryFromBackground(event) {
-  if (event.target.id === "projectGalleryModal") {
-    closeProjectGallery();
-  }
-}
-
-function openGalleryWithKeyboard(
-  event,
-  projectKey
-) {
-  if (
-    event.key === "Enter" ||
-    event.key === " "
-  ) {
-    event.preventDefault();
-    openProjectGallery(projectKey);
-  }
-}
-
-document.addEventListener(
-  "keydown",
-  function (event) {
-    const modal = document.getElementById(
-      "projectGalleryModal"
-    );
-
-    if (
-      !modal ||
-      !modal.classList.contains("show")
-    ) {
-      return;
-    }
-
-    if (event.key === "Escape") {
-      closeProjectGallery();
-    }
-
-    if (event.key === "ArrowRight") {
-      nextGalleryImage();
-    }
-
-    if (event.key === "ArrowLeft") {
-      previousGalleryImage();
-    }
-  }
-);
-</script>
-
+  <a id="log-download"><div id="session-id" class="oops-ref"></div></a>
+  <script src="https://teams.public.onecdn.static.microsoft/hashed/ErrorTemplatePage-029e165.js" nonce="MkCaxQzAXEKgC3900stf9g=="></script>
 </body>
 </html>
