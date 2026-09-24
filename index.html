@@ -1,138 +1,1719 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Portfolio of Niken Oktavia, a Business Analyst experienced in business process improvement, system enhancement, FOMS, FMS, integration support with SAP and WB.NET, SIT, UAT, and mobile UI/UX review."
-  >
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Niken Oktavia | Business Analyst Portfolio</title>
-
+  
   <style>
     :root {
-      --bg: #f8fbff;
-      --white: #ffffff;
-      --text: #243047;
-      --muted: #64748b;
+  --bg: #f8fbff;
+  --white: #ffffff;
+  --text: #243047;
+  --muted: #64748b;
 
-      --soft-blue: #dbeafe;
-      --soft-blue-light: #eff6ff;
+  --soft-blue: #dbeafe;
+  --soft-blue-2: #eff6ff;
+  --soft-pink: #f9dce8;
+  --soft-pink-2: #fff5f8;
 
-      --soft-pink: #f9dce8;
-      --soft-pink-light: #fff5f8;
+  --accent-blue: #7aa7e8;
+  --accent-pink: #d96fa7;
+  --dark-blue: #1e3a5f;
 
-      --accent-blue: #6f9fdf;
-      --accent-pink: #cf659d;
-      --dark-blue: #1e3a5f;
-
-      --border: #e5e7eb;
-      --shadow: 0 12px 32px rgba(30, 58, 95, 0.1);
-    }
-
+  --border: #e5e7eb;
+  --shadow: 0 12px 32px rgba(30, 58, 95, 0.10);
+}
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    button,
-    a {
-      font: inherit;
-    }
-
-    button {
-      border: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
     .container {
-      width: min(90%, 1200px);
-      margin-inline: auto;
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 16px rgba(30, 58, 95, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      cursor: pointer;
+      background: none;
+      border: 0;
+      text-align: left;
+    }
+
+    .logo h2 {
+      color: var(--dark-blue);
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-pink);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav button,
+    .btn-cv {
+      border: 0;
+      background: transparent;
+      font-weight: bold;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      transition: 0.25s;
+    }
+
+    nav button:hover {
+      color: var(--dark-blue);
+      background: var(--soft-blue-2);
+    }
+
+    .btn-cv {
+      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
+      color: var(--dark-blue);
+      padding: 10px 18px;
+      border: 1px solid #dbeafe;
+    }
+
+    .btn-cv:hover {
+      background: linear-gradient(135deg, #bfdbfe, #fbcfe8);
+      color: var(--dark-blue);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.25), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(96, 165, 250, 0.24), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eff6ff 48%, #fff1f2 100%);
+      color: var(--text);
+      padding: 86px 0;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero small {
+      color: var(--accent-pink);
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      margin: 18px 0 10px;
+      line-height: 1.1;
+      color: var(--dark-blue);
+    }
+
+    .hero h1 span {
+      color: var(--accent-pink);
+    }
+
+    .hero h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #334155;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+  background: linear-gradient(
+    135deg,
+    #6f9fdf,
+    #cf659d
+  );
+  color: #ffffff;
+  border: 0;
+  box-shadow: 0 10px 22px rgba(111, 159, 223, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(207, 101, 157, 0.28);
+  filter: brightness(0.96);
+}
+
+    .btn-secondary {
+      border: 1px solid #cbd5e1;
+      color: var(--dark-blue);
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      background: var(--soft-blue-2);
+    }
+
+    .hero-image {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(203, 213, 225, 0.8);
+      border-radius: 28px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .profile-photo {
+  width: min(260px, 100%);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  border-radius: 50%;
+  background-image: url("assets/profile-niken.png");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  border: 8px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(30, 58, 95, 0.18);
+}
+
+    .profile-placeholder {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      margin: auto;
+      background: linear-gradient(135deg, var(--soft-blue), var(--soft-pink));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-blue);
+      font-size: 64px;
+      font-weight: bold;
+      box-shadow: 0 20px 40px rgba(30, 58, 95, 0.18);
+    }
+
+    .quick-skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .quick-card {
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+    }
+
+    .quick-card h4 {
+      color: var(--dark-blue);
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .quick-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
     }
 
     section {
       padding: 72px 0;
     }
 
-    /* Header */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
-      box-shadow: 0 2px 16px rgba(30, 58, 95, 0.07);
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-    }
-
-    .logo {
-      background: transparent;
-      cursor: pointer;
-      text-align: left;
-    }
-
-    .logo h2 {
+    .section-title h2 {
       color: var(--dark-blue);
-      font-size: 23px;
-      letter-spacing: 1px;
+      font-size: 32px;
+      margin-bottom: 8px;
     }
 
-    .logo span {
-      display: block;
-      color: var(--accent-pink);
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 3px;
+    .section-title p {
+      color: var(--muted);
     }
 
-    nav ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 8px;
+    .about-grid,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .card,
+    .experience-card,
+    .skill-box {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card h3,
+    .experience-card h3,
+    .skill-box h3 {
+      color: var(--dark-blue);
+      margin-bottom: 15px;
+    }
+
+    .check-list {
       list-style: none;
     }
 
-    nav button,
-    nav a {
-      display: inline-block;
-      padding: 9px 11px;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--text);
-      font-size: 14px;
+    .check-list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-pink);
       font-weight: bold;
+    }
+
+    .experience-card {
+      border-left: 6px solid var(--accent-blue);
+    }
+
+    .experience-card span {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(30, 58, 95, 0.16);
+    }
+
+    .project-media {
+  width: 100%;
+  height: 260px;
+  background-color: #f8fbff;
+  background-image: linear-gradient(135deg, #dbeafe, #f9dce8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-blue);
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+    .project-media.farmer {
+  background-image: url("assets/farmer-operations.png");
+}
+
+.project-media.facility {
+  background-image: url("assets/facility-management.png");
+}
+
+.project-media.integration {
+  background-image: url("assets/sap-wbnet-integration.png");
+}
+
+.project-media.mobile {
+  background-image: url("assets/mobile-revamp.png");
+}
+
+    .project-media .media-icon {
+      font-size: 56px;
+      z-index: 2;
+    }
+
+    .project-media .media-label {
+      position: absolute;
+      bottom: 16px;
+      left: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--dark-blue);
+      backdrop-filter: blur(8px);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .project-content {
+      padding: 26px;
+    }
+
+    .project-badge {
+      display: inline-block;
+      background: var(--soft-blue-2);
+      color: var(--dark-blue);
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      border: 1px solid #dbeafe;
+    }
+
+    .project-content h3 {
+      color: var(--dark-blue);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .project-points {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .project-points li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 9px;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .project-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-pink);
+      font-size: 22px;
+      line-height: 16px;
+    }
+
+    .project-tags,
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tags span,
+    .tag {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: var(--dark-blue);
+      padding: 7px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #eff6ff, #fff1f2);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: var(--dark-blue);
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-info div {
+      background: rgba(255, 255, 255, 0.78);
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+    }
+
+    footer {
+      background: #ffffff;
+      color: var(--muted);
+      text-align: center;
+      padding: 18px 0;
+      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+/* Interactive Header Buttons */
+nav button {
+  position: relative;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+nav button:hover {
+  color: var(--dark-blue);
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue),
+    var(--soft-pink)
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.14);
+}
+
+nav button:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
+}
+
+nav button:focus-visible {
+  outline: 3px solid rgba(122, 167, 232, 0.35);
+  outline-offset: 3px;
+}
+
+/* Interactive Hero Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-cv {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(207, 101, 157, 0.28);
+  filter: brightness(1.03);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 10px rgba(111, 159, 223, 0.22);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue),
+    var(--soft-pink)
+  );
+  color: var(--dark-blue);
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.14);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.12);
+}
+
+.btn-cv:hover {
+  background: linear-gradient(
+    135deg,
+    #bfd6f5,
+    #f2c3d9
+  );
+  color: var(--dark-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.14);
+}
+
+.btn-cv:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 3px 8px rgba(30, 58, 95, 0.12);
+}
+
+/* Responsive */
+
+    /* Download Notification */
+.download-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--dark-blue);
+  box-shadow: 0 14px 35px rgba(30, 58, 95, 0.18);
+font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+.download-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.download-toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-blue),
+    var(--accent-pink)
+  );
+  color: #ffffff;
+  font-size: 16px;
+}
+
+    /* Clickable Project Image */
+.project-media {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.project-media:hover {
+  filter: brightness(0.94);
+}
+
+.project-media:active {
+  transform: scale(0.99);
+}
+
+.media-label {
+  z-index: 3;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.gallery-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-container {
+  position: relative;
+  width: min(1000px, 96vw);
+  max-height: 92vh;
+  padding: 24px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.38);
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.3s ease;
+}
+
+.gallery-modal.show .gallery-container {
+  transform: translateY(0) scale(1);
+}
+
+.gallery-header {
+  padding-right: 50px;
+  margin-bottom: 16px;
+}
+
+.gallery-header h3 {
+  color: var(--dark-blue);
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.gallery-header p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--soft-pink);
+  color: var(--dark-blue);
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-close:hover {
+  background: #f2c3d9;
+  transform: rotate(90deg);
+}
+
+.gallery-image-area {
+  width: 100%;
+  min-height: 320px;
+  max-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--soft-blue-2),
+    var(--soft-pink-2)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-height: 620px;
+  display: block;
+  object-fit: contain;
+}
+
+.gallery-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.gallery-button {
+  border: 0;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    #6f9fdf,
+    #cf659d
+  );
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gallery-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 58, 95, 0.2);
+}
+
+.gallery-button:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.gallery-counter {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 4px 2px 8px;
+  overflow-x: auto;
+}
+
+.gallery-thumbnail {
+  width: 96px;
+  height: 64px;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-thumbnail.active {
+  border-color: var(--accent-pink);
+}
+
+/* Gallery Mobile */
+@media (max-width: 768px) {
+  .gallery-modal {
+    padding: 10px;
+  }
+
+  .gallery-container {
+    width: 100%;
+    max-height: 94vh;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .gallery-header h3 {
+    font-size: 18px;
+  }
+
+  .gallery-image-area {
+    min-height: 220px;
+  }
+
+  .gallery-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-counter {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .gallery-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .gallery-thumbnail {
+    width: 74px;
+    height: 52px;
+  }
+}
+    @media (max-width: 992px) {   
+        .hero-content,
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-skills,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+
+@media (max-width: 768px) {
+  /* Mobile Header */
+  header {
+    position: relative;
+  }
+
+  .navbar {
+    width: 92%;
+    flex-direction: column;
+    padding: 16px 0 18px;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo h2 {
+    font-size: 25px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .logo span {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    white-space: nowrap;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 8px 10px;
+  }
+
+  nav button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  nav .btn-cv {
+    padding: 9px 16px;
+  }
+
+  /* Mobile Hero */
+  .hero {
+    padding: 50px 0 44px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .hero small {
+    display: block;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 2.5px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    line-height: 1.05;
+    margin: 20px 0 18px;
+  }
+
+  .hero h3 {
+    font-size: 19px;
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 26px;
+  }
+
+  /* Mobile Hero Buttons */
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-bottom: 28px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 16px;
+    font-size: 14px;
+  }
+
+  .hero-buttons .btn-secondary:last-child {
+    grid-column: auto;
+  }
+
+  /* Mobile Content */
+  .quick-skills,
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .quick-card {
+    padding: 18px;
+  }
+
+  .quick-card h4 {
+    font-size: 16px;
+  }
+
+  .quick-card p {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    padding: 24px;
+  }
+
+  .profile-photo {
+    width: min(210px, 100%);
+  }
+
+  .project-media {
+    height: 220px;
+  }
+
+  .download-toast {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    justify-content: center;
+  }
+}
+    @media (max-width: 420px) {
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons .btn-secondary:last-child {
+    grid-column: auto;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero h3 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav button {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  nav .btn-cv {
+    padding: 8px 13px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <button class="logo" onclick="location.href='#home'">
+        <h2>NIKEN OKTAVIA</h2>
+        <span>BUSINESS ANALYST</span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><button onclick="location.href='#home'">Home</button></li>
+          <li><button onclick="location.href='#about'">About Me</button></li>
+          <li><button onclick="location.href='#experience'">Experience</button></li>
+          <li><button onclick="location.href='#projects'">Projects</button></li>
+          <li><button onclick="location.href='#skills'">Skills</button></li>
+          <li><button onclick="location.href='#contact'">Contact</button></li>
+         <li>
+  <button class="btn-cv" onclick="downloadCV()">
+    Download CV
+  </button>
+</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <small>WELCOME TO MY PORTFOLIO</small>
+          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
+          <h3>Business Analyst | SAP | FMS | Integration Project Support</h3>
+
+          <p>
+            I help bridge business needs and technical solutions by analyzing requirements,
+            preparing functional documentation, designing process flows, and supporting
+            system enhancements across SAP, FMS, and integration platforms.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="location.href='#projects'">View My Projects</button>
+            <button class="btn-secondary" onclick="downloadCV()">Download CV</button>
+            <button class="btn-secondary" onclick="location.href='#contact'">Contact Me</button>
+          </div>
+
+          <div class="quick-skills">
+            <div class="quick-card"><h4>Requirement Analysis</h4><p>Business needs to solution</p></div>
+            <div class="quick-card"><h4>Process Flow</h4><p>As-Is, To-Be, E2E flow</p></div>
+            <div class="quick-card"><h4>Documentation</h4><p>CRF, FRD, user scenario</p></div>
+            <div class="quick-card"><h4>Integration Support</h4><p>SAP, MuleSoft, API, JSON</p></div>
+          </div>
+        </div>
+
+<div class="hero-image">
+<div class="profile-photo"></div>
+</div>
+</div>
+</section>
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Short profile and professional focus</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Professional Summary</h3>
+            <p>
+              I am a Business Analyst based in Medan, North Sumatera, with experience
+              in supporting system enhancement, change request preparation, business
+              process analysis, and integration-related documentation.
+            </p>
+            <br />
+            <p>
+              My work focuses on understanding business requirements, translating them
+              into clear functional specifications, coordinating with users and developers,
+              and ensuring the solution aligns with operational needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What I Do Best</h3>
+            <ul class="check-list">
+              <li>Analyze business requirements and translate them into functional solutions.</li>
+              <li>Prepare CRF, requirement documents, and process flows.</li>
+              <li>Support SAP, FMS enhancements, and integration activities.</li>
+              <li>Review field mapping, JSON payload, and system responses.</li>
+              <li>Coordinate with users, developers, and stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p>Professional role and responsibilities</p>
+        </div>
+
+        <div class="experience-card">
+          <h3>Middle Office Assistant Analyst</h3>
+          <span>Medan, North Sumatera</span>
+
+          <ul class="check-list">
+            <li>Analyze business requirements from users and translate them into functional documentation.</li>
+            <li>Prepare CRF, user requirement documents, and meeting summaries.</li>
+            <li>Support SAP, FMS, and integration-related enhancement discussions.</li>
+            <li>Review field mapping, JSON payload, and SAP feedback or errors.</li>
+            <li>Coordinate with users, developers, and related stakeholders.</li>
+            <li>Prepare process flow diagrams and end-to-end business scenarios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <p>Selected projects covering business process improvement, system enhancement, integration, and UI/UX revamp</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-card">
+<div
+  class="project-media farmer"
+  onclick="openProjectGallery('farmer')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'farmer')"
+>
+  <div class="media-label">
+    View Farmer Documentation
+  </div>
+</div>
+            <div class="project-content">
+              <span class="project-badge">Farmer Operations Management System</span>
+              <h3>Farmer Operations Management System</h3>
+              <p>Supported business analysis activities for farmer operations processes, including requirement gathering, process flow review, documentation, and coordination with stakeholders.</p>
+              <ul class="project-points">
+                <li>Prepared requirement analysis and functional documentation.</li>
+                <li>Reviewed business process flow and user scenarios.</li>
+                <li>Supported system enhancement discussion with related teams.</li>
+              </ul>
+              <div class="project-tags"><span>Business Analysis</span><span>Process Flow</span><span>Requirement</span><span>Documentation</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div
+  class="project-media facility"
+  onclick="openProjectGallery('facility')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'facility')"
+>
+  <div class="media-label">
+    View Facility Documentation
+  </div>
+</div>
+            <div class="project-content">
+              <span class="project-badge">Facility Management System</span>
+              <h3>Project Facility Management System</h3>
+              <p>Involved in FMS enhancement activities related to access management, permit management, approval workflow, document generation, and operational process improvement.</p>
+              <ul class="project-points">
+                <li>Prepared As-Is and To-Be process documentation.</li>
+                <li>Reviewed approval workflow and business rule logic.</li>
+                <li>Supported CRF preparation and stakeholder review.</li>
+              </ul>
+              <div class="project-tags"><span>FMS</span><span>Workflow</span><span>CRF</span><span>System Enhancement</span></div>
+            </div>
+          </div>
+
+        <div class="project-card">
+  <div
+    class="project-media integration"
+    onclick="openProjectGallery('integration')"
+    role="button"
+    tabindex="0"
+    onkeydown="openGalleryWithKeyboard(event, 'integration')"
+  >
+    <div class="media-label">
+      View SAP &amp; WB.NET Documentation
+    </div>
+  </div>
+
+            <div class="project-content">
+              <span class="project-badge">SAP & WB.NET Integration</span>
+              <h3>Integration to SAP and WB.NET</h3>
+              <p>Supported integration analysis between internal systems, SAP, and WB.NET, including mapping review, payload checking, error investigation, and coordination between business and technical teams.</p>
+              <ul class="project-points">
+                <li>Reviewed field mapping and integration requirements.</li>
+                <li>Supported JSON payload and API response checking.</li>
+                <li>Assisted issue analysis related to SAP feedback and integration errors.</li>
+              </ul>
+              <div class="project-tags"><span>SAP</span><span>WB.NET</span><span>API</span><span>JSON Mapping</span><span>Integration</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+          <div
+  class="project-media mobile"
+  onclick="openProjectGallery('mobile')"
+  role="button"
+  tabindex="0"
+  onkeydown="openGalleryWithKeyboard(event, 'mobile')"
+>
+  <div class="media-label">
+    View Mobile Revamp Documentation
+  </div>
+</div>
+            <div class="project-content">
+              <span class="project-badge">Mobile UI/UX Revamp</span>
+              <h3>Mobile UI/UX Revamp</h3>
+              <p>Involved in mobile application revamp by reviewing user flow, providing UI/UX input, improving screen layout, and ensuring the design supports business process needs.</p>
+              <ul class="project-points">
+                <li>Reviewed mobile user journey and screen flow.</li>
+                <li>Provided UI/UX improvement input for better usability.</li>
+                <li>Aligned mobile design with business requirements.</li>
+              </ul>
+              <div class="project-tags"><span>UI/UX</span><span>Mobile Revamp</span><span>User Flow</span><span>Design Review</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-title"><h2>Skills</h2><p>Business, technical, and documentation capabilities</p></div>
+        <div class="skills-grid">
+          <div class="skill-box"><h3>Business Analysis</h3><div class="tags"><span class="tag">Requirement Gathering</span><span class="tag">CRF Documentation</span><span class="tag">Functional Specification</span><span class="tag">Process Flow</span><span class="tag">User Scenario</span></div></div>
+          <div class="skill-box"><h3>Technical Systems</h3><div class="tags"><span class="tag">SAP</span><span class="tag">FMS</span><span class="tag">WB.NET</span><span class="tag">MuleSoft</span><span class="tag">API</span><span class="tag">JSON</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <p>Interested to discuss business analysis, system enhancement, or integration-related projects? Feel free to reach out.</p>
+        <div class="contact-info"><div>Email: niken.oktavia@email.com</div><div>LinkedIn: linkedin.com/in/nikenoktavia</div><div>Location: Medan, North Sumatera</div></div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Project Gallery Modal -->
+<div
+  class="gallery-modal"
+  id="projectGalleryModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="projectGalleryTitle"
+  onclick="closeGalleryFromBackground(event)"
+>
+  <div class="gallery-container">
+    <button
+      class="gallery-close"
+      type="button"
+      onclick="closeProjectGallery()"
+      aria-label="Close gallery"
+    >
+      &times;
+    </button>
+
+    <div class="gallery-header">
+      <h3 id="projectGalleryTitle">
+        Project Documentation
+      </h3>
+
+      <p id="projectGalleryDescription">
+        Documentation using sample or testing data.
+      </p>
+    </div>
+
+    <div class="gallery-image-area">
+      <img
+        class="gallery-image"
+        id="projectGalleryImage"
+        src=""
+        alt="Project documentation"
+      />
+    </div>
+
+    <div class="gallery-controls">
+      <button
+        class="gallery-button"
+        type="button"
+        onclick="previousGalleryImage()"
+      >
+        Previous
+      </button>
+
+      <div
+        class="gallery-counter"
+        id="projectGalleryCounter"
+      >
+        1 / 1
+      </div>
+
+      <button
+        class="gallery-button"
+        type="button"
+        onclick="nextGalleryImage()"
+      >
+        Next
+      </button>
+    </div>
+
+    <div
+      class="gallery-thumbnails"
+      id="projectGalleryThumbnails"
+      aria-label="Project gallery thumbnails"
+    ></div>
+  </div>
+</div>
+  <footer>
+  <p>© 2026 Niken Oktavia. All rights reserved.</p>
+</footer>
+
+<div
+  class="download-toast"
+  id="downloadToast"
+  role="status"
+  aria-live="polite"
+>
+  <span class="download-toast-icon">✓</span>
+  <span>Download CV dimulai</span>
+</div>
+
+<script>
+  let downloadToastTimer;
+
+  function downloadCV() {
+    const link = document.createElement("a");
+
+    link.href = "assets/cv-niken-oktavia.pdf";
+    link.download = "CV-Niken-Oktavia.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    showDownloadToast();
+  }
+
+  function showDownloadToast() {
+    const toast = document.getElementById("downloadToast");
+
+    if (!toast) {
+      return;
+    }
+
+    clearTimeout(downloadToastTimer);
+    toast.classList.add("show");
+
+    downloadToastTimer = setTimeout(function () {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+
+
+  const projectGalleries = {
+  farmer: {
+    title: "Farmer Operations Management System",
+    description:
+      "Business process, system functionality, and project documentation.",
+    images: [
+  "assets/farmer-operations.png",
+  "assets/farmer-operations-1.png",
+  "assets/farmer-operations-2.png",
+  "assets/farmer-operations-3.png"
+]
+  },
+
+  facility: {
+    title: "Facility Management System",
+    description:
+      "FMS workflow, dashboard, transaction, and enhancement documentation.",
+    images: [
+  "assets/facility-management.png",
+  "assets/facility-management-1.png",
+  "assets/facility-management-2.png",
+  "assets/facility-management-3.png"
+]
+  },
+
+  integration: {
+    title: "SAP and WB.NET Integration",
+    description:
+      "Integration flow, mapping, payload, response, and testing documentation.",
+    images: [
+  "assets/sap-wbnet-integration.png",
+  "assets/sap-wbnet-integration-1.png",
+  "assets/sap-wbnet-integration-2.png",
+  "assets/sap-wbnet-integration-3.png"
+]
+  },
+
+  mobile: {
+    title: "Mobile UI/UX Revamp",
+    description:
+      "Mobile user flow, interface design, and revamp documentation.",
+    images: [
+  "assets/mobile-revamp.png",
+  "assets/mobile-revamp-1.png",
+  "assets/mobile-revamp-2.png",
+  "assets/mobile-revamp-3.png"
+]
+  }
+};
+
+let activeProjectGallery = null;
+let activeGalleryIndex = 0;
+
+function openProjectGallery(projectKey) {
+  activeProjectGallery = projectGalleries[projectKey];
+  activeGalleryIndex = 0;
+
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  const modal = document.getElementById(
+    "projectGalleryModal"
+  );
+
+  const title = document.getElementById(
+    "projectGalleryTitle"
+  );
+
+  const description = document.getElementById(
+    "projectGalleryDescription"
+  );
+
+  if (!modal || !title || !description) {
+    return;
+  }
+
+  title.textContent = activeProjectGallery.title;
+  description.textContent =
+    activeProjectGallery.description;
+
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+
+  renderProjectGallery();
+}
+
+function renderProjectGallery() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  const image = document.getElementById(
+    "projectGalleryImage"
+  );
+
+  const counter = document.getElementById(
+    "projectGalleryCounter"
+  );
+
+  const thumbnails = document.getElementById(
+    "projectGalleryThumbnails"
+  );
+
+  if (!image || !counter || !thumbnails) {
+    return;
+  }
+
+  const currentImage =
+    activeProjectGallery.images[activeGalleryIndex];
+
+  image.src = currentImage;
+
+  image.alt =
+    activeProjectGallery.title +
+    " documentation image " +
+    (activeGalleryIndex + 1);
+
+  counter.textContent =
+    activeGalleryIndex +
+    1 +
+    " / " +
+    activeProjectGallery.images.length;
+
+  thumbnails.innerHTML = "";
+
+  activeProjectGallery.images.forEach(
+    function (imagePath, index) {
+      const thumbnailButton =
+        document.createElement("button");
+
+      thumbnailButton.type = "button";
+      thumbnailButton.className =
+        "gallery-thumbnail";
+
+      if (index === activeGalleryIndex) {
+        thumbnailButton.classList.add("active");
+      }
+
+      thumbnailButton.onclick = function () {
+        activeGalleryIndex = index;
+        renderProjectGallery();
+      };
+
+      const thumbnailImage =
+        document.createElement("img");
+
+      thumbnailImage.src = imagePath;
+      thumbnailImage.alt =
+        "Open documentation image " +
+        (index + 1);
+
+      thumbnailButton.appendChild(
+        thumbnailImage
+      );
+
+      thumbnails.appendChild(
+        thumbnailButton
+      );
+    }
+  );
+}
+
+function nextGalleryImage() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  activeGalleryIndex =
+    (activeGalleryIndex + 1) %
+    activeProjectGallery.images.length;
+
+  renderProjectGallery();
+}
+
+function previousGalleryImage() {
+  if (!activeProjectGallery) {
+    return;
+  }
+
+  activeGalleryIndex =
+    (
+      activeGalleryIndex -
+      1 +
+      activeProjectGallery.images.length
+    ) %
+    activeProjectGallery.images.length;
+
+  renderProjectGallery();
+}
+
+function closeProjectGallery() {
+  const modal = document.getElementById(
+    "projectGalleryModal"
+  );
+
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+  activeProjectGallery = null;
+}
+
+function closeGalleryFromBackground(event) {
+  if (event.target.id === "projectGalleryModal") {
+    closeProjectGallery();
+  }
+}
+
+function openGalleryWithKeyboard(
+  event,
+  projectKey
+) {
+  if (
+    event.key === "Enter" ||
+    event.key === " "
+  ) {
+    event.preventDefault();
+    openProjectGallery(projectKey);
+  }
+}
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+    const modal = document.getElementById(
+      "projectGalleryModal"
+    );
+
+    if (
+      !modal ||
+      !modal.classList.contains("show")
+    ) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeProjectGallery();
+    }
+
+    if (event.key === "ArrowRight") {
+      nextGalleryImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+      previousGalleryImage();
+    }
+  }
+);
+</script>
+
+</body>
+</html>
