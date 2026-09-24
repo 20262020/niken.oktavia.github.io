@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Niken Oktavia | Business Analyst Portfolio</title>
+<meta
+  name="description"
+  content="Portfolio of Niken Oktavia, a Business Analyst experienced in business process improvement, system enhancement, SAP and WB.NET integration support, FMS, FOMS, functional documentation, SIT, UAT, and mobile UI/UX review."
+>
+
+<title>Niken Oktavia | Business Analyst Portfolio</title>
   
   <style>
     :root {
@@ -503,23 +508,37 @@
     }
 
     .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-    .contact-info div {
-      background: rgba(255, 255, 255, 0.78);
-      padding: 14px 20px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
-    }
+.contact-info a,
+.contact-info div {
+  display: block;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
 
-    footer {
-      background: #ffffff;
+.contact-info a:hover {
+  transform: translateY(-3px);
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+}
+
+footer {
+  background: #ffffff;
       color: var(--muted);
       text-align: center;
       padding: 18px 0;
@@ -1124,15 +1143,22 @@ font-size: 14px;
     <section class="hero" id="home">
       <div class="container hero-content">
         <div>
-          <small>WELCOME TO MY PORTFOLIO</small>
-          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
-          <h3>Business Analyst | SAP | FMS | Integration Project Support</h3>
+          <small>BUSINESS ANALYST PORTFOLIO</small>
 
-          <p>
-            I help bridge business needs and technical solutions by analyzing requirements,
-            preparing functional documentation, designing process flows, and supporting
-            system enhancements across SAP, FMS, and integration platforms.
-          </p>
+<h1>
+  Hi, I’m <span>Niken Oktavia</span>
+</h1>
+
+<h3>
+  Business Analyst | Business Process Improvement | System Enhancement | Integration Support
+</h3>
+
+<p>
+  I bridge business requirements and technical solutions by analyzing
+  operational processes, gathering and documenting requirements, preparing
+  functional specifications, supporting system enhancements, and coordinating
+  SIT and UAT across FMS, FOMS, SAP, WB.NET, and mobile applications.
+</p>
 
           <div class="hero-buttons">
             <button class="btn-primary" onclick="location.href='#projects'">View My Projects</button>
@@ -1141,12 +1167,26 @@ font-size: 14px;
           </div>
 
           <div class="quick-skills">
-            <div class="quick-card"><h4>Requirement Analysis</h4><p>Business needs to solution</p></div>
-            <div class="quick-card"><h4>Process Flow</h4><p>As-Is, To-Be, E2E flow</p></div>
-            <div class="quick-card"><h4>Documentation</h4><p>CRF, FRD, user scenario</p></div>
-            <div class="quick-card"><h4>Integration Support</h4><p>SAP, MuleSoft, API, JSON</p></div>
-          </div>
-        </div>
+  <div class="quick-card">
+    <h4>Business Analysis</h4>
+    <p>Requirement gathering and business process analysis</p>
+  </div>
+
+  <div class="quick-card">
+    <h4>Process Improvement</h4>
+    <p>As-Is, To-Be, gap analysis, and end-to-end flow</p>
+  </div>
+
+  <div class="quick-card">
+    <h4>Functional Documentation</h4>
+    <p>CRF, FDS, SIT, UAT, MoM, and user scenarios</p>
+  </div>
+
+  <div class="quick-card">
+    <h4>Integration Support</h4>
+    <p>SAP, WB.NET, API, JSON, and field mapping</p>
+  </div>
+</div>
 
 <div class="hero-image">
 <div class="profile-photo"></div>
@@ -1162,30 +1202,69 @@ font-size: 14px;
 
         <div class="about-grid">
           <div class="card">
-            <h3>Professional Summary</h3>
-            <p>
-              I am a Business Analyst based in Medan, North Sumatera, with experience
-              in supporting system enhancement, change request preparation, business
-              process analysis, and integration-related documentation.
-            </p>
-            <br />
-            <p>
-              My work focuses on understanding business requirements, translating them
-              into clear functional specifications, coordinating with users and developers,
-              and ensuring the solution aligns with operational needs.
-            </p>
-          </div>
+  <h3>Professional Summary</h3>
+
+  <p>
+    I am a Business Analyst based in Medan, North Sumatera, with experience
+    in business process improvement, requirement analysis, functional
+    documentation, system enhancement, integration support, and application
+    testing.
+  </p>
+
+  <br>
+
+  <p>
+    I work closely with business users, developers, SAP teams, and other
+    stakeholders to translate operational requirements into clear and
+    actionable system solutions. My experience includes FMS, FOMS, SAP and
+    WB.NET integration support, procurement and logistics processes, as well
+    as mobile UI/UX improvements.
+  </p>
+
+  <br>
+
+  <p>
+    I am experienced in preparing CRF, FDS, SIT and UAT scenarios, process
+    flows, field mapping, meeting minutes, and supporting documentation
+    throughout the system development and enhancement lifecycle.
+  </p>
+</div>
 
           <div class="card">
-            <h3>What I Do Best</h3>
-            <ul class="check-list">
-              <li>Analyze business requirements and translate them into functional solutions.</li>
-              <li>Prepare CRF, requirement documents, and process flows.</li>
-              <li>Support SAP, FMS enhancements, and integration activities.</li>
-              <li>Review field mapping, JSON payload, and system responses.</li>
-              <li>Coordinate with users, developers, and stakeholders.</li>
-            </ul>
-          </div>
+  <h3>What I Do Best</h3>
+
+  <ul class="check-list">
+    <li>
+      Gather, analyze, and translate business requirements into clear
+      functional and system requirements.
+    </li>
+
+    <li>
+      Prepare As-Is and To-Be processes, gap analysis, business rules,
+      validation logic, and end-to-end process flows.
+    </li>
+
+    <li>
+      Prepare CRF, FDS, SIT scenarios, UAT scenarios, meeting minutes,
+      field mapping, and functional documentation.
+    </li>
+
+    <li>
+      Support system enhancements and integration activities involving
+      FMS, FOMS, SAP, WB.NET, API, and JSON payloads.
+    </li>
+
+    <li>
+      Coordinate with business users, developers, testers, SAP teams,
+      and project stakeholders.
+    </li>
+
+    <li>
+      Review mobile user flows and UI/UX improvements to ensure alignment
+      with operational requirements.
+    </li>
+  </ul>
+</div>
         </div>
       </div>
     </section>
@@ -1198,18 +1277,52 @@ font-size: 14px;
         </div>
 
         <div class="experience-card">
-          <h3>Middle Office Assistant Analyst</h3>
-          <span>Medan, North Sumatera</span>
+          <div class="experience-card">
+  <h3>Middle Office Associate Analyst</h3>
 
-          <ul class="check-list">
-            <li>Analyze business requirements from users and translate them into functional documentation.</li>
-            <li>Prepare CRF, user requirement documents, and meeting summaries.</li>
-            <li>Support SAP, FMS, and integration-related enhancement discussions.</li>
-            <li>Review field mapping, JSON payload, and SAP feedback or errors.</li>
-            <li>Coordinate with users, developers, and related stakeholders.</li>
-            <li>Prepare process flow diagrams and end-to-end business scenarios.</li>
-          </ul>
-        </div>
+  <span>
+    Medan, North Sumatera
+  </span>
+
+  <ul class="check-list">
+    <li>
+      Gather and analyze business requirements from users and translate
+      them into clear functional and system requirements.
+    </li>
+
+    <li>
+      Prepare CRF, FDS, SIT and UAT scenarios, process flows, field
+      mapping, meeting minutes, and other supporting documentation.
+    </li>
+
+    <li>
+      Support system enhancement initiatives involving Facility
+      Management System and Farmer Operations Management System.
+    </li>
+
+    <li>
+      Support integration analysis between internal applications,
+      SAP, and WB.NET, including payload checking, field mapping,
+      system responses, and error investigation.
+    </li>
+
+    <li>
+      Coordinate requirement clarification, testing, review, and
+      implementation activities with business users, developers,
+      testers, SAP teams, and project stakeholders.
+    </li>
+
+    <li>
+      Conduct SIT and support UAT to validate that system changes
+      meet approved business requirements.
+    </li>
+
+    <li>
+      Review mobile application flows and provide UI/UX improvement
+      recommendations based on user and operational needs.
+    </li>
+  </ul>
+</div>
       </div>
     </section>
 
@@ -1234,17 +1347,49 @@ font-size: 14px;
   </div>
 </div>
             <div class="project-content">
-              <span class="project-badge">Farmer Operations Management System</span>
-              <h3>Farmer Operations Management System</h3>
-              <p>Supported business analysis activities for farmer operations processes, including requirement gathering, process flow review, documentation, and coordination with stakeholders.</p>
-              <ul class="project-points">
-                <li>Prepared requirement analysis and functional documentation.</li>
-                <li>Reviewed business process flow and user scenarios.</li>
-                <li>Supported system enhancement discussion with related teams.</li>
-              </ul>
-              <div class="project-tags"><span>Business Analysis</span><span>Process Flow</span><span>Requirement</span><span>Documentation</span></div>
-            </div>
-          </div>
+  <span class="project-badge">
+    Farmer Operations Management System
+  </span>
+
+  <h3>Farmer Operations Management System</h3>
+
+  <p>
+    Supported business analysis and system enhancement activities for
+    farmer operational processes, including requirement analysis,
+    process review, functional documentation, testing, and stakeholder
+    coordination.
+  </p>
+
+  <ul class="project-points">
+    <li>
+      Gathered and analyzed business requirements for farmer operational
+      processes.
+    </li>
+
+    <li>
+      Prepared process flows, functional requirements, and testing
+      scenarios.
+    </li>
+
+    <li>
+      Supported system enhancements and user issue investigations.
+    </li>
+
+    <li>
+      Coordinated requirement clarification and testing with business
+      users and technical teams.
+    </li>
+  </ul>
+
+  <div class="project-tags">
+    <span>FOMS</span>
+    <span>Business Analysis</span>
+    <span>Process Flow</span>
+    <span>System Enhancement</span>
+    <span>SIT</span>
+    <span>UAT</span>
+  </div>
+</div>
 
           <div class="project-card">
             <div
@@ -1259,17 +1404,50 @@ font-size: 14px;
   </div>
 </div>
             <div class="project-content">
-              <span class="project-badge">Facility Management System</span>
-              <h3>Project Facility Management System</h3>
-              <p>Involved in FMS enhancement activities related to access management, permit management, approval workflow, document generation, and operational process improvement.</p>
-              <ul class="project-points">
-                <li>Prepared As-Is and To-Be process documentation.</li>
-                <li>Reviewed approval workflow and business rule logic.</li>
-                <li>Supported CRF preparation and stakeholder review.</li>
-              </ul>
-              <div class="project-tags"><span>FMS</span><span>Workflow</span><span>CRF</span><span>System Enhancement</span></div>
-            </div>
-          </div>
+  <span class="project-badge">
+    Facility Management System
+  </span>
+
+  <h3>Facility Management System</h3>
+
+  <p>
+    Supported business process improvement and system enhancement
+    initiatives across facility operations, including access management,
+    permit management, service transactions, approval workflows,
+    document generation, and reporting.
+  </p>
+
+  <ul class="project-points">
+    <li>
+      Analyzed As-Is and To-Be processes and identified system
+      enhancement opportunities.
+    </li>
+
+    <li>
+      Prepared CRF, FDS, business rules, validation logic, and process
+      flow documentation.
+    </li>
+
+    <li>
+      Reviewed approval workflows, field behavior, system notifications,
+      and document generation requirements.
+    </li>
+
+    <li>
+      Prepared SIT scenarios and supported UAT with business users.
+    </li>
+  </ul>
+
+  <div class="project-tags">
+    <span>FMS</span>
+    <span>CRF</span>
+    <span>FDS</span>
+    <span>Workflow</span>
+    <span>SIT</span>
+    <span>UAT</span>
+    <span>Process Improvement</span>
+  </div>
+</div>
 
         <div class="project-card">
   <div
@@ -1284,18 +1462,55 @@ font-size: 14px;
     </div>
   </div>
 
-            <div class="project-content">
-              <span class="project-badge">SAP & WB.NET Integration</span>
-              <h3>Integration to SAP and WB.NET</h3>
-              <p>Supported integration analysis between internal systems, SAP, and WB.NET, including mapping review, payload checking, error investigation, and coordination between business and technical teams.</p>
-              <ul class="project-points">
-                <li>Reviewed field mapping and integration requirements.</li>
-                <li>Supported JSON payload and API response checking.</li>
-                <li>Assisted issue analysis related to SAP feedback and integration errors.</li>
-              </ul>
-              <div class="project-tags"><span>SAP</span><span>WB.NET</span><span>API</span><span>JSON Mapping</span><span>Integration</span></div>
-            </div>
-          </div>
+           <div class="project-content">
+  <span class="project-badge">
+    SAP &amp; WB.NET Integration Support
+  </span>
+
+  <h3>SAP &amp; WB.NET Integration Support</h3>
+
+  <p>
+    Supported integration analysis between business applications,
+    SAP, and WB.NET by reviewing business requirements, field mapping,
+    payloads, system responses, validation rules, and integration errors.
+  </p>
+
+  <ul class="project-points">
+    <li>
+      Reviewed field mapping and data transformation requirements
+      between source and target systems.
+    </li>
+
+    <li>
+      Supported JSON payload, API response, and integration result
+      validation.
+    </li>
+
+    <li>
+      Investigated SAP validation errors and coordinated clarification
+      with business and technical teams.
+    </li>
+
+    <li>
+      Prepared integration scenarios and supported end-to-end testing.
+    </li>
+
+    <li>
+      Supported procurement, logistics, sales order, and related
+      transactional integration processes.
+    </li>
+  </ul>
+
+  <div class="project-tags">
+    <span>SAP</span>
+    <span>WB.NET</span>
+    <span>Integration Support</span>
+    <span>API</span>
+    <span>JSON</span>
+    <span>Field Mapping</span>
+    <span>Error Analysis</span>
+  </div>
+</div>
 
           <div class="project-card">
           <div
@@ -1310,17 +1525,47 @@ font-size: 14px;
   </div>
 </div>
             <div class="project-content">
-              <span class="project-badge">Mobile UI/UX Revamp</span>
-              <h3>Mobile UI/UX Revamp</h3>
-              <p>Involved in mobile application revamp by reviewing user flow, providing UI/UX input, improving screen layout, and ensuring the design supports business process needs.</p>
-              <ul class="project-points">
-                <li>Reviewed mobile user journey and screen flow.</li>
-                <li>Provided UI/UX improvement input for better usability.</li>
-                <li>Aligned mobile design with business requirements.</li>
-              </ul>
-              <div class="project-tags"><span>UI/UX</span><span>Mobile Revamp</span><span>User Flow</span><span>Design Review</span></div>
-            </div>
-          </div>
+  <span class="project-badge">
+    Mobile Application UI/UX Revamp
+  </span>
+
+  <h3>Mobile Application UI/UX Revamp</h3>
+
+  <p>
+    Supported the mobile application revamp by reviewing user journeys,
+    transaction flows, screen layouts, field behavior, validation
+    messages, and usability improvements based on business requirements.
+  </p>
+
+  <ul class="project-points">
+    <li>
+      Reviewed end-to-end mobile user journeys and transaction flows.
+    </li>
+
+    <li>
+      Provided UI/UX recommendations to improve usability and process
+      clarity.
+    </li>
+
+    <li>
+      Reviewed field visibility, mandatory rules, validation messages,
+      and system notifications.
+    </li>
+
+    <li>
+      Aligned the mobile application design with operational and
+      business requirements.
+    </li>
+  </ul>
+
+  <div class="project-tags">
+    <span>Mobile UI/UX</span>
+    <span>User Journey</span>
+    <span>Process Flow</span>
+    <span>Validation</span>
+    <span>Usability Review</span>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -1328,19 +1573,84 @@ font-size: 14px;
     <section id="skills">
       <div class="container">
         <div class="section-title"><h2>Skills</h2><p>Business, technical, and documentation capabilities</p></div>
-        <div class="skills-grid">
-          <div class="skill-box"><h3>Business Analysis</h3><div class="tags"><span class="tag">Requirement Gathering</span><span class="tag">CRF Documentation</span><span class="tag">Functional Specification</span><span class="tag">Process Flow</span><span class="tag">User Scenario</span></div></div>
-          <div class="skill-box"><h3>Technical Systems</h3><div class="tags"><span class="tag">SAP</span><span class="tag">FMS</span><span class="tag">WB.NET</span><span class="tag">MuleSoft</span><span class="tag">API</span><span class="tag">JSON</span></div></div>
-        </div>
-      </div>
+       <div class="skills-grid">
+  <div class="skill-box">
+    <h3>Business Analysis</h3>
+
+    <div class="tags">
+      <span class="tag">Requirement Gathering</span>
+      <span class="tag">Business Process Analysis</span>
+      <span class="tag">Gap Analysis</span>
+      <span class="tag">As-Is &amp; To-Be Process</span>
+      <span class="tag">Business Rules</span>
+      <span class="tag">Stakeholder Coordination</span>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <h3>Functional Documentation</h3>
+
+    <div class="tags">
+      <span class="tag">CRF</span>
+      <span class="tag">FDS</span>
+      <span class="tag">SIT Scenario</span>
+      <span class="tag">UAT Scenario</span>
+      <span class="tag">Process Flow</span>
+      <span class="tag">Field Mapping</span>
+      <span class="tag">Meeting Minutes</span>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <h3>Systems &amp; Integration</h3>
+
+    <div class="tags">
+      <span class="tag">SAP</span>
+      <span class="tag">FMS</span>
+      <span class="tag">FOMS</span>
+      <span class="tag">WB.NET</span>
+      <span class="tag">API</span>
+      <span class="tag">JSON</span>
+      <span class="tag">Integration Testing</span>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <h3>Testing &amp; User Experience</h3>
+
+    <div class="tags">
+      <span class="tag">SIT</span>
+      <span class="tag">UAT Support</span>
+      <span class="tag">Defect Analysis</span>
+      <span class="tag">Validation Testing</span>
+      <span class="tag">Mobile UI/UX Review</span>
+      <span class="tag">User Journey</span>
+    </div>
+  </div>
+</div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container">
         <h2>Let’s Connect</h2>
-        <p>Interested to discuss business analysis, system enhancement, or integration-related projects? Feel free to reach out.</p>
-        <div class="contact-info"><div>Email: niken.oktavia@email.com</div><div>LinkedIn: linkedin.com/in/nikenoktavia</div><div>Location: Medan, North Sumatera</div></div>
-      </div>
+
+<p>
+  Interested in discussing business analysis, business process
+  improvement, system enhancement, application testing, or integration
+  support opportunities? Feel free to reach out.
+</p>
+       <div class="contact-info">
+  <a href="mailto:nikenoktavia2000@gmail.com">
+nikenoktavia2000@gmail.com
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/niken-oktavia-196a891b1"
+    target="_blank"
+    rel="noopener noreferrer"
+ North Sumatera
+  </div>
+</div>
     </section>
   </main>
 
