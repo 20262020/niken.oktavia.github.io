@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
+  >
 
   <meta
     name="description"
     content="Portfolio of Niken Oktavia, a Business Analyst experienced in business process improvement, system enhancement, FOMS, FMS, integration support with SAP and WB.NET, SIT, UAT, and mobile UI/UX review."
-  />
+  >
 
   <title>Niken Oktavia | Business Analyst Portfolio</title>
 
@@ -49,7 +50,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
@@ -69,7 +70,7 @@
 
     .container {
       width: min(90%, 1200px);
-      margin: auto;
+      margin-inline: auto;
     }
 
     section {
@@ -83,6 +84,7 @@
       top: 0;
       z-index: 1000;
       background: rgba(255, 255, 255, 0.94);
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(226, 232, 240, 0.9);
       box-shadow: 0 2px 16px rgba(30, 58, 95, 0.07);
@@ -125,86 +127,12 @@
       list-style: none;
     }
 
-    nav button {
+    nav button,
+    nav a {
+      display: inline-block;
       padding: 9px 11px;
       border-radius: 999px;
       background: transparent;
       color: var(--text);
       font-size: 14px;
       font-weight: bold;
-      cursor: pointer;
-      transition: 0.22s ease;
-    }
-
-    nav button:hover,
-    nav button:focus-visible {
-      background: linear-gradient(
-        135deg,
-        var(--soft-blue),
-        var(--soft-pink)
-      );
-      color: var(--dark-blue);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(30, 58, 95, 0.12);
-    }
-
-    nav button:active {
-      transform: translateY(1px) scale(0.97);
-    }
-
-    .btn-cv {
-      background: linear-gradient(
-        135deg,
-        var(--soft-blue),
-        var(--soft-pink)
-      );
-      border: 1px solid var(--soft-blue);
-    }
-
-    /* Hero */
-
-    .hero {
-      padding: 86px 0;
-      background:
-        radial-gradient(
-          circle at 15% 20%,
-          rgba(207, 101, 157, 0.2),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 85% 25%,
-          rgba(111, 159, 223, 0.22),
-          transparent 30%
-        ),
-        linear-gradient(
-          135deg,
-          #ffffff 0%,
-          var(--soft-blue-light) 48%,
-          var(--soft-pink-light) 100%
-        );
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 42px;
-    }
-
-    .hero small {
-      color: var(--accent-pink);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
-
-    .hero h1 {
-      margin: 18px 0 12px;
-      color: var(--dark-blue);
-      font-size: clamp(44px, 5vw, 58px);
-      line-height: 1.08;
-    }
-
-    .hero h1 span {
-      color: var(--accent-pink);
-   
