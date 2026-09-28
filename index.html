@@ -3,566 +3,4150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Niken Oktavia, a Business Analyst experienced in business process improvement, system enhancement, FMS, FOMS, SAP and WB.NET integration support, functional documentation, SIT, UAT, and mobile UI/UX review.">
-  <title>Niken Oktavia | Business Analyst Portfolio</title>
+
+  <meta
+    name="description"
+    content="Niken Oktavia - IT Business Analyst with 3+ years of experience in requirements analysis, business process analysis, functional analysis, system integration, SAP integration, API, middleware, SIT, UAT, and digital system enhancement."
+  >
+
+  <meta
+    name="keywords"
+    content="Niken Oktavia, IT Business Analyst, Business Analyst, System Integration, SAP Integration, API, MuleSoft, Postman, Requirements Analysis, Business Process Analysis, Functional Analysis, SIT, UAT"
+  >
+
+  <title>Niken Oktavia | IT Business Analyst Portfolio</title>
+
   <style>
     :root {
-      --bg: #f8fbff; --surface: #ffffff; --text: #243047; --muted: #64748b;
-      --blue-50: #eff6ff; --blue-100: #dbeafe; --pink-50: #fff5f8; --pink-100: #f9dce8;
-      --blue: #6f9fdf; --pink: #cf659d; --navy: #1e3a5f; --border: #e2e8f0;
-      --shadow-sm: 0 8px 22px rgba(30,58,95,.07); --shadow: 0 18px 44px rgba(30,58,95,.12);
+      --bg: #f8fbff;
+      --surface: #ffffff;
+      --text: #243047;
+      --muted: #64748b;
+
+      --blue-50: #eff6ff;
+      --blue-100: #dbeafe;
+      --pink-50: #fff5f8;
+      --pink-100: #f9dce8;
+
+      --blue: #6f9fdf;
+      --pink: #cf659d;
+      --navy: #1e3a5f;
+
+      --border: #e2e8f0;
+
+      --shadow-sm: 0 8px 22px rgba(30,58,95,.07);
+      --shadow: 0 18px 44px rgba(30,58,95,.12);
+
       --radius: 22px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
-    body { background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
-    body.modal-open { overflow: hidden; }
-    a { color: inherit; text-decoration: none; }
-    button, a { font: inherit; }
-    button { border: 0; }
-    img { max-width: 100%; }
-    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    section { padding: 78px 0; }
-    .section-heading { max-width: 760px; margin: 0 auto 38px; text-align: center; }
-    .section-heading .eyebrow, .hero .eyebrow { display: block; margin-bottom: 10px; color: var(--pink); font-size: 12px; font-weight: 800; letter-spacing: 2.5px; }
-    .section-heading h2 { margin-bottom: 10px; color: var(--navy); font-size: clamp(29px, 4vw, 38px); line-height: 1.2; }
-    .section-heading p { color: var(--muted); }
 
-    /* Header */
-    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.94); border-top: 4px solid rgba(111,159,223,.28); border-bottom: 1px solid rgba(226,232,240,.9); box-shadow: 0 2px 16px rgba(30,58,95,.06); backdrop-filter: blur(14px); }
-    .navbar { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { flex: 0 0 auto; }
-    .brand strong { display: block; color: var(--navy); font-size: 24px; line-height: 1.1; letter-spacing: .5px; }
-    .brand span { display: block; margin-top: 5px; color: var(--pink); font-size: 11px; font-weight: 800; letter-spacing: 3px; }
-    .nav-list { display: flex; align-items: center; justify-content: flex-end; gap: 4px; list-style: none; }
-    .nav-link { display: inline-flex; min-height: 42px; align-items: center; padding: 9px 13px; border-radius: 999px; color: var(--text); font-size: 14px; font-weight: 700; transition: .2s ease; }
-    .nav-link:hover, .nav-link:focus-visible { background: linear-gradient(135deg,var(--blue-100),var(--pink-100)); color: var(--navy); transform: translateY(-2px); outline: none; }
-    .nav-cv { margin-left: 6px; padding-inline: 19px; background: linear-gradient(135deg,var(--blue-100),var(--pink-100)); border: 1px solid rgba(111,159,223,.15); }
-    .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; background: var(--blue-50); border-radius: 12px; color: var(--navy); cursor: pointer; font-size: 24px; }
-
-    /* Hero */
-    .hero { padding: 74px 0 82px; overflow: hidden; background: radial-gradient(circle at 12% 18%,rgba(207,101,157,.18),transparent 30%), radial-gradient(circle at 88% 18%,rgba(111,159,223,.20),transparent 32%), linear-gradient(135deg,#fff 0%,var(--blue-50) 50%,var(--pink-50) 100%); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(320px,.55fr); align-items: center; gap: 64px; }
-    .hero-copy { min-width: 0; }
-    .hero h1 { margin-bottom: 15px; color: var(--navy); font-size: clamp(45px,5.3vw,66px); line-height: 1.05; letter-spacing: -1.5px; }
-    .hero h1 span { color: var(--pink); }
-    .hero-role { max-width: 790px; margin-bottom: 20px; color: #334155; font-size: clamp(20px,2.1vw,25px); font-weight: 800; line-height: 1.45; }
-    .hero-description { max-width: 760px; margin-bottom: 28px; color: var(--muted); font-size: 16px; line-height: 1.8; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
-    .btn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 21px; border: 1px solid #cbd5e1; border-radius: 999px; background: rgba(255,255,255,.9); color: var(--navy); font-size: 14px; font-weight: 800; cursor: pointer; transition: .2s ease; }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(30,58,95,.13); }
-    .btn-primary { border-color: transparent; background: linear-gradient(135deg,var(--blue),var(--pink)); color: white; box-shadow: 0 10px 22px rgba(111,159,223,.28); }
-    .quick-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; max-width: 780px; }
-    .quick-card { min-height: 105px; padding: 17px 18px; background: rgba(255,255,255,.82); border: 1px solid rgba(203,213,225,.85); border-radius: 16px; box-shadow: var(--shadow-sm); }
-    .quick-card h3 { margin-bottom: 5px; color: var(--navy); font-size: 15px; }
-    .quick-card p { color: var(--muted); font-size: 13px; line-height: 1.55; }
-    .profile-card { width: 100%; max-width: 390px; justify-self: end; padding: 30px; background: rgba(255,255,255,.84); border: 1px solid rgba(203,213,225,.9); border-radius: 30px; box-shadow: var(--shadow); text-align: center; }
-    .profile-photo { width: min(260px,100%); aspect-ratio: 1; margin: 0 auto 21px; display: grid; place-items: center; overflow: hidden; background: url("assets/profile-niken.png") center 20% / cover no-repeat; border: 8px solid rgba(255,255,255,.96); border-radius: 50%; box-shadow: 0 18px 38px rgba(30,58,95,.19); }
-    .profile-fallback { display: none; color: var(--navy); font-size: 48px; font-weight: 900; letter-spacing: 2px; }
-    .profile-photo.photo-missing { background: linear-gradient(135deg,var(--blue-100),var(--pink-100)); }
-    .profile-photo.photo-missing .profile-fallback { display: block; }
-    .profile-card h2 { color: var(--navy); font-size: 22px; }
-    .profile-title { margin: 3px 0 18px; color: var(--pink); font-size: 13px; font-weight: 800; }
-    .profile-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 9px; padding-top: 18px; border-top: 1px solid var(--border); }
-    .profile-stat { padding: 10px 7px; background: linear-gradient(135deg,var(--blue-50),var(--pink-50)); border: 1px solid var(--border); border-radius: 12px; }
-    .profile-stat strong { display: block; color: var(--navy); font-size: 12px; }
-    .profile-stat span { display: block; color: var(--muted); font-size: 10px; }
-
-    /* Cards */
-    .about-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
-    .panel { padding: 30px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-    .panel h3 { margin-bottom: 14px; color: var(--navy); font-size: 21px; }
-    .panel p { color: #475569; }
-    .panel p + p { margin-top: 14px; }
-    .check-list { list-style: none; }
-    .check-list li { position: relative; margin-bottom: 12px; padding-left: 27px; color: #3f4c61; }
-    .check-list li:last-child { margin-bottom: 0; }
-    .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--pink); font-weight: 900; }
-
-    /* Experience */
-    .section-soft { background: linear-gradient(180deg,#fff,var(--blue-50)); }
-    .experience-card { max-width: 970px; margin: auto; padding: 31px 32px; background: white; border: 1px solid var(--border); border-left: 6px solid var(--blue); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-    .experience-card h3 { color: var(--navy); font-size: 23px; }
-    .experience-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 4px 0 20px; color: var(--muted); font-size: 14px; }
-
-    /* Projects */
-    .project-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 25px; }
-    .project-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; background: white; border: 1px solid var(--border); border-radius: 24px; box-shadow: var(--shadow-sm); transition: .25s ease; }
-    .project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-    .project-media { position: relative; height: 245px; background-color: #f5f8fc; background-position: center; background-repeat: no-repeat; background-size: contain; cursor: pointer; }
-    .farmer { background-image: url("assets/farmer-operations.png"); }
-    .facility { background-image: url("assets/facility-management.png"); }
-    .integration { background-image: url("assets/sap-wbnet-integration.png"); }
-    .mobile { background-image: url("assets/mobile-revamp.png"); }
-    .media-label { position: absolute; left: 17px; bottom: 15px; padding: 8px 13px; background: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.8); border-radius: 999px; color: var(--navy); font-size: 12px; font-weight: 800; backdrop-filter: blur(8px); }
-    .project-body { display: flex; flex: 1; flex-direction: column; padding: 25px; }
-    .badge { align-self: flex-start; margin-bottom: 12px; padding: 6px 11px; background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 999px; color: var(--navy); font-size: 11px; font-weight: 800; }
-    .project-body h3 { margin-bottom: 10px; color: var(--navy); font-size: 21px; }
-    .project-body > p { margin-bottom: 15px; color: #526077; font-size: 14px; }
-    .project-points { margin-bottom: 18px; list-style: none; }
-    .project-points li { position: relative; margin-bottom: 8px; padding-left: 20px; color: #445066; font-size: 13px; }
-    .project-points li::before { content: "•"; position: absolute; left: 2px; color: var(--pink); font-size: 21px; line-height: 15px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
-    .tag { padding: 6px 9px; background: white; border: 1px solid var(--border); border-radius: 999px; color: var(--navy); font-size: 11px; font-weight: 700; }
-
-    /* Skills */
-    .skills-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
-    .skill-card { padding: 25px; background: white; border: 1px solid var(--border); border-radius: 19px; box-shadow: var(--shadow-sm); }
-    .skill-card h3 { margin-bottom: 14px; color: var(--navy); font-size: 18px; }
-
-
-    /* Business Analyst Approach */
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .approach-card {
-      position: relative;
-      min-height: 188px;
-      padding: 24px 20px 20px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 19px;
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow,
+    .hero .eyebrow {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 38px);
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.94);
+      border-top: 4px solid rgba(111,159,223,.28);
+      border-bottom: 1px solid rgba(226,232,240,.9);
+
+      box-shadow: 0 2px 16px rgba(30,58,95,.06);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 86px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 28px;
+    }
+
+    .brand {
+      flex: 0 0 auto;
+    }
+
+    .brand strong {
+      display: block;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: .5px;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 5px;
+      color: var(--pink);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+
+      list-style: none;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      min-height: 42px;
+
+      align-items: center;
+
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      color: var(--text);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: .2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      background: linear-gradient(
+        135deg,
+        var(--blue-100),
+        var(--pink-100)
+      );
+
+      color: var(--navy);
+
+      transform: translateY(-2px);
+
+      outline: none;
+    }
+
+    .nav-cv {
+      margin-left: 6px;
+      padding-inline: 19px;
+
+      background: linear-gradient(
+        135deg,
+        var(--blue-100),
+        var(--pink-100)
+      );
+
+      border: 1px solid rgba(111,159,223,.15);
+    }
+
+    .menu-toggle {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--blue-50);
+
+      border-radius: 12px;
+
+      color: var(--navy);
+
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 74px 0 82px;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(207,101,157,.18),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(111,159,223,.20),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #fff 0%,
+          var(--blue-50) 50%,
+          var(--pink-50) 100%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.45fr)
+        minmax(320px,.55fr);
+
+      align-items: center;
+
+      gap: 64px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .hero h1 {
+      margin-bottom: 15px;
+
+      color: var(--navy);
+
+      font-size: clamp(45px,5.3vw,66px);
+
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--pink);
+    }
+
+    .hero-role {
+      max-width: 790px;
+
+      margin-bottom: 20px;
+
+      color: #334155;
+
+      font-size: clamp(20px,2.1vw,25px);
+
+      font-weight: 800;
+
+      line-height: 1.45;
+    }
+
+    .hero-description {
+      max-width: 780px;
+
+      margin-bottom: 28px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 21px;
+
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.9);
+
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 25px rgba(30,58,95,.13);
+    }
+
+    .btn-primary {
+      border-color: transparent;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--pink)
+        );
+
+      color: white;
+
+      box-shadow:
+        0 10px 22px rgba(111,159,223,.28);
+    }
+
+    .quick-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 13px;
+
+      max-width: 780px;
+    }
+
+    .quick-card {
+      min-height: 105px;
+
+      padding: 17px 18px;
+
+      background: rgba(255,255,255,.82);
+
+      border: 1px solid rgba(203,213,225,.85);
+
+      border-radius: 16px;
+
       box-shadow: var(--shadow-sm);
     }
+
+    .quick-card h3 {
+      margin-bottom: 5px;
+
+      color: var(--navy);
+
+      font-size: 15px;
+    }
+
+    .quick-card p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* =========================
+       PROFILE CARD
+    ========================= */
+
+    .profile-card {
+      width: 100%;
+      max-width: 390px;
+
+      justify-self: end;
+
+      padding: 30px;
+
+      background: rgba(255,255,255,.84);
+
+      border: 1px solid rgba(203,213,225,.9);
+
+      border-radius: 30px;
+
+      box-shadow: var(--shadow);
+
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: min(260px,100%);
+      aspect-ratio: 1;
+
+      margin: 0 auto 21px;
+
+      display: grid;
+      place-items: center;
+
+      overflow: hidden;
+
+      background:
+        url("assets/profile-niken.png")
+        center 20% / cover no-repeat;
+
+      border: 8px solid rgba(255,255,255,.96);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 18px 38px rgba(30,58,95,.19);
+    }
+
+    .profile-fallback {
+      display: none;
+
+      color: var(--navy);
+
+      font-size: 48px;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+    }
+
+    .profile-photo.photo-missing {
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-100),
+          var(--pink-100)
+        );
+    }
+
+    .profile-photo.photo-missing .profile-fallback {
+      display: block;
+    }
+
+    .profile-card h2 {
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .profile-title {
+      margin: 3px 0 18px;
+
+      color: var(--pink);
+
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .profile-stats {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap: 9px;
+
+      padding-top: 18px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .profile-stat {
+      padding: 10px 7px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-50),
+          var(--pink-50)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+    }
+
+    .profile-stat strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 12px;
+    }
+
+    .profile-stat span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 24px;
+    }
+
+    .panel {
+      padding: 30px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel h3 {
+      margin-bottom: 14px;
+
+      color: var(--navy);
+
+      font-size: 21px;
+    }
+
+    .panel p {
+      color: #475569;
+    }
+
+    .panel p + p {
+      margin-top: 14px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+
+      margin-bottom: 12px;
+
+      padding-left: 27px;
+
+      color: #3f4c61;
+    }
+
+    .check-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-list li::before {
+      content: "✓";
+
+      position: absolute;
+      left: 0;
+
+      color: var(--pink);
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .section-soft {
+      background:
+        linear-gradient(
+          180deg,
+          #fff,
+          var(--blue-50)
+        );
+    }
+
+    .experience-card {
+      max-width: 970px;
+
+      margin: auto;
+
+      padding: 31px 32px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-left: 6px solid var(--blue);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .experience-card h3 {
+      color: var(--navy);
+
+      font-size: 23px;
+    }
+
+    .experience-meta {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px 16px;
+
+      margin: 4px 0 20px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .experience-highlight {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+      gap: 12px;
+
+      margin-bottom: 22px;
+    }
+
+    .highlight-box {
+      padding: 15px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-50),
+          var(--pink-50)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+    }
+
+    .highlight-box strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--navy);
+
+      font-size: 13px;
+    }
+
+    .highlight-box span {
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       APPROACH
+    ========================= */
+
+    .approach-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+      gap: 16px;
+    }
+
+    .approach-card {
+      position: relative;
+
+      min-height: 188px;
+
+      padding: 24px 20px 20px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 19px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
     .approach-number {
       width: 38px;
       height: 38px;
+
       display: grid;
+
       place-items: center;
+
       margin-bottom: 15px;
-      background: linear-gradient(135deg, var(--blue-100), var(--pink-100));
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-100),
+          var(--pink-100)
+        );
+
       border-radius: 12px;
+
       color: var(--navy);
+
       font-size: 13px;
       font-weight: 900;
     }
+
     .approach-card h3 {
       margin-bottom: 7px;
+
       color: var(--navy);
+
       font-size: 17px;
     }
+
     .approach-card p {
       color: var(--muted);
+
       font-size: 13px;
       line-height: 1.65;
     }
 
-    /* Project Case Study */
-    .case-study {
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin: 3px 0 19px;
-    }
-    .case-item {
-      padding: 12px;
-      background: linear-gradient(135deg, rgba(239,246,255,.9), rgba(255,245,248,.9));
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
-    .case-item strong {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--navy);
-      font-size: 11px;
-      letter-spacing: .35px;
-      text-transform: uppercase;
-    }
-    .case-item span {
-      display: block;
-      color: #526077;
-      font-size: 12px;
-      line-height: 1.5;
-    }
-    .project-note {
-      margin-top: 15px;
-      padding: 10px 12px;
-      background: #fbfdff;
-      border-left: 3px solid var(--pink);
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.55;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 25px;
     }
 
-    /* Availability CTA */
-    .availability {
-      margin-top: 34px;
-      padding: 25px;
+    .project-card {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-      background: #ffffff;
+
+      min-width: 0;
+
+      flex-direction: column;
+
+      overflow: hidden;
+
+      background: white;
+
       border: 1px solid var(--border);
-      border-radius: 20px;
+
+      border-radius: 24px;
+
       box-shadow: var(--shadow-sm);
-      text-align: left;
+
+      transition: .25s ease;
     }
-    .availability h3 {
-      margin-bottom: 4px;
+
+    .project-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .project-media {
+      position: relative;
+
+      height: 245px;
+
+      background-color: #f5f8fc;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      cursor: pointer;
+    }
+
+    .farmer {
+      background-image:
+        url("assets/farmer-operations.png");
+    }
+
+    .facility {
+      background-image:
+        url("assets/facility-management.png");
+    }
+
+    .integration {
+      background-image:
+        url("assets/sap-wbnet-integration.png");
+    }
+
+    .mobile {
+      background-image:
+        url("assets/mobile-revamp.png");
+    }
+
+    .media-label {
+      position: absolute;
+
+      left: 17px;
+      bottom: 15px;
+
+      padding: 8px 13px;
+
+      background: rgba(255,255,255,.9);
+
+      border: 1px solid rgba(255,255,255,.8);
+
+      border-radius: 999px;
+
       color: var(--navy);
-      font-size: 19px;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      backdrop-filter: blur(8px);
     }
-    .availability p {
-      color: var(--muted);
+
+    .project-body {
+      display: flex;
+
+      flex: 1;
+
+      flex-direction: column;
+
+      padding: 25px;
+    }
+
+    .badge {
+      align-self: flex-start;
+
+      margin-bottom: 12px;
+
+      padding: 6px 11px;
+
+      background: var(--blue-50);
+
+      border: 1px solid var(--blue-100);
+
+      border-radius: 999px;
+
+      color: var(--navy);
+
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .project-body h3 {
+      margin-bottom: 10px;
+
+      color: var(--navy);
+
+      font-size: 21px;
+    }
+
+    .project-body > p {
+      margin-bottom: 15px;
+
+      color: #526077;
+
+      font-size: 14px;
+    }
+
+    .case-study {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 10px;
+
+      margin: 3px 0 19px;
+    }
+
+    .case-item {
+      padding: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(239,246,255,.9),
+          rgba(255,245,248,.9)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 13px;
+    }
+
+    .case-item strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--navy);
+
+      font-size: 11px;
+
+      letter-spacing: .35px;
+
+      text-transform: uppercase;
+    }
+
+    .case-item span {
+      display: block;
+
+      color: #526077;
+
+      font-size: 12px;
+
+      line-height: 1.5;
+    }
+
+    .project-points {
+      margin-bottom: 18px;
+
+      list-style: none;
+    }
+
+    .project-points li {
+      position: relative;
+
+      margin-bottom: 8px;
+
+      padding-left: 20px;
+
+      color: #445066;
+
       font-size: 13px;
     }
 
-    /* Contact */
-    .contact { background: linear-gradient(135deg,var(--blue-50),var(--pink-50)); }
-    .contact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; max-width: 1010px; margin: auto; }
-    .contact-card { min-width: 0; min-height: 104px; display: flex; align-items: center; gap: 13px; padding: 18px; background: rgba(255,255,255,.88); border: 1px solid var(--border); border-radius: 17px; box-shadow: var(--shadow-sm); transition: .2s ease; }
-    a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .contact-icon { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; background: linear-gradient(135deg,var(--blue-100),var(--pink-100)); border-radius: 50%; color: var(--navy); font-weight: 900; }
-    .contact-copy { min-width: 0; }
-    .contact-copy strong { display: block; color: var(--navy); font-size: 13px; }
+    .project-points li::before {
+      content: "•";
+
+      position: absolute;
+
+      left: 2px;
+
+      color: var(--pink);
+
+      font-size: 21px;
+
+      line-height: 15px;
+    }
+
+    .tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: auto;
+    }
+
+    .tag {
+      padding: 6px 9px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      color: var(--navy);
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-note {
+      margin-top: 15px;
+
+      padding: 10px 12px;
+
+      background: #fbfdff;
+
+      border-left: 3px solid var(--pink);
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.55;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 20px;
+    }
+
+    .skill-card {
+      padding: 25px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 19px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 14px;
+
+      color: var(--navy);
+
+      font-size: 18px;
+    }
+
+    .skill-description {
+      margin-bottom: 13px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-50),
+          var(--pink-50)
+        );
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+      gap: 16px;
+
+      max-width: 1010px;
+
+      margin: auto;
+    }
+
+    .contact-card {
+      min-width: 0;
+      min-height: 104px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      padding: 18px;
+
+      background: rgba(255,255,255,.88);
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      box-shadow: var(--shadow-sm);
+
+      transition: .2s ease;
+    }
+
+    a.contact-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+
+      flex: 0 0 42px;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-100),
+          var(--pink-100)
+        );
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      font-weight: 900;
+    }
+
+    .contact-copy {
+      min-width: 0;
+    }
+
+    .contact-copy strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 13px;
+    }
+
     .contact-copy span {
       display: block;
+
       color: var(--muted);
+
       font-size: 12px;
+
       line-height: 1.5;
+
       overflow-wrap: anywhere;
     }
+
     .contact-link-text {
       color: #477fca !important;
+
       text-decoration: underline;
-      text-decoration-color: rgba(71,127,202,.45);
+
+      text-decoration-color:
+        rgba(71,127,202,.45);
+
       text-underline-offset: 3px;
-      transition: color .2s ease, text-decoration-color .2s ease;
+
+      transition:
+        color .2s ease,
+        text-decoration-color .2s ease;
     }
+
     a.contact-card:hover .contact-link-text {
       color: var(--pink) !important;
+
       text-decoration-color: var(--pink);
     }
 
-    /* Footer and toast */
-    footer { padding: 21px 0; background: white; border-top: 1px solid var(--border); color: var(--muted); text-align: center; font-size: 13px; }
-    .toast { position: fixed; right: 22px; bottom: 22px; z-index: 12000; padding: 13px 17px; background: white; border: 1px solid var(--blue-100); border-radius: 13px; box-shadow: var(--shadow); color: var(--navy); font-size: 13px; font-weight: 800; opacity: 0; visibility: hidden; transform: translateY(15px); transition: .25s ease; }
-    .toast.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .availability {
+      margin-top: 34px;
 
-    /* Gallery */
-    .gallery-modal { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: 20px; background: rgba(15,23,42,.88); opacity: 0; visibility: hidden; transition: .25s ease; backdrop-filter: blur(8px); }
-    .gallery-modal.show { opacity: 1; visibility: visible; }
-    .gallery-box { position: relative; width: min(980px,96vw); max-height: 92vh; overflow-y: auto; padding: 23px; background: white; border-radius: 23px; box-shadow: 0 30px 80px rgba(15,23,42,.4); }
-    .gallery-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; background: var(--pink-100); border-radius: 50%; color: var(--navy); font-size: 24px; cursor: pointer; }
-    .gallery-head { padding-right: 48px; margin-bottom: 14px; }
-    .gallery-head h3 { color: var(--navy); }
-    .gallery-head p { color: var(--muted); font-size: 13px; }
-    .gallery-stage { min-height: 330px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(135deg,var(--blue-50),var(--pink-50)); border: 1px solid var(--border); border-radius: 16px; }
-    .gallery-image { width: 100%; max-height: 590px; object-fit: contain; }
-    .gallery-controls { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; margin-top: 16px; }
-    .gallery-btn { padding: 9px 17px; background: linear-gradient(135deg,var(--blue),var(--pink)); border-radius: 999px; color: white; font-weight: 800; cursor: pointer; }
-    .gallery-count { text-align: center; color: var(--muted); font-size: 13px; font-weight: 800; }
-    .thumbnails { display: flex; gap: 9px; margin-top: 14px; overflow-x: auto; padding-bottom: 5px; }
-    .thumbnail { width: 86px; height: 58px; flex: 0 0 auto; overflow: hidden; background: white; border: 3px solid transparent; border-radius: 9px; cursor: pointer; }
-    .thumbnail.active { border-color: var(--pink); }
-    .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+      padding: 25px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 22px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      box-shadow: var(--shadow-sm);
+
+      text-align: left;
+    }
+
+    .availability h3 {
+      margin-bottom: 4px;
+
+      color: var(--navy);
+
+      font-size: 19px;
+    }
+
+    .availability p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery-modal {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 10000;
+
+      display: grid;
+
+      place-items: center;
+
+      padding: 20px;
+
+      background: rgba(15,23,42,.88);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: .25s ease;
+
+      backdrop-filter: blur(8px);
+    }
+
+    .gallery-modal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .gallery-box {
+      position: relative;
+
+      width: min(980px,96vw);
+
+      max-height: 92vh;
+
+      overflow-y: auto;
+
+      padding: 23px;
+
+      background: white;
+
+      border-radius: 23px;
+
+      box-shadow:
+        0 30px 80px rgba(15,23,42,.4);
+    }
+
+    .gallery-close {
+      position: absolute;
+
+      top: 14px;
+      right: 14px;
+
+      width: 40px;
+      height: 40px;
+
+      background: var(--pink-100);
+
+      border-radius: 50%;
+
+      color: var(--navy);
+
+      font-size: 24px;
+
+      cursor: pointer;
+    }
+
+    .gallery-head {
+      padding-right: 48px;
+
+      margin-bottom: 14px;
+    }
+
+    .gallery-head h3 {
+      color: var(--navy);
+    }
+
+    .gallery-head p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    .gallery-stage {
+      min-height: 330px;
+
+      display: grid;
+
+      place-items: center;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-50),
+          var(--pink-50)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+    }
+
+    .gallery-image {
+      width: 100%;
+
+      max-height: 590px;
+
+      object-fit: contain;
+    }
+
+    .gallery-controls {
+      display: grid;
+
+      grid-template-columns:
+        auto 1fr auto;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-top: 16px;
+    }
+
+    .gallery-btn {
+      padding: 9px 17px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--pink)
+        );
+
+      border-radius: 999px;
+
+      color: white;
+
+      font-weight: 800;
+
+      cursor: pointer;
+    }
+
+    .gallery-count {
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+    .thumbnails {
+      display: flex;
+
+      gap: 9px;
+
+      margin-top: 14px;
+
+      overflow-x: auto;
+
+      padding-bottom: 5px;
+    }
+
+    .thumbnail {
+      width: 86px;
+      height: 58px;
+
+      flex: 0 0 auto;
+
+      overflow: hidden;
+
+      background: white;
+
+      border: 3px solid transparent;
+
+      border-radius: 9px;
+
+      cursor: pointer;
+    }
+
+    .thumbnail.active {
+      border-color: var(--pink);
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    /* =========================
+       FOOTER & TOAST
+    ========================= */
+
+    footer {
+      padding: 21px 0;
+
+      background: white;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      text-align: center;
+
+      font-size: 13px;
+    }
+
+    .toast {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 12000;
+
+      padding: 13px 17px;
+
+      background: white;
+
+      border: 1px solid var(--blue-100);
+
+      border-radius: 13px;
+
+      box-shadow: var(--shadow);
+
+      color: var(--navy);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(15px);
+
+      transition: .25s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 1050px) {
-      .nav-link { padding-inline: 9px; font-size: 13px; }
+
+      .nav-link {
+        padding-inline: 9px;
+        font-size: 13px;
+      }
+
       .hero-grid {
-        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        grid-template-columns:
+          minmax(0,1.35fr)
+          minmax(280px,.65fr);
+
         gap: 36px;
       }
+
       .profile-card {
         max-width: 350px;
+
         justify-self: end;
+
         padding: 25px;
       }
+
       .profile-photo {
-        width: min(225px, 100%);
+        width: min(225px,100%);
       }
-      .contact-grid { grid-template-columns: 1fr; max-width: 620px; }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 620px;
+      }
     }
 
     @media (max-width: 960px) {
-      .approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .approach-grid {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+      }
+
+      .experience-highlight {
+        grid-template-columns:
+          repeat(3,minmax(0,1fr));
+      }
     }
 
     @media (max-width: 820px) {
-      html { scroll-padding-top: 78px; }
-      .navbar { min-height: 74px; }
-      .menu-toggle { display: inline-flex; }
-      .site-nav { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; padding: 12px 20px 18px; background: rgba(255,255,255,.98); border-bottom: 1px solid var(--border); box-shadow: 0 14px 28px rgba(30,58,95,.1); }
-      .site-nav.open { display: block; }
-      .nav-list { align-items: stretch; flex-direction: column; }
-      .nav-link { width: 100%; justify-content: center; }
-      .nav-cv { margin-left: 0; }
+
+      html {
+        scroll-padding-top: 78px;
+      }
+
+      .navbar {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .site-nav {
+        position: absolute;
+
+        top: calc(100% + 1px);
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        padding: 12px 20px 18px;
+
+        background: rgba(255,255,255,.98);
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow:
+          0 14px 28px rgba(30,58,95,.1);
+      }
+
+      .site-nav.open {
+        display: block;
+      }
+
+      .nav-list {
+        align-items: stretch;
+
+        flex-direction: column;
+      }
+
+      .nav-link {
+        width: 100%;
+
+        justify-content: center;
+      }
+
+      .nav-cv {
+        margin-left: 0;
+      }
+
       .hero-grid {
-        grid-template-columns: minmax(0, 1fr) 250px;
+        grid-template-columns:
+          minmax(0,1fr)
+          250px;
+
         align-items: start;
+
         gap: 24px;
       }
+
       .profile-card {
         position: sticky;
+
         top: 94px;
+
         max-width: 250px;
+
         padding: 18px;
       }
+
       .profile-photo {
-        width: min(180px, 100%);
+        width: min(180px,100%);
+
         margin-bottom: 14px;
       }
-      .profile-card h2 { font-size: 18px; }
-      .profile-title { font-size: 11px; }
-      .profile-stats { grid-template-columns: 1fr; }
-      .quick-grid { grid-template-columns: 1fr; }
-      .about-grid, .project-grid, .skills-grid { grid-template-columns: 1fr; }
-      .project-media { height: 230px; }
+
+      .profile-card h2 {
+        font-size: 18px;
+      }
+
+      .profile-title {
+        font-size: 11px;
+      }
+
+      .profile-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .project-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-media {
+        height: 230px;
+      }
     }
 
     @media (max-width: 700px) {
+
       .hero-grid {
         grid-template-columns: 1fr;
+
         gap: 34px;
       }
+
       .profile-card {
         position: static;
+
         width: 100%;
+
         max-width: 430px;
+
         justify-self: center;
+
         padding: 23px;
       }
+
       .profile-photo {
-        width: min(225px, 100%);
+        width: min(225px,100%);
       }
+
       .profile-stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .experience-highlight {
+        grid-template-columns: 1fr;
       }
     }
+
     @media (max-width: 600px) {
-      .container { width: min(92%,1120px); }
-      section { padding: 58px 0; }
+
+      .container {
+        width: min(92%,1120px);
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
       .approach-grid,
-      .case-study { grid-template-columns: 1fr; }
-      .approach-card { min-height: auto; }
-      .availability { align-items: stretch; flex-direction: column; text-align: center; }
-      .availability .btn { width: 100%; }
-      .brand strong { font-size: 20px; }
-      .brand span { font-size: 9px; letter-spacing: 2.5px; }
-      .hero { padding: 54px 0 60px; }
-      .hero h1 { font-size: clamp(38px,12vw,49px); }
-      .hero-role { font-size: 18px; }
-      .hero-description { font-size: 14px; }
-      .actions { display: grid; grid-template-columns: 1fr; }
-      .btn { width: 100%; }
-      .quick-grid { grid-template-columns: 1fr; }
-      .quick-card { min-height: auto; }
-      .profile-card { padding: 23px 18px; }
-      .profile-photo { width: min(225px,100%); }
-      .panel, .experience-card, .project-body, .skill-card { padding: 22px; }
-      .gallery-modal { padding: 8px; }
-      .gallery-box { padding: 17px; }
-      .gallery-stage { min-height: 220px; }
-      .gallery-controls { grid-template-columns: 1fr 1fr; }
-      .gallery-count { grid-column: 1/-1; grid-row: 1; }
-      .toast { left: 14px; right: 14px; text-align: center; }
+      .case-study {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-card {
+        min-height: auto;
+      }
+
+      .availability {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .availability .btn {
+        width: 100%;
+      }
+
+      .brand strong {
+        font-size: 20px;
+      }
+
+      .brand span {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+      }
+
+      .hero {
+        padding: 54px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px,12vw,49px);
+      }
+
+      .hero-role {
+        font-size: 18px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .actions {
+        display: grid;
+
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-card {
+        min-height: auto;
+      }
+
+      .profile-card {
+        padding: 23px 18px;
+      }
+
+      .profile-photo {
+        width: min(225px,100%);
+      }
+
+      .panel,
+      .experience-card,
+      .project-body,
+      .skill-card {
+        padding: 22px;
+      }
+
+      .gallery-modal {
+        padding: 8px;
+      }
+
+      .gallery-box {
+        padding: 17px;
+      }
+
+      .gallery-stage {
+        min-height: 220px;
+      }
+
+      .gallery-controls {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-count {
+        grid-column: 1/-1;
+
+        grid-row: 1;
+      }
+
+      .toast {
+        left: 14px;
+        right: 14px;
+
+        text-align: center;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *,*::before,*::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+
+        animation-duration: .01ms !important;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header class="site-header">
+
     <div class="container navbar">
-      <a class="brand" href="#home" aria-label="Niken Oktavia portfolio home">
-        <strong>NIKEN OKTAVIA</strong><span>BUSINESS ANALYST</span>
+
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Niken Oktavia portfolio home"
+      >
+        <strong>NIKEN OKTAVIA</strong>
+        <span>IT BUSINESS ANALYST</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        onclick="toggleMenu(this)"
+      >
+        ☰
+      </button>
+
+      <nav
+        class="site-nav"
+        id="siteNav"
+        aria-label="Main navigation"
+      >
+
         <ul class="nav-list">
-          <li><a class="nav-link" href="#home">Home</a></li><li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li><li><a class="nav-link" href="#approach">Approach</a></li><li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li><li><a class="nav-link" href="#contact">Contact</a></li>
-          <li><a class="nav-link nav-cv" href="assets/CV-Niken-Oktavia.pdf" download="CV-Niken-Oktavia.pdf" onclick="showToast()">Download CV</a></li>
+
+          <li>
+            <a class="nav-link" href="#home">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#experience">
+              Experience
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#approach">
+              Approach
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#projects">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#skills">
+              Skills
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" href="#contact">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="nav-link nav-cv"
+              href="assets/CV-Niken-Oktavia.pdf"
+              download="CV-Niken-Oktavia.pdf"
+              onclick="showToast()"
+            >
+              Download CV
+            </a>
+          </li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
 
+
   <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero" id="home">
+
       <div class="container hero-grid">
+
         <div class="hero-copy">
-          <span class="eyebrow">BUSINESS ANALYST PORTFOLIO</span>
-          <h1>Hi, I’m <span>Niken Oktavia</span></h1>
-          <p class="hero-role">Business Analyst | Business Process Improvement | System Enhancement | Integration Support</p>
-          <p class="hero-description">I bridge business requirements and technical solutions by analyzing operational processes, gathering and documenting requirements, preparing functional specifications, supporting system enhancements, and coordinating SIT and UAT across FMS, FOMS, SAP, WB.NET, and mobile applications.</p>
+
+          <span class="eyebrow">
+            IT BUSINESS ANALYST PORTFOLIO
+          </span>
+
+          <h1>
+            Hi, I’m
+            <span>Niken Oktavia</span>
+          </h1>
+
+          <p class="hero-role">
+            IT Business Analyst |
+            Requirements |
+            Process Analysis |
+            System Integration
+          </p>
+
+          <p class="hero-description">
+            IT Business Analyst with 3+ years of experience in
+            requirements analysis, business process improvement,
+            functional analysis, system enhancement, and integration
+            projects. Experienced in bridging business requirements
+            with technical solutions across non-ERP applications,
+            SAP integration, middleware, APIs, and enterprise
+            business processes.
+          </p>
+
           <div class="actions">
-            <a class="btn btn-primary" href="#projects">View My Projects</a>
-            <a class="btn" href="assets/CV-Niken-Oktavia.pdf" download="CV-Niken-Oktavia.pdf" onclick="showToast()">Download CV</a>
-            <a class="btn" href="#contact">Contact Me</a>
+
+            <a
+              class="btn btn-primary"
+              href="#projects"
+            >
+              View My Projects
+            </a>
+
+            <a
+              class="btn"
+              href="assets/CV-Niken-Oktavia.pdf"
+              download="CV-Niken-Oktavia.pdf"
+              onclick="showToast()"
+            >
+              Download CV
+            </a>
+
+            <a
+              class="btn"
+              href="#contact"
+            >
+              Contact Me
+            </a>
+
           </div>
+
+
           <div class="quick-grid">
-            <article class="quick-card"><h3>Business Analysis</h3><p>Requirement gathering, business process analysis, and stakeholder coordination.</p></article>
-            <article class="quick-card"><h3>Process Improvement</h3><p>As-Is, To-Be, gap analysis, business rules, and end-to-end process flows.</p></article>
-            <article class="quick-card"><h3>Functional Documentation</h3><p>CRF, FDS, SIT, UAT, field mapping, user scenarios, and meeting minutes.</p></article>
-            <article class="quick-card"><h3>Integration Support</h3><p>SAP, WB.NET, API, JSON payloads, system responses, and error analysis.</p></article>
+
+            <article class="quick-card">
+
+              <h3>
+                Requirements Analysis
+              </h3>
+
+              <p>
+                Requirement gathering, elicitation,
+                functional requirements, business rules,
+                user scenarios, and acceptance criteria.
+              </p>
+
+            </article>
+
+
+            <article class="quick-card">
+
+              <h3>
+                Process Analysis
+              </h3>
+
+              <p>
+                As-Is, To-Be, gap analysis,
+                process modelling, workflow,
+                and end-to-end business process analysis.
+              </p>
+
+            </article>
+
+
+            <article class="quick-card">
+
+              <h3>
+                Functional Analysis
+              </h3>
+
+              <p>
+                BRD/CRF, FDS, process flows,
+                field mapping, validation logic,
+                and functional specifications.
+              </p>
+
+            </article>
+
+
+            <article class="quick-card">
+
+              <h3>
+                System Integration
+              </h3>
+
+              <p>
+                SAP integration, APIs, Postman,
+                MuleSoft, JSON/XML, system responses,
+                and integration validation.
+              </p>
+
+            </article>
+
           </div>
+
         </div>
+
+
+        <!-- PROFILE -->
+
         <aside class="profile-card">
-          <div class="profile-photo" id="profilePhoto" role="img" aria-label="Professional profile photo"><span class="profile-fallback" aria-hidden="true">NO</span></div>
-          <h2>Niken Oktavia</h2><p class="profile-title">Middle Office Associate Analyst</p>
-          <div class="profile-stats">
-            <div class="profile-stat"><strong>Business</strong><span>Process Analysis</span></div>
-            <div class="profile-stat"><strong>System</strong><span>Enhancement</span></div>
-            <div class="profile-stat"><strong>Testing</strong><span>SIT &amp; UAT</span></div>
-            <div class="profile-stat"><strong>Integration</strong><span>SAP &amp; WB.NET</span></div>
+
+          <div
+            class="profile-photo"
+            id="profilePhoto"
+            role="img"
+            aria-label="Professional profile photo"
+          >
+            <span
+              class="profile-fallback"
+              aria-hidden="true"
+            >
+              NO
+            </span>
           </div>
+
+          <h2>
+            Niken Oktavia
+          </h2>
+
+          <p class="profile-title">
+            IT Business Analyst
+          </p>
+
+
+          <div class="profile-stats">
+
+            <div class="profile-stat">
+              <strong>Requirements</strong>
+              <span>Analysis &amp; Elicitation</span>
+            </div>
+
+            <div class="profile-stat">
+              <strong>Process</strong>
+              <span>As-Is &amp; To-Be</span>
+            </div>
+
+            <div class="profile-stat">
+              <strong>Integration</strong>
+              <span>SAP &amp; API</span>
+            </div>
+
+            <div class="profile-stat">
+              <strong>Testing</strong>
+              <span>SIT &amp; UAT</span>
+            </div>
+
+          </div>
+
         </aside>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about">
-      <div class="container">
-        <div class="section-heading"><span class="eyebrow">PROFILE</span><h2>About Me</h2><p>My professional focus and the value I bring to business and technical teams.</p></div>
-        <div class="about-grid">
-          <article class="panel"><h3>Professional Summary</h3><p>I am a Business Analyst based in Medan, North Sumatera, with experience in business process improvement, requirement analysis, functional documentation, system enhancement, integration support, and application testing.</p><p>I work with business users, developers, testers, SAP teams, and stakeholders to convert operational needs into clear and actionable system solutions.</p><p>My experience includes FMS, FOMS, SAP and WB.NET integration support, procurement and logistics processes, and mobile UI/UX review.</p></article>
-          <article class="panel"><h3>What I Do Best</h3><ul class="check-list"><li>Translate business needs into clear functional and system requirements.</li><li>Prepare As-Is, To-Be, gap analysis, business rules, and validation logic.</li><li>Prepare CRF, FDS, SIT, UAT, process flows, field mapping, and MoM.</li><li>Support system enhancements and integration issue analysis.</li><li>Coordinate clarification, testing, review, and implementation activities.</li><li>Review mobile user journeys and UI/UX improvements.</li></ul></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section-soft" id="experience">
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">EXPERIENCE</span><h2>Professional Experience</h2><p>Core responsibilities across business analysis, enhancement, integration, and testing activities.</p></div>
-        <article class="experience-card"><h3>Middle Office Associate Analyst</h3><div class="experience-meta"><span>Medan, North Sumatera</span><span>Business Analysis &amp; System Enhancement</span></div><ul class="check-list"><li>Gather and analyze user requirements and translate them into functional requirements.</li><li>Prepare CRF, FDS, SIT and UAT scenarios, process flows, field mapping, and meeting minutes.</li><li>Support enhancements for Facility Management System and Farmer Operations Management System.</li><li>Support integration analysis involving internal systems, SAP, and WB.NET.</li><li>Review payloads, mappings, system responses, validation messages, and integration errors.</li><li>Coordinate SIT, support UAT, and verify solutions against approved requirements.</li></ul></article>
-      </div>
-    </section>
 
-
-    <section class="section-soft" id="approach">
-      <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">HOW I WORK</span>
-          <h2>From Business Need to Implemented Solution</h2>
-          <p>A structured approach to keep business users, developers, testers, and system teams aligned throughout delivery.</p>
+
+          <span class="eyebrow">
+            PROFILE
+          </span>
+
+          <h2>
+            About Me
+          </h2>
+
+          <p>
+            Bridging business needs, functional requirements,
+            and technical solutions.
+          </p>
+
         </div>
+
+
+        <div class="about-grid">
+
+          <article class="panel">
+
+            <h3>
+              Professional Summary
+            </h3>
+
+            <p>
+              I am an IT Business Analyst with 3+ years of
+              experience in business process analysis,
+              requirements engineering, functional analysis,
+              system enhancement, integration, and application
+              testing.
+            </p>
+
+            <p>
+              I work closely with business users, developers,
+              testers, SAP teams, and other technical stakeholders
+              to translate operational needs into clear and
+              actionable system requirements.
+            </p>
+
+            <p>
+              My experience includes procurement and logistics
+              processes, Facility Management System, Farmer
+              Operations Management System, and integration
+              between non-ERP applications and SAP through
+              APIs and middleware.
+            </p>
+
+          </article>
+
+
+          <article class="panel">
+
+            <h3>
+              What I Do Best
+            </h3>
+
+            <ul class="check-list">
+
+              <li>
+                Gather, analyze, and document business
+                and system requirements.
+              </li>
+
+              <li>
+                Translate business needs into functional
+                requirements, process flows, and system
+                behavior.
+              </li>
+
+              <li>
+                Analyze As-Is and To-Be processes,
+                business rules, gaps, and dependencies.
+              </li>
+
+              <li>
+                Prepare CRF, FDS, process flows,
+                field mapping, user scenarios,
+                and acceptance criteria.
+              </li>
+
+              <li>
+                Support API and system integration analysis,
+                including payload, mapping, response,
+                and validation review.
+              </li>
+
+              <li>
+                Coordinate SIT, support UAT,
+                clarify defects, and validate solutions
+                against approved requirements.
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section
+      class="section-soft"
+      id="experience"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            EXPERIENCE
+          </span>
+
+          <h2>
+            Professional Experience
+          </h2>
+
+          <p>
+            Business analysis, system integration,
+            process improvement, and digital solution delivery.
+          </p>
+
+        </div>
+
+
+        <article class="experience-card">
+
+          <h3>
+            IT Business Analyst
+          </h3>
+
+          <div class="experience-meta">
+
+            <span>
+              Wilmar Consultancy Service
+            </span>
+
+            <span>
+              Indonesia
+            </span>
+
+            <span>
+              3+ Years
+            </span>
+
+          </div>
+
+
+          <div class="experience-highlight">
+
+            <div class="highlight-box">
+
+              <strong>
+                Business Analysis
+              </strong>
+
+              <span>
+                Requirements, process analysis,
+                functional analysis
+              </span>
+
+            </div>
+
+
+            <div class="highlight-box">
+
+              <strong>
+                System Integration
+              </strong>
+
+              <span>
+                Non-ERP applications, SAP,
+                APIs, middleware
+              </span>
+
+            </div>
+
+
+            <div class="highlight-box">
+
+              <strong>
+                Delivery &amp; Testing
+              </strong>
+
+              <span>
+                CRF/FDS, SIT, UAT,
+                implementation support
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <ul class="check-list">
+
+            <li>
+              Gather and analyze business requirements
+              and translate them into functional and
+              system requirements.
+            </li>
+
+            <li>
+              Analyze business processes and prepare
+              As-Is, To-Be, gap analysis, business rules,
+              workflows, and process flows.
+            </li>
+
+            <li>
+              Prepare functional documentation including
+              CRF, FDS, field mapping, user scenarios,
+              acceptance criteria, and testing documentation.
+            </li>
+
+            <li>
+              Work with developers, testers, business users,
+              and SAP teams to clarify requirements and
+              validate system solutions.
+            </li>
+
+            <li>
+              Analyze integrations between non-ERP
+              applications and SAP, including API payloads,
+              mappings, responses, validation, and
+              integration errors.
+            </li>
+
+            <li>
+              Support integration testing and system
+              validation using tools such as Postman,
+              while coordinating issue clarification
+              with technical teams.
+            </li>
+
+            <li>
+              Coordinate SIT and support UAT activities
+              to verify that implemented solutions align
+              with approved business requirements.
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPROACH
+    ========================= -->
+
+    <section
+      class="section-soft"
+      id="approach"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            HOW I WORK
+          </span>
+
+          <h2>
+            From Business Need to Implemented Solution
+          </h2>
+
+          <p>
+            A structured approach to connect business,
+            functional requirements, technical teams,
+            testing, and implementation.
+          </p>
+
+        </div>
+
 
         <div class="approach-grid">
-          <article class="approach-card">
-            <span class="approach-number">01</span>
-            <h3>Discover</h3>
-            <p>Gather requirements, understand pain points, review the current process, and clarify expected business outcomes.</p>
-          </article>
 
           <article class="approach-card">
-            <span class="approach-number">02</span>
-            <h3>Define</h3>
-            <p>Translate findings into As-Is and To-Be flows, business rules, validation logic, field mapping, CRF, and FDS.</p>
+
+            <span class="approach-number">
+              01
+            </span>
+
+            <h3>
+              Discover
+            </h3>
+
+            <p>
+              Gather requirements, understand pain points,
+              review the current process, identify
+              stakeholders, and clarify expected
+              business outcomes.
+            </p>
+
           </article>
 
-          <article class="approach-card">
-            <span class="approach-number">03</span>
-            <h3>Validate</h3>
-            <p>Prepare SIT scenarios, review system responses, coordinate defect clarification, and support business UAT.</p>
-          </article>
 
           <article class="approach-card">
-            <span class="approach-number">04</span>
-            <h3>Deliver</h3>
-            <p>Support implementation, prepare user guidance, monitor feedback, and maintain documentation for traceability.</p>
+
+            <span class="approach-number">
+              02
+            </span>
+
+            <h3>
+              Analyze &amp; Define
+            </h3>
+
+            <p>
+              Translate findings into As-Is and To-Be flows,
+              business rules, functional requirements,
+              field mapping, CRF, FDS, and system behavior.
+            </p>
+
           </article>
+
+
+          <article class="approach-card">
+
+            <span class="approach-number">
+              03
+            </span>
+
+            <h3>
+              Validate
+            </h3>
+
+            <p>
+              Prepare SIT scenarios, review system responses,
+              validate integration behavior, clarify defects,
+              and support business UAT.
+            </p>
+
+          </article>
+
+
+          <article class="approach-card">
+
+            <span class="approach-number">
+              04
+            </span>
+
+            <h3>
+              Deliver
+            </h3>
+
+            <p>
+              Support implementation, coordinate stakeholders,
+              maintain documentation, and ensure traceability
+              between requirements and delivered solutions.
+            </p>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
     <section id="projects">
+
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">PORTFOLIO</span><h2>Featured Projects</h2><p>Selected work covering business process improvement, system enhancement, integration support, testing, and mobile UI/UX review.</p></div>
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            SELECTED WORK
+          </span>
+
+          <h2>
+            Featured Projects
+          </h2>
+
+          <p>
+            Selected projects demonstrating requirements analysis,
+            process improvement, system integration, testing,
+            and digital solution delivery.
+          </p>
+
+        </div>
+
+
         <div class="project-grid">
-          <article class="project-card"><div class="project-media farmer" role="button" tabindex="0" onclick="openGallery('farmer')" onkeydown="openWithKeyboard(event,'farmer')"><span class="media-label">View FOMS Documentation</span></div><div class="project-body"><span class="badge">FARMER OPERATIONS</span><h3>Farmer Operations Management System</h3><p>Supported business analysis and enhancement activities for farmer operational processes.</p><div class="case-study"><div class="case-item"><strong>Business Need</strong><span>Improve clarity, control, and data accuracy across farmer operations and ordering.</span></div><div class="case-item"><strong>My Contribution</strong><span>Requirement analysis, process review, functional documentation, testing, and issue clarification.</span></div><div class="case-item"><strong>Key Deliverables</strong><span>Process flows, requirements, validation scenarios, SIT cases, and UAT support.</span></div><div class="case-item"><strong>Outcome</strong><span>Clearer operational flow and stronger alignment between users and the technical team.</span></div></div><ul class="project-points"><li>Analyzed operational requirements and user scenarios.</li><li>Prepared process flows, functional requirements, and test scenarios.</li><li>Supported issue investigation and stakeholder coordination.</li></ul><div class="tags"><span class="tag">FOMS</span><span class="tag">Business Analysis</span><span class="tag">SIT</span><span class="tag">UAT</span></div></div></article>
-          <article class="project-card"><div class="project-media facility" role="button" tabindex="0" onclick="openGallery('facility')" onkeydown="openWithKeyboard(event,'facility')"><span class="media-label">View FMS Documentation</span></div><div class="project-body"><span class="badge">FACILITY MANAGEMENT</span><h3>Facility Management System</h3><p>Supported system enhancements for facility operations, approval workflows, transactions, documents, and reporting.</p><div class="case-study"><div class="case-item"><strong>Business Need</strong><span>Standardize facility processes and strengthen workflow, validation, and document controls.</span></div><div class="case-item"><strong>My Contribution</strong><span>As-Is and To-Be analysis, CRF and FDS preparation, rule clarification, and testing coordination.</span></div><div class="case-item"><strong>Key Deliverables</strong><span>Business rules, validation logic, process flows, SIT scenarios, and user guidance.</span></div><div class="case-item"><strong>Outcome</strong><span>Improved process clarity, traceability, and shared understanding of expected system behavior.</span></div></div><ul class="project-points"><li>Prepared As-Is, To-Be, CRF, FDS, and validation logic.</li><li>Reviewed workflows, field behavior, notifications, and documents.</li><li>Prepared SIT scenarios and supported business UAT.</li></ul><div class="tags"><span class="tag">FMS</span><span class="tag">CRF</span><span class="tag">FDS</span><span class="tag">Workflow</span></div></div></article>
-          <article class="project-card"><div class="project-media integration" role="button" tabindex="0" onclick="openGallery('integration')" onkeydown="openWithKeyboard(event,'integration')"><span class="media-label">View Integration Documentation</span></div><div class="project-body"><span class="badge">INTEGRATION SUPPORT</span><h3>SAP &amp; WB.NET Integration Support</h3><p>Supported integration analysis through mapping, payload, response, validation, and error review.</p><div class="case-study"><div class="case-item"><strong>Business Need</strong><span>Ensure reliable data exchange between business applications, middleware, SAP, and WB.NET.</span></div><div class="case-item"><strong>My Contribution</strong><span>Mapping review, payload validation, response analysis, error clarification, and end-to-end testing support.</span></div><div class="case-item"><strong>Key Deliverables</strong><span>Field mapping, integration scenarios, validation notes, and issue analysis documentation.</span></div><div class="case-item"><strong>Outcome</strong><span>Faster issue clarification and better alignment of source data, target fields, and business rules.</span></div></div><ul class="project-points"><li>Reviewed source-to-target field mapping requirements.</li><li>Validated JSON payloads, API responses, and integration results.</li><li>Investigated SAP validation errors with business and technical teams.</li></ul><div class="tags"><span class="tag">SAP</span><span class="tag">WB.NET</span><span class="tag">API</span><span class="tag">JSON</span></div></div></article>
-          <article class="project-card"><div class="project-media mobile" role="button" tabindex="0" onclick="openGallery('mobile')" onkeydown="openWithKeyboard(event,'mobile')"><span class="media-label">View Mobile Documentation</span></div><div class="project-body"><span class="badge">MOBILE UI/UX</span><h3>Mobile Application UI/UX Revamp</h3><p>Reviewed user journeys, transaction flows, field behavior, validation messages, and usability improvements.</p><div class="case-study"><div class="case-item"><strong>Business Need</strong><span>Make mobile transactions easier to understand and better aligned with operational needs.</span></div><div class="case-item"><strong>My Contribution</strong><span>User-flow review, field behavior clarification, validation review, and UI/UX recommendations.</span></div><div class="case-item"><strong>Key Deliverables</strong><span>User journeys, screen review notes, validation requirements, and usability feedback.</span></div><div class="case-item"><strong>Outcome</strong><span>Clearer transaction flow and more consistent field behavior and system notifications.</span></div></div><ul class="project-points"><li>Reviewed end-to-end mobile flows and screen layouts.</li><li>Proposed usability and process clarity improvements.</li><li>Aligned field rules and notifications with business needs.</li></ul><div class="tags"><span class="tag">UI/UX</span><span class="tag">User Journey</span><span class="tag">Validation</span><span class="tag">Mobile</span></div></div></article>
+
+
+          <!-- FOMS -->
+
+          <article class="project-card">
+
+            <div
+              class="project-media farmer"
+              role="button"
+              tabindex="0"
+              onclick="openGallery('farmer')"
+              onkeydown="openWithKeyboard(event,'farmer')"
+            >
+
+              <span class="media-label">
+                View FOMS Documentation
+              </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="badge">
+                BUSINESS &amp; PROCUREMENT SYSTEM
+              </span>
+
+              <h3>
+                Farmer Operations Management System
+              </h3>
+
+              <p>
+                Business analysis and system implementation
+                for farmer and procurement-related operational
+                processes, including integration with SAP.
+              </p>
+
+
+              <div class="case-study">
+
+                <div class="case-item">
+
+                  <strong>
+                    Business Need
+                  </strong>
+
+                  <span>
+                    Improve process visibility, operational
+                    control, and data consistency across
+                    farmer and procurement activities.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    My Contribution
+                  </strong>
+
+                  <span>
+                    Requirement analysis, process modelling,
+                    functional clarification, integration
+                    requirements, testing, and stakeholder
+                    coordination.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Project Scope
+                  </strong>
+
+                  <span>
+                    Procurement and business processes
+                    implemented across multiple locations
+                    in Indonesia, Myanmar, and Tanzania.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Integration
+                  </strong>
+
+                  <span>
+                    Non-ERP application integrated with SAP
+                    for procurement, stock, and transaction
+                    related data exchange.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <ul class="project-points">
+
+                <li>
+                  Analyzed business requirements and
+                  translated operational needs into
+                  functional requirements.
+                </li>
+
+                <li>
+                  Prepared process flows, business rules,
+                  validation scenarios, and testing
+                  documentation.
+                </li>
+
+                <li>
+                  Supported SAP integration analysis,
+                  data mapping, and validation of
+                  system transactions.
+                </li>
+
+                <li>
+                  Coordinated SIT/UAT and clarified
+                  issues between business and technical teams.
+                </li>
+
+              </ul>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  FOMS
+                </span>
+
+                <span class="tag">
+                  Business Analysis
+                </span>
+
+                <span class="tag">
+                  Procurement
+                </span>
+
+                <span class="tag">
+                  SAP Integration
+                </span>
+
+                <span class="tag">
+                  SIT
+                </span>
+
+                <span class="tag">
+                  UAT
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- FMS -->
+
+          <article class="project-card">
+
+            <div
+              class="project-media facility"
+              role="button"
+              tabindex="0"
+              onclick="openGallery('facility')"
+              onkeydown="openWithKeyboard(event,'facility')"
+            >
+
+              <span class="media-label">
+                View FMS Documentation
+              </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="badge">
+                FACILITY MANAGEMENT
+              </span>
+
+              <h3>
+                Facility Management System
+              </h3>
+
+              <p>
+                Ongoing system enhancement project covering
+                facility service requests, workflows,
+                transactions, billing-related processes,
+                and SAP integration.
+              </p>
+
+
+              <div class="case-study">
+
+                <div class="case-item">
+
+                  <strong>
+                    Business Need
+                  </strong>
+
+                  <span>
+                    Standardize facility processes,
+                    strengthen workflow controls,
+                    and improve transaction traceability.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    My Contribution
+                  </strong>
+
+                  <span>
+                    As-Is/To-Be analysis, requirement
+                    elicitation, CRF/FDS preparation,
+                    business rule clarification,
+                    and testing coordination.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Functional Scope
+                  </strong>
+
+                  <span>
+                    Service requests, approval workflow,
+                    service orders, billing-related
+                    processes, and payment status.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Integration
+                  </strong>
+
+                  <span>
+                    Integration requirements involving
+                    SAP sales order, billing, payment
+                    status, and related business data.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <ul class="project-points">
+
+                <li>
+                  Analyzed current and future-state
+                  processes and identified functional gaps.
+                </li>
+
+                <li>
+                  Prepared CRF, FDS, business rules,
+                  validation logic, and process flows.
+                </li>
+
+                <li>
+                  Defined functional requirements for
+                  workflow, transactions, notifications,
+                  and document behavior.
+                </li>
+
+                <li>
+                  Prepared SIT scenarios and supported
+                  business UAT and solution validation.
+                </li>
+
+              </ul>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  FMS
+                </span>
+
+                <span class="tag">
+                  Requirement Analysis
+                </span>
+
+                <span class="tag">
+                  As-Is / To-Be
+                </span>
+
+                <span class="tag">
+                  FDS
+                </span>
+
+                <span class="tag">
+                  Workflow
+                </span>
+
+                <span class="tag">
+                  SAP Integration
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- INTEGRATION -->
+
+          <article class="project-card">
+
+            <div
+              class="project-media integration"
+              role="button"
+              tabindex="0"
+              onclick="openGallery('integration')"
+              onkeydown="openWithKeyboard(event,'integration')"
+            >
+
+              <span class="media-label">
+                View Integration Documentation
+              </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="badge">
+                SYSTEM INTEGRATION
+              </span>
+
+              <h3>
+                SAP &amp; Application Integration
+              </h3>
+
+              <p>
+                Integration analysis between non-ERP
+                business applications, middleware, SAP,
+                and WB.NET.
+              </p>
+
+
+              <div class="case-study">
+
+                <div class="case-item">
+
+                  <strong>
+                    Business Need
+                  </strong>
+
+                  <span>
+                    Enable reliable exchange of business
+                    data between applications and enterprise
+                    systems.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    My Contribution
+                  </strong>
+
+                  <span>
+                    Integration requirement analysis,
+                    mapping review, payload validation,
+                    response analysis, and issue clarification.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Integration Components
+                  </strong>
+
+                  <span>
+                    API, Postman, JSON/XML, middleware,
+                    SAP, and WB.NET integration flows.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Validation
+                  </strong>
+
+                  <span>
+                    Reviewed request/response behavior,
+                    source-to-target mapping, validation
+                    messages, and transaction results.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <ul class="project-points">
+
+                <li>
+                  Analyzed source-to-target field mapping
+                  and integration requirements.
+                </li>
+
+                <li>
+                  Used Postman to validate API request
+                  and response payloads.
+                </li>
+
+                <li>
+                  Reviewed JSON/XML data structures and
+                  integration response behavior.
+                </li>
+
+                <li>
+                  Investigated SAP validation errors and
+                  coordinated clarification with technical
+                  and business teams.
+                </li>
+
+                <li>
+                  Supported integration testing and
+                  end-to-end transaction validation.
+                </li>
+
+              </ul>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  SAP
+                </span>
+
+                <span class="tag">
+                  API
+                </span>
+
+                <span class="tag">
+                  Postman
+                </span>
+
+                <span class="tag">
+                  MuleSoft
+                </span>
+
+                <span class="tag">
+                  JSON/XML
+                </span>
+
+                <span class="tag">
+                  WB.NET
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- UI UX -->
+
+          <article class="project-card">
+
+            <div
+              class="project-media mobile"
+              role="button"
+              tabindex="0"
+              onclick="openGallery('mobile')"
+              onkeydown="openWithKeyboard(event,'mobile')"
+            >
+
+              <span class="media-label">
+                View Mobile Documentation
+              </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="badge">
+                ADDITIONAL CAPABILITY
+              </span>
+
+              <h3>
+                Mobile Application UI/UX Revamp
+              </h3>
+
+              <p>
+                Reviewed mobile user journeys, transaction
+                flows, field behavior, validation messages,
+                and usability improvements.
+              </p>
+
+
+              <div class="case-study">
+
+                <div class="case-item">
+
+                  <strong>
+                    Business Need
+                  </strong>
+
+                  <span>
+                    Improve usability and align mobile
+                    transaction flows with operational
+                    requirements.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    My Contribution
+                  </strong>
+
+                  <span>
+                    User-flow review, field behavior
+                    clarification, validation review,
+                    and UI/UX recommendations.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Key Deliverables
+                  </strong>
+
+                  <span>
+                    User journeys, screen review notes,
+                    validation requirements, and
+                    usability feedback.
+                  </span>
+
+                </div>
+
+
+                <div class="case-item">
+
+                  <strong>
+                    Outcome
+                  </strong>
+
+                  <span>
+                    Clearer transaction flow and more
+                    consistent field behavior and
+                    system notifications.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <ul class="project-points">
+
+                <li>
+                  Reviewed end-to-end mobile transaction
+                  flows and screen layouts.
+                </li>
+
+                <li>
+                  Proposed usability and process
+                  clarity improvements.
+                </li>
+
+                <li>
+                  Aligned field rules, validation,
+                  and notifications with business needs.
+                </li>
+
+              </ul>
+
+
+              <div class="tags">
+
+                <span class="tag">
+                  UI/UX
+                </span>
+
+                <span class="tag">
+                  User Journey
+                </span>
+
+                <span class="tag">
+                  Figma
+                </span>
+
+                <span class="tag">
+                  Validation
+                </span>
+
+                <span class="tag">
+                  Mobile
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
         </div>
-        <p class="project-note">Portfolio visuals use sample, testing, or sanitized information. Confidential business data and production credentials are not displayed.</p>
+
+
+        <p class="project-note">
+          Portfolio visuals use sample, testing, or sanitized
+          information. Confidential business data, production
+          credentials, and sensitive company information are
+          not displayed.
+        </p>
+
       </div>
+
     </section>
 
-    <section class="section-soft" id="skills">
-      <div class="container"><div class="section-heading"><span class="eyebrow">CAPABILITIES</span><h2>Skills</h2><p>Business, functional, technical, testing, and documentation capabilities.</p></div><div class="skills-grid">
-        <article class="skill-card"><h3>Business Analysis</h3><div class="tags"><span class="tag">Requirement Gathering</span><span class="tag">Process Analysis</span><span class="tag">Gap Analysis</span><span class="tag">As-Is &amp; To-Be</span><span class="tag">Business Rules</span></div></article>
-        <article class="skill-card"><h3>Functional Documentation</h3><div class="tags"><span class="tag">CRF</span><span class="tag">FDS</span><span class="tag">Process Flow</span><span class="tag">Field Mapping</span><span class="tag">Meeting Minutes</span></div></article>
-        <article class="skill-card"><h3>Systems &amp; Integration</h3><div class="tags"><span class="tag">SAP</span><span class="tag">FMS</span><span class="tag">FOMS</span><span class="tag">WB.NET</span><span class="tag">API</span><span class="tag">JSON</span></div></article>
-        <article class="skill-card"><h3>Testing &amp; User Experience</h3><div class="tags"><span class="tag">SIT</span><span class="tag">UAT Support</span><span class="tag">Defect Analysis</span><span class="tag">Validation Testing</span><span class="tag">Mobile UI/UX</span></div></article>
-      </div></div>
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section
+      class="section-soft"
+      id="skills"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            CORE CAPABILITIES
+          </span>
+
+          <h2>
+            Skills &amp; Tools
+          </h2>
+
+          <p>
+            Business analysis, functional analysis,
+            system integration, testing, and supporting tools.
+          </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <article class="skill-card">
+
+            <h3>
+              Business Analysis
+            </h3>
+
+            <p class="skill-description">
+              Core activities used to understand business
+              needs and translate them into system requirements.
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                Requirement Gathering
+              </span>
+
+              <span class="tag">
+                Requirement Elicitation
+              </span>
+
+              <span class="tag">
+                Business Process Analysis
+              </span>
+
+              <span class="tag">
+                Functional Analysis
+              </span>
+
+              <span class="tag">
+                Gap Analysis
+              </span>
+
+              <span class="tag">
+                As-Is / To-Be
+              </span>
+
+              <span class="tag">
+                Business Rules
+              </span>
+
+              <span class="tag">
+                Process Modelling
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Requirements &amp; Documentation
+            </h3>
+
+            <p class="skill-description">
+              Documentation and functional artefacts used
+              throughout requirements and solution delivery.
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                BRD
+              </span>
+
+              <span class="tag">
+                CRF
+              </span>
+
+              <span class="tag">
+                FDS
+              </span>
+
+              <span class="tag">
+                Functional Requirements
+              </span>
+
+              <span class="tag">
+                User Stories
+              </span>
+
+              <span class="tag">
+                Use Cases
+              </span>
+
+              <span class="tag">
+                Acceptance Criteria
+              </span>
+
+              <span class="tag">
+                Process Flow
+              </span>
+
+              <span class="tag">
+                Field Mapping
+              </span>
+
+              <span class="tag">
+                Meeting Minutes
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Systems &amp; Integration
+            </h3>
+
+            <p class="skill-description">
+              Experience analyzing integrations between
+              business applications and enterprise systems.
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                SAP Integration
+              </span>
+
+              <span class="tag">
+                API
+              </span>
+
+              <span class="tag">
+                REST API
+              </span>
+
+              <span class="tag">
+                Postman
+              </span>
+
+              <span class="tag">
+                MuleSoft
+              </span>
+
+              <span class="tag">
+                JSON
+              </span>
+
+              <span class="tag">
+                XML
+              </span>
+
+              <span class="tag">
+                WB.NET
+              </span>
+
+              <span class="tag">
+                FMS
+              </span>
+
+              <span class="tag">
+                FOMS
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Testing &amp; Delivery
+            </h3>
+
+            <p class="skill-description">
+              Supporting validation and delivery from
+              functional requirements through implementation.
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                SIT
+              </span>
+
+              <span class="tag">
+                UAT
+              </span>
+
+              <span class="tag">
+                Defect Analysis
+              </span>
+
+              <span class="tag">
+                Integration Testing
+              </span>
+
+              <span class="tag">
+                Validation Testing
+              </span>
+
+              <span class="tag">
+                Jira
+              </span>
+
+              <span class="tag">
+                Microsoft Visio
+              </span>
+
+              <span class="tag">
+                Figma
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container"><div class="section-heading"><span class="eyebrow">CONTACT</span><h2>Let’s Connect</h2><p>Interested in business analysis, system enhancement, testing, or integration support opportunities? Feel free to reach out.</p></div><div class="contact-grid">
-        <a
-          class="contact-card"
-          href="mailto:nikenoktavia2000@gmail.com"
-          aria-label="Send an email to Niken Oktavia"
-        >
-          <span class="contact-icon" aria-hidden="true">✉</span>
-          <span class="contact-copy">
-            <strong>Email</strong>
-            <span>nikenoktavia2000@gmail.com</span>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            CONTACT
           </span>
-        </a>
-        <a
-          class="contact-card"
-          href="https://www.linkedin.com/in/niken-oktavia-196a891b1"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open Niken Oktavia LinkedIn profile"
-        >
-          <span class="contact-icon" aria-hidden="true">in</span>
-          <span class="contact-copy">
-            <strong>LinkedIn</strong>
-            <span class="contact-link-text">linkedin.com/in/niken-oktavia-196a891b1</span>
-          </span>
-        </a>
-        <div class="contact-card"><span class="contact-icon">⌖</span><span class="contact-copy"><strong>Location</strong><span>Medan, North Sumatera</span></span></div>
-      </div>
-      <div class="availability">
-        <div>
-          <h3>Open to Business Analyst Opportunities</h3>
-          <p>Available to discuss roles involving process improvement, functional analysis, system enhancement, testing, and integration support.</p>
+
+          <h2>
+            Let’s Connect
+          </h2>
+
+          <p>
+            Open to IT Business Analyst opportunities involving
+            requirements analysis, process improvement,
+            system integration, and digital solutions.
+          </p>
+
         </div>
-        <a class="btn btn-primary" href="mailto:nikenoktavia2000@gmail.com?subject=Business%20Analyst%20Opportunity">Start a Conversation</a>
+
+
+        <div class="contact-grid">
+
+
+          <a
+            class="contact-card"
+            href="mailto:nikenoktavia2000@gmail.com"
+            aria-label="Send an email to Niken Oktavia"
+          >
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              ✉
+            </span>
+
+            <span class="contact-copy">
+
+              <strong>
+                Email
+              </strong>
+
+              <span>
+                nikenoktavia2000@gmail.com
+              </span>
+
+            </span>
+
+          </a>
+
+
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/niken-oktavia-196a891b1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Niken Oktavia LinkedIn profile"
+          >
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              in
+            </span>
+
+            <span class="contact-copy">
+
+              <strong>
+                LinkedIn
+              </strong>
+
+              <span class="contact-link-text">
+                linkedin.com/in/niken-oktavia-196a891b1
+              </span>
+
+            </span>
+
+          </a>
+
+
+          <div class="contact-card">
+
+            <span class="contact-icon">
+              ⌖
+            </span>
+
+            <span class="contact-copy">
+
+              <strong>
+                Location
+              </strong>
+
+              <span>
+                Medan, North Sumatera
+              </span>
+
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="availability">
+
+          <div>
+
+            <h3>
+              Open to IT Business Analyst Opportunities
+            </h3>
+
+            <p>
+              Available to discuss roles involving
+              requirements analysis, functional analysis,
+              process improvement, system integration,
+              testing, and digital solution delivery.
+            </p>
+
+          </div>
+
+
+          <a
+            class="btn btn-primary"
+            href="mailto:nikenoktavia2000@gmail.com?subject=IT%20Business%20Analyst%20Opportunity"
+          >
+            Start a Conversation
+          </a>
+
+        </div>
+
       </div>
-      </div>
+
     </section>
+
   </main>
 
-  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryTitle" onclick="closeFromBackdrop(event)"><div class="gallery-box"><button class="gallery-close" type="button" onclick="closeGallery()" aria-label="Close gallery">&times;</button><div class="gallery-head"><h3 id="galleryTitle">Project Documentation</h3><p id="galleryDescription">Project documentation using sample or testing data.</p></div><div class="gallery-stage"><img class="gallery-image" id="galleryImage" src="" alt="Project documentation"></div><div class="gallery-controls"><button class="gallery-btn" type="button" onclick="previousImage()">Previous</button><div class="gallery-count" id="galleryCount">1 / 1</div><button class="gallery-btn" type="button" onclick="nextImage()">Next</button></div><div class="thumbnails" id="galleryThumbnails"></div></div></div>
-  <div class="toast" id="downloadToast" role="status" aria-live="polite">✓ CV download started</div>
-  <footer><div class="container">© 2026 Niken Oktavia. All rights reserved.</div></footer>
+
+  <!-- =========================
+       GALLERY
+  ========================= -->
+
+  <div
+    class="gallery-modal"
+    id="galleryModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="galleryTitle"
+    onclick="closeFromBackdrop(event)"
+  >
+
+    <div class="gallery-box">
+
+      <button
+        class="gallery-close"
+        type="button"
+        onclick="closeGallery()"
+        aria-label="Close gallery"
+      >
+        &times;
+      </button>
+
+
+      <div class="gallery-head">
+
+        <h3 id="galleryTitle">
+          Project Documentation
+        </h3>
+
+        <p id="galleryDescription">
+          Project documentation using sample or testing data.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-stage">
+
+        <img
+          class="gallery-image"
+          id="galleryImage"
+          src=""
+          alt="Project documentation"
+        >
+
+      </div>
+
+
+      <div class="gallery-controls">
+
+        <button
+          class="gallery-btn"
+          type="button"
+          onclick="previousImage()"
+        >
+          Previous
+        </button>
+
+        <div
+          class="gallery-count"
+          id="galleryCount"
+        >
+          1 / 1
+        </div>
+
+        <button
+          class="gallery-btn"
+          type="button"
+          onclick="nextImage()"
+        >
+          Next
+        </button>
+
+      </div>
+
+
+      <div
+        class="thumbnails"
+        id="galleryThumbnails"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="toast"
+    id="downloadToast"
+    role="status"
+    aria-live="polite"
+  >
+    ✓ CV download started
+  </div>
+
+
+  <footer>
+
+    <div class="container">
+      © 2026 Niken Oktavia. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
+
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
+
     const profileImageTest = new Image();
+
     profileImageTest.onload = function () {};
+
     profileImageTest.onerror = function () {
-      const profile = document.getElementById('profilePhoto');
-      if (profile) profile.classList.add('photo-missing');
+
+      const profile =
+        document.getElementById('profilePhoto');
+
+      if (profile) {
+        profile.classList.add('photo-missing');
+      }
+
     };
-    profileImageTest.src = 'assets/profile-niken.png';
+
+    profileImageTest.src =
+      'assets/profile-niken.png';
+
+
+    /* =========================
+       GALLERY DATA
+    ========================= */
 
     const galleries = {
-      farmer: { title: 'Farmer Operations Management System', description: 'Business process, functionality, testing, and project documentation.', images: ['assets/farmer-operations.png','assets/farmer-operations1.png'] },
-      facility: { title: 'Facility Management System', description: 'Workflow, transaction, enhancement, and testing documentation.', images: ['assets/facility-management.png','assets/facility-management-1.png'] },
-      integration: { title: 'SAP and WB.NET Integration Support', description: 'Integration flow, mapping, payload, response, and testing documentation.', images: ['assets/wb-integration1.png','assets/wb.net.jpg'] },
-      mobile: { title: 'Mobile Application UI/UX Revamp', description: 'Mobile user flow, validation, interface review, and revamp documentation.', images: ['assets/mobile-revamp.png','assets/mobile-revamp1.png','assets/mobile-revamp2.png','assets/mobile-revamp3.png'] }
+
+      farmer: {
+        title:
+          'Farmer Operations Management System',
+
+        description:
+          'Business requirements, process analysis, functional documentation, testing, and system integration documentation.',
+
+        images: [
+          'assets/farmer-operations.png',
+          'assets/farmer-operations1.png'
+        ]
+      },
+
+
+      facility: {
+        title:
+          'Facility Management System',
+
+        description:
+          'Business process, workflow, functional requirement, enhancement, and testing documentation.',
+
+        images: [
+          'assets/facility-management.png',
+          'assets/facility-management-1.png'
+        ]
+      },
+
+
+      integration: {
+        title:
+          'SAP and Application Integration',
+
+        description:
+          'Integration flow, mapping, API payload, response, validation, and testing documentation.',
+
+        images: [
+          'assets/wb-integration1.png',
+          'assets/wb.net.jpg'
+        ]
+      },
+
+
+      mobile: {
+        title:
+          'Mobile Application UI/UX Revamp',
+
+        description:
+          'Mobile user flow, validation, interface review, and usability improvement documentation.',
+
+        images: [
+          'assets/mobile-revamp.png',
+          'assets/mobile-revamp1.png',
+          'assets/mobile-revamp2.png',
+          'assets/mobile-revamp3.png'
+        ]
+      }
+
     };
-    let activeGallery = null, activeIndex = 0, toastTimer;
-    function toggleMenu(button) { const nav = document.getElementById('siteNav'); nav.classList.toggle('open'); button.setAttribute('aria-expanded', nav.classList.contains('open')); }
-    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { const nav = document.getElementById('siteNav'); const button = document.querySelector('.menu-toggle'); nav.classList.remove('open'); button.setAttribute('aria-expanded','false'); }));
-    function showToast() { const toast = document.getElementById('downloadToast'); clearTimeout(toastTimer); toast.classList.add('show'); toastTimer = setTimeout(() => toast.classList.remove('show'), 3000); }
-    function openGallery(key) { activeGallery = galleries[key]; activeIndex = 0; if (!activeGallery) return; document.getElementById('galleryTitle').textContent = activeGallery.title; document.getElementById('galleryDescription').textContent = activeGallery.description; document.getElementById('galleryModal').classList.add('show'); document.body.classList.add('modal-open'); renderGallery(); }
-    function renderGallery() { if (!activeGallery) return; const image = document.getElementById('galleryImage'), count = document.getElementById('galleryCount'), thumbs = document.getElementById('galleryThumbnails'); image.src = activeGallery.images[activeIndex]; image.alt = activeGallery.title + ' documentation image ' + (activeIndex + 1); count.textContent = (activeIndex + 1) + ' / ' + activeGallery.images.length; thumbs.innerHTML = ''; activeGallery.images.forEach((path,index) => { const button = document.createElement('button'); button.type='button'; button.className='thumbnail' + (index === activeIndex ? ' active' : ''); button.onclick=()=>{ activeIndex=index; renderGallery(); }; const img=document.createElement('img'); img.src=path; img.alt='Open documentation image ' + (index+1); button.appendChild(img); thumbs.appendChild(button); }); }
-    function nextImage() { if (!activeGallery) return; activeIndex=(activeIndex+1)%activeGallery.images.length; renderGallery(); }
-    function previousImage() { if (!activeGallery) return; activeIndex=(activeIndex-1+activeGallery.images.length)%activeGallery.images.length; renderGallery(); }
-    function closeGallery() { document.getElementById('galleryModal').classList.remove('show'); document.body.classList.remove('modal-open'); activeGallery=null; }
-    function closeFromBackdrop(event) { if (event.target.id === 'galleryModal') closeGallery(); }
-    function openWithKeyboard(event,key) { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openGallery(key); } }
-    document.addEventListener('keydown', event => { const modal=document.getElementById('galleryModal'); if (!modal.classList.contains('show')) return; if (event.key==='Escape') closeGallery(); if (event.key==='ArrowRight') nextImage(); if (event.key==='ArrowLeft') previousImage(); });
+
+
+    let activeGallery = null;
+
+    let activeIndex = 0;
+
+    let toastTimer;
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    function toggleMenu(button) {
+
+      const nav =
+        document.getElementById('siteNav');
+
+      nav.classList.toggle('open');
+
+      button.setAttribute(
+        'aria-expanded',
+        nav.classList.contains('open')
+      );
+
+    }
+
+
+    document
+      .querySelectorAll('.nav-link')
+      .forEach(link => {
+
+        link.addEventListener(
+          'click',
+          () => {
+
+            const nav =
+              document.getElementById('siteNav');
+
+            const button =
+              document.querySelector('.menu-toggle');
+
+            nav.classList.remove('open');
+
+            button.setAttribute(
+              'aria-expanded',
+              'false'
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       CV TOAST
+    ========================= */
+
+    function showToast() {
+
+      const toast =
+        document.getElementById('downloadToast');
+
+      clearTimeout(toastTimer);
+
+      toast.classList.add('show');
+
+      toastTimer = setTimeout(
+        () => toast.classList.remove('show'),
+        3000
+      );
+
+    }
+
+
+    /* =========================
+       OPEN GALLERY
+    ========================= */
+
+    function openGallery(key) {
+
+      activeGallery =
+        galleries[key];
+
+      activeIndex = 0;
+
+      if (!activeGallery) {
+        return;
+      }
+
+      document.getElementById(
+        'galleryTitle'
+      ).textContent =
+        activeGallery.title;
+
+
+      document.getElementById(
+        'galleryDescription'
+      ).textContent =
+        activeGallery.description;
+
+
+      document
+        .getElementById('galleryModal')
+        .classList.add('show');
+
+
+      document.body.classList.add(
+        'modal-open'
+      );
+
+
+      renderGallery();
+
+    }
+
+
+    /* =========================
+       RENDER GALLERY
+    ========================= */
+
+    function renderGallery() {
+
+      if (!activeGallery) {
+        return;
+      }
+
+      const image =
+        document.getElementById(
+          'galleryImage'
+        );
+
+      const count =
+        document.getElementById(
+          'galleryCount'
+        );
+
+      const thumbs =
+        document.getElementById(
+          'galleryThumbnails'
+        );
+
+
+      image.src =
+        activeGallery.images[
+          activeIndex
+        ];
+
+
+      image.alt =
+        activeGallery.title +
+        ' documentation image ' +
+        (activeIndex + 1);
+
+
+      count.textContent =
+        (activeIndex + 1) +
+        ' / ' +
+        activeGallery.images.length;
+
+
+      thumbs.innerHTML = '';
+
+
+      activeGallery.images.forEach(
+        (path,index) => {
+
+          const button =
+            document.createElement(
+              'button'
+            );
+
+          button.type =
+            'button';
+
+          button.className =
+            'thumbnail' +
+            (
+              index === activeIndex
+                ? ' active'
+                : ''
+            );
+
+
+          button.onclick =
+            () => {
+
+              activeIndex =
+                index;
+
+              renderGallery();
+
+            };
+
+
+          const img =
+            document.createElement(
+              'img'
+            );
+
+          img.src =
+            path;
+
+          img.alt =
+            'Open documentation image ' +
+            (index + 1);
+
+
+          button.appendChild(img);
+
+          thumbs.appendChild(button);
+
+        }
+      );
+
+    }
+
+
+    /* =========================
+       GALLERY NAVIGATION
+    ========================= */
+
+    function nextImage() {
+
+      if (!activeGallery) {
+        return;
+      }
+
+      activeIndex =
+        (
+          activeIndex + 1
+        ) %
+        activeGallery.images.length;
+
+      renderGallery();
+
+    }
+
+
+    function previousImage() {
+
+      if (!activeGallery) {
+        return;
+      }
+
+      activeIndex =
+        (
+          activeIndex - 1 +
+          activeGallery.images.length
+        ) %
+        activeGallery.images.length;
+
+      renderGallery();
+
+    }
+
+
+    /* =========================
+       CLOSE GALLERY
+    ========================= */
+
+    function closeGallery() {
+
+      document
+        .getElementById('galleryModal')
+        .classList.remove('show');
+
+
+      document.body.classList.remove(
+        'modal-open'
+      );
+
+
+      activeGallery = null;
+
+    }
+
+
+    function closeFromBackdrop(event) {
+
+      if (
+        event.target.id ===
+        'galleryModal'
+      ) {
+
+        closeGallery();
+
+      }
+
+    }
+
+
+    /* =========================
+       KEYBOARD ACCESS
+    ========================= */
+
+    function openWithKeyboard(
+      event,
+      key
+    ) {
+
+      if (
+        event.key === 'Enter' ||
+        event.key === ' '
+      ) {
+
+        event.preventDefault();
+
+        openGallery(key);
+
+      }
+
+    }
+
+
+    document.addEventListener(
+      'keydown',
+      event => {
+
+        const modal =
+          document.getElementById(
+            'galleryModal'
+          );
+
+
+        if (
+          !modal.classList.contains(
+            'show'
+          )
+        ) {
+
+          return;
+
+        }
+
+
+        if (
+          event.key === 'Escape'
+        ) {
+
+          closeGallery();
+
+        }
+
+
+        if (
+          event.key === 'ArrowRight'
+        ) {
+
+          nextImage();
+
+        }
+
+
+        if (
+          event.key === 'ArrowLeft'
+        ) {
+
+          previousImage();
+
+        }
+
+      }
+    );
+
   </script>
+
 </body>
 </html>
